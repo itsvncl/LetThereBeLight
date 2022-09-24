@@ -1,13 +1,44 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "207a5b98",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "207a5b98",
+        "name": "com.DefaultCompany.com.unity.template.mobile2D",
+        "processId": 18816,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "207a5b98",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4269,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 5315,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 14659,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 17158,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 18816,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +72,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },
