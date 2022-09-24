@@ -48,7 +48,7 @@ public class SmoothDrag : MonoBehaviour
             }
             
             //Checking if the object is directly touched initally
-            if(!touched && col == Physics2D.OverlapPoint(touchPos))
+            if(!touched && touch.phase == TouchPhase.Began && col == Physics2D.OverlapPoint(touchPos))
             {
                 smoothing = false;
                 touched = true;
@@ -61,7 +61,7 @@ public class SmoothDrag : MonoBehaviour
             }
 
 
-            if (touch.phase == TouchPhase.Ended)
+            if (touched && touch.phase == TouchPhase.Ended)
             {
                 if (touched) StartCoroutine(startSmoothing());
                 touched = false;
@@ -71,7 +71,6 @@ public class SmoothDrag : MonoBehaviour
                 //Getting the distance between the location of the sprite, and the location of the lifted finger
                 float distance = Vector3.Distance(touchPos, touchPosBefore);
                 smoothingEnd = calculateEndPosition(touchPosBefore, touchPos);
-                 
             }
         }
 
