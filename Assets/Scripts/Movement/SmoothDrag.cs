@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,29 +7,28 @@ public class SmoothDrag : MonoBehaviour
 {
     private Vector3 touchOffset;
     private Vector3 touchPos;
-    private Vector3 initialTouch;
     private Vector3 touchPosBefore;
-    private Vector3 dircetion;
-    private bool touched;
-
-    private Vector3 smoothingEnd;
-    private bool smoothing;
+    private Vector3 direction;
+    
+    private bool touched = false;
+    private bool smoothing = false;
+    private float distance;
+    private float currentSpeed;
 
     private Collider2D col;
     private Rigidbody2D rb;  
 
-
-    [SerializeField] private float smoothingSpeed = 10;
-    [SerializeField] private float smoothingDistance = 3;
+    [SerializeField] private float smoothingSpeed = 15;
     [SerializeField] private float followSpeed = 20;
+
+    [SerializeField] private bool lockX = false;
+    [SerializeField] private bool lockY = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         touchPos = Vector3.zero;
-        touched = false;
-        smoothing = false;
     }
 
     void Update()
@@ -43,7 +43,6 @@ public class SmoothDrag : MonoBehaviour
             //Getting the offset of the touch from the objects center
             if(touch.phase == TouchPhase.Began)
             {
-                initialTouch = transform.position;
                 touchOffset = transform.position - touchPos;
             }
             
@@ -56,46 +55,49 @@ public class SmoothDrag : MonoBehaviour
 
             if (touched)
             {
-                dircetion = (touchPos + touchOffset) - (transform.position);
-                rb.velocity = new Vector2(dircetion.x, dircetion.y) * followSpeed;
+                direction = (touchPos + touchOffset) - (transform.position);
+
+                if (lockX) direction.x = 0;
+                if (lockY) direction.y = 0;
+
+                rb.velocity = new Vector2(direction.x, direction.y) * followSpeed;
             }
 
 
             if (touched && touch.phase == TouchPhase.Ended)
             {
-                if (touched) StartCoroutine(startSmoothing());
+                smoothing = true;
                 touched = false;
-                rb.velocity = Vector2.zero;
 
-
-                //Getting the distance between the location of the sprite, and the location of the lifted finger
-                float distance = Vector3.Distance(touchPos, touchPosBefore);
-                smoothingEnd = calculateEndPosition(touchPosBefore, touchPos);
+                distance = Vector3.Distance(touchPos, touchPosBefore);
+                currentSpeed = Mathf.Clamp(distance / Time.deltaTime, 0, 50);
             }
         }
 
-        if (smoothing) transform.position = Vector3.Lerp(transform.position, smoothingEnd, Time.deltaTime * smoothingSpeed);
+        if (smoothing)
+        {
+            currentSpeed = Mathf.Lerp(currentSpeed, 0, smoothingSpeed * Time.deltaTime);
+            rb.velocity = new Vector2(direction.x, direction.y) * currentSpeed;
+
+            if (currentSpeed <= 0.05f)
+            {
+                rb.velocity = Vector2.zero;
+                smoothing = false;
+            }
+
+        }
     }
 
-    Vector3 calculateEndPosition(Vector3 before, Vector3 after)
+    public void setLockX(bool val)
     {
-        Vector3 dir = after - before;
-        
-        float x = dir.x < 0f ? -1 : 1;
-        float y = dir.y < 0f ? -1 : 1;
-
-        Vector3 endPos = new Vector3();
-        endPos.x = transform.position.x + (dir.x ) * smoothingDistance;
-        endPos.y = transform.position.y + (dir.y ) * smoothingDistance;
-        endPos.z = transform.position.z;
-
-        return endPos;
+        lockX = val;
+        rb.velocity = Vector2.zero;
+        smoothing = false;
     }
-
-    IEnumerator startSmoothing()
+    public void setLockY(bool val)
     {
-        smoothing = true;
-        yield return new WaitForSeconds(4);
+        lockY = val;
+        rb.velocity = Vector2.zero;
         smoothing = false;
     }
 }
