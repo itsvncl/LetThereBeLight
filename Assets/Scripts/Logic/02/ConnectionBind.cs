@@ -40,13 +40,7 @@ public class ConnectionBind : MonoBehaviour
             if (touched)
             {
                 Vector3 where = tempWire.transform.position - touchPos;
-                Vector2 xPos = new Vector3(touchPos.x, tempWire.transform.position.y);
-                float distance = Vector2.Distance(tempWire.transform.position, xPos);
-                distance = 1.0f;
-
-                Debug.Log(distance);
-
-                tempWire.transform.localScale = new Vector3(distance * (-where.x), tempWire.transform.localScale.y, tempWire.transform.localScale.z);
+                tempWire.transform.localScale = new Vector3(-where.x * (1/transform.localScale.x), tempWire.transform.localScale.y, tempWire.transform.localScale.z);
             }
 
             if(touched && touch.phase == TouchPhase.Ended && target == Physics2D.OverlapPoint(touchPos))
