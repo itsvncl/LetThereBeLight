@@ -16,10 +16,6 @@ public class SwitchLogic : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update() {
-    }
-
     private void OnCollisionEnter2D(Collision2D collision) {
         if (ceiling.IsTouching(self)) {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
