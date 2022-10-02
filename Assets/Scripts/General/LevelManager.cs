@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour {
     }
 
     IEnumerator Load() {
+        Debug.Log("Level loading");
         animator.SetTrigger("FadeOut");
 
         yield return new WaitForSeconds(1.5f);
