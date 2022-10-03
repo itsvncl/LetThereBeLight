@@ -25,6 +25,16 @@ public class AndoridActivityManager : MonoBehaviour {
         activity.Call("unlockVolumeButton");
     }
 
+    public void StartFlashlightGuard() {
+        NullCheck();
+        activity.Call("enableFlashlightGuard");
+    }
+
+    public void StopFlashlightGuard() {
+        NullCheck();
+        activity.Call("disableFlashlightGuard");
+    }
+
     private void NullCheck() {
         if (activity == null) {
             throw new System.Exception("Activity is null!");

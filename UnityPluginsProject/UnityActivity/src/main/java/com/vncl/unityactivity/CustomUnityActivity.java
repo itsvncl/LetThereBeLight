@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import com.unity3d.player.UnityPlayer;
 
 public class CustomUnityActivity extends UnityPlayerActivity {
-    private static final String LOGTAG = "VolumeManagerActivity";
+    private static final String LOGTAG = "CustomUnityActivity";
 
     private boolean isVolumeButtonLocked = false;
     private CameraManager cameraManager;
@@ -61,6 +61,8 @@ public class CustomUnityActivity extends UnityPlayerActivity {
                 super.onTorchModeChanged(cameraId, enabled);
             }
         }, null);
+
+        Log.i(LOGTAG, "Flashlight guard enabled");
     }
     public void disableFlashlightGuard(){
         cameraManager.registerTorchCallback(new CameraManager.TorchCallback() {
@@ -71,6 +73,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         }, null);
 
         cameraManager = null;
+        Log.i(LOGTAG, "Flashlight guard disabled");
     }
 }
 
