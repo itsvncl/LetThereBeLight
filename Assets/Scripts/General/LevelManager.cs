@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour {
         Debug.Log("Level loading");
         animator.SetTrigger("FadeOut");
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(currentLevel);
         animator.SetTrigger("FadeIn");
