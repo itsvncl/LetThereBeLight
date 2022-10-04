@@ -35,6 +35,16 @@ public class AndoridActivityManager : MonoBehaviour {
         activity.Call("disableFlashlightGuard");
     }
 
+    public void StartLightSensorGuard(float targetValue) {
+        NullCheck();
+        activity.Call("enableLightSensorGuard", targetValue);
+    }
+
+    public void StopLightSensorGuard() {
+        NullCheck();
+        activity.Call("disableLightSensorGuard");
+    }
+
     private void NullCheck() {
         if (activity == null) {
             throw new System.Exception("Activity is null!");
