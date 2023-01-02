@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level06 - Morse code.unity
     guid: 588ebf6af7f6bc34891ed0ed477c106f
   - enabled: 1
+    path: Assets/Scenes/Level07 - Orientation and proximity (Sleep).unity
+    guid: 79d3bb42276bc7a489686d7cc0338a09
+  - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:

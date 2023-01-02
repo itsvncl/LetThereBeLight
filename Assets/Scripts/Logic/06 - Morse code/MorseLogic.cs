@@ -38,10 +38,10 @@ public class MorseLogic : MonoBehaviour {
             if (touch.phase == TouchPhase.Ended) {
                 touchDuration = Time.time - timeTouchBegan;
                 
-                var wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                var touchPosition = new Vector2(wp.x, wp.y);
+                Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                Vector2 touchPosition = new Vector2(wp.x, wp.y);
 
-                if (retryCollider != Physics2D.OverlapPoint(touchPosition)) {
+                if (retryCollider == Physics2D.OverlapPoint(touchPosition)) {
                     Reset();
                     return;
                 }

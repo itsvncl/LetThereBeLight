@@ -18,7 +18,7 @@ import com.unity3d.player.UnityPlayer;
 //TODO: onPause remove event listener
 //TODO: onResume re add event listener
 public class CustomUnityActivity extends UnityPlayerActivity {
-    private static final String LOGTAG = "CustomUnityActivity";
+    private static final String LOGTAG = "LetThereBeLightActivity";
 
     private boolean isVolumeButtonLocked = false;
 
@@ -52,23 +52,47 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        cameraManager = (CameraManager) this.getSystemService(Context.CAMERA_SERVICE);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if(lightSensorEventListener != null)
+            sensorManager.unregisterListener(lightSensorEventListener);
+        if(flashCallback != null)
+            cameraManager.unregisterTorchCallback(flashCallback);
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if(lightSensorEventListener != null)
+            sensorManager.registerListener(lightSensorEventListener, lightSensor, 1000);
+        if(flashCallback != null)
+            cameraManager.registerTorchCallback(flashCallback, null);
+    }
+
     public void lockVolumeButton(){
         this.isVolumeButtonLocked = true;
         Log.i(LOGTAG, "Volume button locked");
     }
-
     public void unlockVolumeButton(){
         isVolumeButtonLocked = false;
         Log.i(LOGTAG, "Volume button unlocked");
     }
 
-    //TODO: If the flash is already on, then give them the win.
     public void enableFlashlightGuard(){
-        cameraManager = (CameraManager) this.getSystemService(Context.CAMERA_SERVICE);
+
         flashCallback = new CameraManager.TorchCallback() {
             @Override
             public void onTorchModeChanged(@NonNull String cameraId, boolean enabled) {
                 if(enabled){
+                    Log.i(LOGTAG, "Flash enabled");
                     UnityPlayer.UnitySendMessage("FlashlightGuard", "FlashOn", "");
                     super.onTorchModeChanged(cameraId, true);
                     disableFlashlightGuard();
@@ -84,12 +108,11 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     }
     public void disableFlashlightGuard(){
         cameraManager.unregisterTorchCallback(flashCallback);
-        cameraManager = null;
+        flashCallback = null;
         Log.i(LOGTAG, "Flashlight guard disabled");
     }
 
     public void enableLightSensorGuard(float targetValue){
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
 
         lightSensorEventListener = new SensorEventListener() {
@@ -97,6 +120,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
 
                 if(sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT){
+                    Log.i(LOGTAG, String.valueOf(sensorEvent.values[0]));
                     if(sensorEvent.values[0] >= targetValue){
                         UnityPlayer.UnitySendMessage("LightSensorGuard", "LightTargetReached", "");
                         disableLightSensorGuard();
@@ -113,8 +137,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     }
     public void disableLightSensorGuard(){
         sensorManager.unregisterListener(lightSensorEventListener);
-        sensorManager = null;
-
+        lightSensorEventListener = null;
         Log.i(LOGTAG, "Light sensor listener disabled");
     }
 }
