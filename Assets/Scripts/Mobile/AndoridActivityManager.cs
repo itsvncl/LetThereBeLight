@@ -45,6 +45,16 @@ public class AndoridActivityManager : MonoBehaviour {
         activity.Call("disableLightSensorGuard");
     }
 
+    public void StartProximitySensorGuard(float targetValue) {
+        NullCheck();
+        activity.Call("enableProximitySensorGuard", targetValue);
+    }
+
+    public void StopProximitySensorGuard() {
+        NullCheck();
+        activity.Call("disableProximitySensorGuard");
+    }
+
     private void NullCheck() {
         if (activity == null) {
             throw new System.Exception("Activity is null!");
