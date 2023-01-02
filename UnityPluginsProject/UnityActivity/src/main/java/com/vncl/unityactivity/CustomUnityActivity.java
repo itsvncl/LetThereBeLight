@@ -27,9 +27,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
 
     private SensorManager sensorManager;
     private Sensor lightSensor;
-    private Sensor proximitySensor;
     private SensorEventListener lightSensorEventListener;
-    private SensorEventListener proximitySensorEventListener;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -60,27 +58,21 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         cameraManager = (CameraManager) this.getSystemService(Context.CAMERA_SERVICE);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
-
     @Override
     public void onPause() {
         super.onPause();
 
         if(lightSensorEventListener != null)
             sensorManager.unregisterListener(lightSensorEventListener);
-        if(proximitySensorEventListener != null)
-            sensorManager.unregisterListener(proximitySensorEventListener);
         if(flashCallback != null)
             cameraManager.unregisterTorchCallback(flashCallback);
     }
-
     @Override
     public void onResume() {
         super.onResume();
 
         if(lightSensorEventListener != null)
             sensorManager.registerListener(lightSensorEventListener, lightSensor, 1000);
-        if(proximitySensorEventListener != null)
-            sensorManager.registerListener(proximitySensorEventListener, proximitySensor, 1000);
         if(flashCallback != null)
             cameraManager.registerTorchCallback(flashCallback, null);
     }
@@ -147,35 +139,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         sensorManager.unregisterListener(lightSensorEventListener);
         lightSensorEventListener = null;
         Log.i(LOGTAG, "Light sensor listener disabled");
-    }
-
-    public void enableProximitySensorGuard(float targetValue){
-        proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-
-        proximitySensorEventListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-
-                if(sensorEvent.sensor.getType() == Sensor.TYPE_PROXIMITY){
-                    Log.i(LOGTAG, String.valueOf(sensorEvent.values[0]));
-                    if(sensorEvent.values[0] <= targetValue){
-                        UnityPlayer.UnitySendMessage("ProximitySensorGuard", "ProximityTargetReached", "");
-                        disableProximitySensorGuard();
-                    }
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {}
-        };
-
-        sensorManager.registerListener(proximitySensorEventListener, proximitySensor, 1000);
-        Log.i(LOGTAG, "Light sensor listener enabled with target value: " + targetValue);
-    }
-    public void disableProximitySensorGuard(){
-        sensorManager.unregisterListener(proximitySensorEventListener);
-        proximitySensorEventListener = null;
-        Log.i(LOGTAG, "Proximity sensor listener disabled");
     }
 }
 
