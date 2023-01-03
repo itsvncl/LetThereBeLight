@@ -9,7 +9,6 @@ import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -25,9 +24,12 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     private CameraManager cameraManager;
     private CameraManager.TorchCallback flashCallback;
 
+    private ScreenshotDetector screenshotDetector;
+
     private SensorManager sensorManager;
     private Sensor lightSensor;
     private SensorEventListener lightSensorEventListener;
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -53,9 +55,9 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        cameraManager = (CameraManager) this.getSystemService(Context.CAMERA_SERVICE);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
     @Override
@@ -66,6 +68,8 @@ public class CustomUnityActivity extends UnityPlayerActivity {
             sensorManager.unregisterListener(lightSensorEventListener);
         if(flashCallback != null)
             cameraManager.unregisterTorchCallback(flashCallback);
+        if(screenshotDetector != null)
+            screenshotDetector.stop();
     }
     @Override
     public void onResume() {
@@ -75,6 +79,8 @@ public class CustomUnityActivity extends UnityPlayerActivity {
             sensorManager.registerListener(lightSensorEventListener, lightSensor, 1000);
         if(flashCallback != null)
             cameraManager.registerTorchCallback(flashCallback, null);
+        if(screenshotDetector != null)
+            screenshotDetector.start();
     }
 
     public void lockVolumeButton(){
@@ -139,6 +145,15 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         sensorManager.unregisterListener(lightSensorEventListener);
         lightSensorEventListener = null;
         Log.i(LOGTAG, "Light sensor listener disabled");
+    }
+
+    public void enableScreenshotDetector(){
+        screenshotDetector = new ScreenshotDetector(this);
+        screenshotDetector.start();
+    }
+    public void disableScreenshotDetector(){
+        screenshotDetector.stop();
+        screenshotDetector = null;
     }
 }
 

@@ -45,14 +45,13 @@ public class AndoridActivityManager : MonoBehaviour {
         activity.Call("disableLightSensorGuard");
     }
 
-    public void StartProximitySensorGuard(float targetValue) {
+    public void StartScreenshotDetector() {
         NullCheck();
-        activity.Call("enableProximitySensorGuard", targetValue);
+        activity.Call("enableScreenshotDetector");
     }
-
-    public void StopProximitySensorGuard() {
+    public void StopScreenshotDetector() {
         NullCheck();
-        activity.Call("disableProximitySensorGuard");
+        activity.Call("disableScreenshotDetector");
     }
 
     private void NullCheck() {
