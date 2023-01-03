@@ -53,10 +53,7 @@ public class ScreenshotDetector {
             cursor = ctx.getContentResolver().query(uri, projection, null, null, null);
             if (cursor != null && cursor.moveToFirst()) {
                 int displayNameColIndex = cursor.getColumnIndex(MediaStore.Images.Media.DISPLAY_NAME);
-                int dataColIndex = cursor.getColumnIndex(MediaStore.Images.Media.DATA);
-
                 final String fileName = cursor.getString(displayNameColIndex);
-                final String path = cursor.getString(dataColIndex);
 
                 if(fileName.toLowerCase().contains("screenshot")){
                     UnityPlayer.UnitySendMessage("ScreenshotGuard", "ScreenshotTaken", "");

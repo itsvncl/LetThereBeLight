@@ -126,7 +126,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
 
                 if(sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT){
-                    Log.i(LOGTAG, String.valueOf(sensorEvent.values[0]));
                     if(sensorEvent.values[0] >= targetValue){
                         UnityPlayer.UnitySendMessage("LightSensorGuard", "LightTargetReached", "");
                         disableLightSensorGuard();
