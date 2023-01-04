@@ -13,6 +13,9 @@ public class LightLogic : MonoBehaviour
     void Start() {
         AndoridActivityManager.Instance.LockVolumeButton();
     }
+    void OnDestroy() {
+        AndoridActivityManager.Instance.UnlockVolumeButton();
+    }
 
     void FixedUpdate() {
         if(alphaTarget > alpha) {

@@ -13,8 +13,14 @@ public class LevelManager : MonoBehaviour {
     [SerializeField] private float transitionTime = 1.5f;
 
     private void Awake() {
-        Instance = this;
-        DontDestroyOnLoad(this.gameObject);
+
+        if (Instance != null && Instance != this) {
+            Destroy(this);
+        }
+        else {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     IEnumerator Load() {
@@ -46,5 +52,17 @@ public class LevelManager : MonoBehaviour {
         StartCoroutine(Load());
     }
 
+    public void DebugNextLevel() {
+        if (currentLevel < maxLevel) {
+            currentLevel++;
+        }
+        SceneManager.LoadScene(currentLevel);
+    }
 
+    public void DebugPreviousLevel() {
+        if(currentLevel > 0) {
+            currentLevel--;
+        }
+        SceneManager.LoadScene(currentLevel);
+    }
 }

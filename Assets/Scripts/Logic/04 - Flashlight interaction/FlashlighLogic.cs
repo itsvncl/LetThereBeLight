@@ -9,6 +9,10 @@ public class FlashlighLogic : MonoBehaviour
         AndoridActivityManager.Instance.StartFlashlightGuard();
     }
 
+    void OnDestroy() {
+        AndoridActivityManager.Instance.StopFlashlightGuard();
+    }
+
     public void FlashOn(string s = "") {
         LevelManager.Instance.LevelComplete();
     }

@@ -8,6 +8,10 @@ public class ScreenshotLogic : MonoBehaviour
         AndoridActivityManager.Instance.StartScreenshotDetector();
     }
 
+    void OnDestroy() {
+        AndoridActivityManager.Instance.StopScreenshotDetector();
+    }
+
     void ScreenshotTaken(string s = "") {
         LevelManager.Instance.LevelComplete();
         AndoridActivityManager.Instance.StopScreenshotDetector();
