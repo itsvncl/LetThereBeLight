@@ -111,7 +111,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7203fe8252504504291b927b4105dd50, type: 3}
   - {fileID: 21300000, guid: 6fbeacc0d417368428e165beb4ed9e95, type: 3}
   - {fileID: 21300000, guid: 3da6bc14c772b884697aac3a1690edf9, type: 3}
-  movementSpeed: 0.5
+  movementSpeed: 0.6
+  destination: {x: 0, y: 0, z: 0}
   locationIndex: 0
 --- !u!61 &-6363954113299893240
 BoxCollider2D:
@@ -123,7 +124,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

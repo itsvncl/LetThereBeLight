@@ -1033,7 +1033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &990373960
 Transform:
   m_ObjectHideFlags: 0
@@ -2235,5 +2235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touchUtil: {fileID: 260018487}
   number: {fileID: 2829558602307450209, guid: 462405590c1c04f46ab806f69bb3d5de, type: 3}
-  lockTime: 0.3
+  lockTime: 0.15
+  winTier: 11
   Board: []

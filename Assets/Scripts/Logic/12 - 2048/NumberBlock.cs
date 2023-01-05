@@ -29,6 +29,7 @@ public class NumberBlock : MonoBehaviour {
             tier = 1;
         }
 
+        destination = transform.position;
         locationIndex = LocationToIndex();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -40,60 +41,68 @@ public class NumberBlock : MonoBehaviour {
         if (direction == Direction.Stationary) return;
 
         Vector3 newPos = transform.position;
-        Vector3 occupancyTest = newPos;
-        float scaleOffsetX = transform.localScale.x / 2;
-        float scaleOffsetY = transform.localScale.x / 2;
 
         switch (direction) {
             case Direction.Up:
                 newPos.y += movementSpeed;
-                occupancyTest.y += movementSpeed + scaleOffsetY;
+
+                if(newPos.y >= destination.y) {
+                    Settle(destination);
+                    return;
+                }
                 break;
             case Direction.Down:
                 newPos.y -= movementSpeed;
-                occupancyTest.y -= movementSpeed + scaleOffsetY;
+
+                if (newPos.y <= destination.y) {
+                    Settle(destination);
+                    return;
+                }
                 break;
             case Direction.Right:
                 newPos.x += movementSpeed;
-                occupancyTest.x += movementSpeed + scaleOffsetX;
+
+                if (newPos.x >= destination.x) {
+                    Settle(destination);
+                    return;
+                }
                 break;
             case Direction.Left:
                 newPos.x -= movementSpeed;
-                occupancyTest.x -= movementSpeed + scaleOffsetX;
+
+                if (newPos.x <= destination.x) {
+                    Settle(destination);
+                    return;
+                }
                 break;
+
         }
 
-        GameObject occupant = GetOccupant(occupancyTest);
-
-        if (occupant != null) {
-            HandleCollision(occupant);
-        }
-        else {
-            transform.position = newPos;
-        }
-
+        transform.position = newPos;
     }
 
     //Ez meg se hívódik
-    private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("Ilyen");
-        HandleCollision(collision.gameObject);
+    void OnTriggerStay2D(Collider2D collider) {
+        //Debug.Log("Ilyen");
+        HandleCollision(collider.gameObject);
     }
 
     void HandleCollision(GameObject collision) {
         NumberBlock other = collision.GetComponent<NumberBlock>();
         //Meaning that the other is not a number
         if(other == null) {
-            Settle();
+            //Settle(destination);
             return;
         }
 
         if (other.tier == this.tier && !merged) {
-            Destroy(other.gameObject);
-            Merge();
-        }
-        else {
-            Settle();
+            if (other.destination.Equals(other.transform.position)) {
+                Destroy(other.gameObject);
+                Merge();
+            }else if (destination.Equals(transform.position)) {
+                Destroy(this.gameObject);
+                other.Merge();
+            }
         }
     }
 
@@ -104,28 +113,7 @@ public class NumberBlock : MonoBehaviour {
         merged = true;
     }
 
-    void Settle() {
-        //Helyre kell rakni
-        float[] positions = NumberGameLogic.validPos;
-        Vector3 newPos = transform.position;
-
-        if(direction == Direction.Left || direction == Direction.Right) {
-            foreach (float pos in positions) {
-                if (Mathf.Abs(pos - newPos.x) <= 0.5) {
-                    newPos.x = pos;
-                    break;
-                }
-            }
-        }
-        else {
-            foreach (float pos in positions) {
-                if (Mathf.Abs(pos - newPos.y) <= 0.5) {
-                    newPos.y = pos;
-                    break;
-                }
-            }
-        }
-
+    void Settle(Vector3 newPos) {
         transform.position = newPos;
 
         direction = Direction.Stationary;
@@ -222,6 +210,9 @@ public class NumberBlock : MonoBehaviour {
                 previousNumber = null;
                 continue;
             }
+            else {
+                previousNumber = current;
+            }
         }
 
         if(previousNumber != null && previousNumber.tier == tier) {
@@ -241,6 +232,74 @@ public class NumberBlock : MonoBehaviour {
         if (direction == Direction.Left) {
             destination = new Vector3(transform.position.x - (step * 1f), transform.position.y, transform.position.z);
         }
+
+    }
+    public bool HasDestionation(TouchUtil.DragDirection direction) {
+        Vector3 currentPos = transform.position;
+        List<GameObject> occupancyList = new List<GameObject>();
+        int step = 0;
+
+        if (direction == TouchUtil.DragDirection.Up) {
+            while (currentPos.y < 1.5f) {
+                currentPos.y += 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+        if (direction == TouchUtil.DragDirection.Down) {
+            while (currentPos.y > -1.5f) {
+                currentPos.y -= 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+        if (direction == TouchUtil.DragDirection.Right) {
+            while (currentPos.x < 1.5f) {
+                currentPos.x += 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+        if (direction == TouchUtil.DragDirection.Left) {
+            while (currentPos.x > -1.5f) {
+                currentPos.x -= 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+
+        //Calculate with the list
+        if (occupancyList.Count == 0) {
+            destination = transform.position;
+        }
+
+        occupancyList.Reverse();
+        NumberBlock previousNumber = null;
+
+        foreach (var occupant in occupancyList) {
+            if (occupant == null) {
+                step++;
+                continue;
+            }
+
+            NumberBlock current = occupant?.GetComponent<NumberBlock>();
+
+            if (previousNumber == null) {
+                previousNumber = current;
+                continue;
+            }
+
+            if (previousNumber.tier == current.tier) {
+                step++;
+                previousNumber = null;
+                continue;
+            }
+            else {
+                previousNumber = current;
+            }
+        }
+
+        if (previousNumber != null && previousNumber.tier == tier) {
+            step++;
+        }
+
+        return step > 0;
     }
 
     public int LocationIndex {
@@ -253,10 +312,10 @@ public class NumberBlock : MonoBehaviour {
         int y = 0;
 
         for(int i = 0; i < positions.Length; i++) {
-            if(positions[i] == transform.position.x) {
+            if(positions[i] == destination.x) {
                 x = i;
             }
-            if (positions[i] == transform.position.y) {
+            if (positions[i] == destination.y) {
                 y = i;
             }
         }
@@ -264,4 +323,7 @@ public class NumberBlock : MonoBehaviour {
         return (12 - y * 4) + x;
     }
 
+    public int Tier {
+        get { return tier; }
+    }
 }
