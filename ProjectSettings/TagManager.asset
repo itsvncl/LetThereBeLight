@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Vertical
   - Horizontal
+  - Border
   layers:
   - Default
   - TransparentFX
