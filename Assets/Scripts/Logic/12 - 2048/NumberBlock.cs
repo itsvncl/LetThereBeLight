@@ -10,11 +10,13 @@ public class NumberBlock : MonoBehaviour {
 
     private int tier = 0;
     SpriteRenderer spriteRenderer;
+    private bool merged = false;
 
     [SerializeField] private Sprite[] numberSprites;
     [SerializeField] private float movementSpeed;
 
     Direction direction = Direction.Stationary;
+    public Vector3 destination;
     Rigidbody2D rb;
     public int locationIndex;
 
@@ -61,8 +63,10 @@ public class NumberBlock : MonoBehaviour {
                 break;
         }
 
-        if (IsOccupied(occupancyTest)) {
-            Settle();
+        GameObject occupant = GetOccupant(occupancyTest);
+
+        if (occupant != null) {
+            HandleCollision(occupant);
         }
         else {
             transform.position = newPos;
@@ -70,16 +74,34 @@ public class NumberBlock : MonoBehaviour {
 
     }
 
+    //Ez meg se hívódik
     private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log(collision.gameObject.name);
+        Debug.Log("Ilyen");
+        HandleCollision(collision.gameObject);
+    }
 
+    void HandleCollision(GameObject collision) {
+        NumberBlock other = collision.GetComponent<NumberBlock>();
+        //Meaning that the other is not a number
+        if(other == null) {
+            Settle();
+            return;
+        }
 
-        Settle();
+        if (other.tier == this.tier && !merged) {
+            Destroy(other.gameObject);
+            Merge();
+        }
+        else {
+            Settle();
+        }
     }
 
     void Merge() {
+        if (merged) return;
         tier++;
         spriteRenderer.sprite = numberSprites[tier];
+        merged = true;
     }
 
     void Settle() {
@@ -89,7 +111,7 @@ public class NumberBlock : MonoBehaviour {
 
         if(direction == Direction.Left || direction == Direction.Right) {
             foreach (float pos in positions) {
-                if (Mathf.Abs(pos - newPos.x) < 0.5) {
+                if (Mathf.Abs(pos - newPos.x) <= 0.5) {
                     newPos.x = pos;
                     break;
                 }
@@ -97,7 +119,7 @@ public class NumberBlock : MonoBehaviour {
         }
         else {
             foreach (float pos in positions) {
-                if (Mathf.Abs(pos - newPos.y) < 0.5) {
+                if (Mathf.Abs(pos - newPos.y) <= 0.5) {
                     newPos.y = pos;
                     break;
                 }
@@ -111,15 +133,17 @@ public class NumberBlock : MonoBehaviour {
         locationIndex = LocationToIndex();
     }
 
-    bool IsOccupied(Vector3 loc) {
+    //Returns the object that is occuping the point. Returns null if this!
+    GameObject GetOccupant(Vector3 loc) {
         Collider2D overlap = Physics2D.OverlapPoint(loc);
 
-        if (overlap == GetComponent<Collider2D>()) return false;
+        if (overlap == GetComponent<Collider2D>()) return null;
 
-        return overlap != null;
+        return overlap?.gameObject;
     }
 
     public void MoveInDirection(TouchUtil.DragDirection dir) {
+        merged = false;
         switch (dir) {
             case TouchUtil.DragDirection.Up:
                 direction = Direction.Up;
@@ -137,6 +161,85 @@ public class NumberBlock : MonoBehaviour {
                 direction = Direction.Left;
                 rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                 break;
+        }
+
+        CalculateDestination();
+    }
+
+    private void CalculateDestination() {
+        Vector3 currentPos = transform.position;
+        List <GameObject> occupancyList = new List<GameObject>();
+        int step = 0;
+
+        if(direction == Direction.Up) {
+            while(currentPos.y < 1.5f) {
+                currentPos.y += 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+        if (direction == Direction.Down) {
+            while (currentPos.y > -1.5f) {
+                currentPos.y -= 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+        if (direction == Direction.Right) {
+            while (currentPos.x < 1.5f) {
+                currentPos.x += 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+        if (direction == Direction.Left) {
+            while (currentPos.x > -1.5f) {
+                currentPos.x -= 1f;
+                occupancyList.Add(GetOccupant(currentPos));
+            }
+        }
+
+        //Calculate with the list
+        if(occupancyList.Count == 0) {
+            destination = transform.position;
+        }
+        
+        occupancyList.Reverse();
+        NumberBlock previousNumber = null;
+
+        foreach(var occupant in occupancyList) {
+            if(occupant == null) {
+                step++;
+                continue;
+            }
+
+            NumberBlock current = occupant?.GetComponent<NumberBlock>();
+
+            if (previousNumber == null) {
+                previousNumber = current;
+                continue;
+            }
+
+            if (previousNumber.tier == current.tier) {
+                step++;
+                previousNumber = null;
+                continue;
+            }
+        }
+
+        if(previousNumber != null && previousNumber.tier == tier) {
+            step++;
+        }
+
+        //Assigning the destination
+        if (direction == Direction.Up) {
+            destination = new Vector3(transform.position.x, transform.position.y + (step * 1f),transform.position.z);
+        }
+        if (direction == Direction.Down) {
+            destination = new Vector3(transform.position.x, transform.position.y - (step * 1f), transform.position.z);
+        }
+        if (direction == Direction.Right) {
+            destination = new Vector3(transform.position.x + (step * 1f), transform.position.y, transform.position.z);
+        }
+        if (direction == Direction.Left) {
+            destination = new Vector3(transform.position.x - (step * 1f), transform.position.y, transform.position.z);
         }
     }
 

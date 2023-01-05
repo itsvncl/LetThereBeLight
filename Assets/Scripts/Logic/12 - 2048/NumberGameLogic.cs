@@ -36,7 +36,6 @@ public class NumberGameLogic : MonoBehaviour {
     }
 
     private Vector3 indexToPos(int index) {
-        Debug.Log(index + "  " + index % 4 + "  " + (3 - index / 4));
 
         Vector3 pos = new Vector3(validPos[index%4], validPos[3-index/4], -1);
 
@@ -61,11 +60,15 @@ public class NumberGameLogic : MonoBehaviour {
 
         return freePos;
     }
-
+    
+    //Depending on the direction, the objects start 
     void MoveNumbers() {
-        foreach(var number in Board){
-            if(number != null) {
-                number.gameObject.GetComponent<NumberBlock>().MoveInDirection(touchUtil.SwipeDirection);
+
+        if (true) {
+            foreach (var number in Board) {
+                if (number != null) {
+                    number.gameObject.GetComponent<NumberBlock>().MoveInDirection(touchUtil.SwipeDirection);
+                }
             }
         }
     }
@@ -81,7 +84,6 @@ public class NumberGameLogic : MonoBehaviour {
             if (number == null) continue;
 
             int index = number.GetComponent<NumberBlock>().LocationIndex;
-            Debug.Log(index);
             newBoard[index] = number;
         }
 
