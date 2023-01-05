@@ -15,7 +15,7 @@ public class NumberBlock : MonoBehaviour {
     [SerializeField] private Sprite[] numberSprites;
     [SerializeField] private float movementSpeed;
 
-    Direction direction = Direction.Stationary;
+    private Direction direction = Direction.Stationary;
     public Vector3 destination;
     Rigidbody2D rb;
     public int locationIndex;
@@ -96,10 +96,10 @@ public class NumberBlock : MonoBehaviour {
         }
 
         if (other.tier == this.tier && !merged) {
-            if (other.destination.Equals(other.transform.position)) {
+            if (other.direction == Direction.Stationary) {
                 Destroy(other.gameObject);
                 Merge();
-            }else if (destination.Equals(transform.position)) {
+            }else if (direction == Direction.Stationary) {
                 Destroy(this.gameObject);
                 other.Merge();
             }
@@ -326,4 +326,9 @@ public class NumberBlock : MonoBehaviour {
     public int Tier {
         get { return tier; }
     }
+
+    public Direction Dir { 
+        get { return direction; }
+    }
+
 }

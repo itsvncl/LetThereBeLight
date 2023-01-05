@@ -7,6 +7,7 @@ public class TouchUtil : MonoBehaviour {
     private DragDirection _dragDirection;
     private Vector3 _beginPosition;
     private Vector3 _endPosition;
+    private Vector3 _worldPosition;
     private TouchState _state;
     private float _swipeDistance;
     private bool _touchCompleted;
@@ -26,6 +27,10 @@ public class TouchUtil : MonoBehaviour {
         return col == Physics2D.OverlapPoint(touchPosition);
     }
 
+    public bool IsTouching(Collider2D col) {
+        return col == Physics2D.OverlapPoint(_worldPosition);
+    }
+
     public static DragDirection GetDragDirection(Vector2 directionVector) {
 
         if (Mathf.Abs(directionVector.x) > Mathf.Abs(directionVector.y)) {
@@ -40,8 +45,8 @@ public class TouchUtil : MonoBehaviour {
     void Update() {
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
-            Vector3 touchPos = Camera.main.ScreenToWorldPoint(touch.position); //Transforming the touch coordinates to unit coordinates
-            touchPos.z = transform.position.z;
+            _worldPosition = Camera.main.ScreenToWorldPoint(touch.position); //Transforming the touch coordinates to unit coordinates
+            _worldPosition.z = transform.position.z;
 
             if (touch.phase == TouchPhase.Began) {
                 _state = TouchState.Began;
@@ -77,5 +82,9 @@ public class TouchUtil : MonoBehaviour {
 
     public float SwipeDistance { 
         get { return _swipeDistance; }
+    }
+
+    public Vector3 WorldPosition {
+        get { return _worldPosition; }
     }
 }

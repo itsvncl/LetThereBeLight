@@ -8,6 +8,7 @@ public class NumberGameLogic : MonoBehaviour {
     [SerializeField] private GameObject number;
     [SerializeField] private float lockTime;
     [SerializeField] private int winTier;
+    [SerializeField] private Collider2D retryButton;
 
     public List<GameObject> Board = new List<GameObject>(16);
 
@@ -30,10 +31,16 @@ public class NumberGameLogic : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        bool touchCompleted = touchUtil.TouchCompleted;
         //Win / lose conditions
+        //Retry button
+        if (touchCompleted && !boardLocked && touchUtil.IsTouching(retryButton) && touchUtil.SwipeDistance < 20) {
+            Reset();
 
+            return;
+        }
         //Play
-        if (touchUtil.TouchCompleted && !boardLocked && touchUtil.SwipeDistance > 70) {
+        if (touchCompleted && !boardLocked && touchUtil.SwipeDistance > 70) {
             if (!IsValidMove()) return;
 
             //Move numbers
@@ -56,6 +63,26 @@ public class NumberGameLogic : MonoBehaviour {
         foreach (var go in Board) {
             if (go == null) return false;
         }
+
+
+        foreach (var go in Board) {
+            NumberBlock num = go.transform.GetComponent<NumberBlock>();
+            if (num.HasDestionation(TouchUtil.DragDirection.Up)) {
+                return false;
+            }
+            if (num.HasDestionation(TouchUtil.DragDirection.Down)) {
+                return false;
+            }
+            if (num.HasDestionation(TouchUtil.DragDirection.Left)) {
+                return false;
+            }
+            if (num.HasDestionation(TouchUtil.DragDirection.Right)) {
+                return false;
+            }
+        }
+
+
+        Debug.Log("Lose");
 
         return true;
     }
@@ -98,6 +125,7 @@ public class NumberGameLogic : MonoBehaviour {
         List<int> freePos = FreePositions();
 
         int posIndex = freePos[Random.Range(0, freePos.Count)];
+
         Board[posIndex] = Instantiate(number, indexToPos(posIndex), Quaternion.identity);
     }
 
@@ -142,12 +170,30 @@ public class NumberGameLogic : MonoBehaviour {
         Board = newBoard;
     }
 
+    private bool IsMoving() {
+        foreach (var number in Board) {
+            if (number != null) {
+                if(number.gameObject.GetComponent<NumberBlock>().Dir != NumberBlock.Direction.Stationary) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     IEnumerator PlayTurn(float time) {
         boardLocked = true;
 
         yield return new WaitForSeconds(time);
+
+        while (IsMoving()) {
+            Debug.Log("Was moving");
+            yield return new WaitForSeconds(0.05f);
+        }
+
         SyncPositions();
         CreateNewNumber();
+
 
         boardLocked = false;
 
