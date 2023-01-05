@@ -7,6 +7,8 @@ public class NumberGameLogic : MonoBehaviour {
     [SerializeField] private TouchUtil touchUtil;
     [SerializeField] private GameObject number;
     [SerializeField] private float lockTime;
+    [SerializeField] private int winTier;
+    [SerializeField] private Collider2D retryButton;
 
     public List<GameObject> Board = new List<GameObject>(16);
 
@@ -14,9 +16,10 @@ public class NumberGameLogic : MonoBehaviour {
     private bool boardLocked = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        for(int i = 0; i < 16; i++) {
+    void Start() {
+        boardLocked = false;
+
+        for (int i = 0; i < 16; i++) {
             Board.Add(null);
         }
 
@@ -26,35 +29,111 @@ public class NumberGameLogic : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (touchUtil.TouchCompleted && !boardLocked && touchUtil.SwipeDistance > 70) {
+    void Update() {
+
+        bool touchCompleted = touchUtil.TouchCompleted;
+        //Win / lose conditions
+        //Retry button
+        if (touchCompleted && !boardLocked && touchUtil.IsTouching(retryButton) && touchUtil.SwipeDistance < 20) {
+            Reset();
+
+            return;
+        }
+        //Play
+        if (touchCompleted && !boardLocked && touchUtil.SwipeDistance > 70) {
+            if (!IsValidMove()) return;
+
             //Move numbers
             MoveNumbers();
             StartCoroutine(PlayTurn(lockTime));
         }
     }
 
-    private Vector3 indexToPos(int index) {
-        Debug.Log(index + "  " + index % 4 + "  " + (3 - index / 4));
+    private bool IsWin() {
 
-        Vector3 pos = new Vector3(validPos[index%4], validPos[3-index/4], -1);
+        foreach (var go in Board) {
+            NumberBlock num = go?.GetComponent<NumberBlock>();
+            if (num == null) continue;
+            if (num.Tier == winTier) return true;
+        }
+        return false;
+    }
+
+    private bool IsLose() {
+        foreach (var go in Board) {
+            if (go == null) return false;
+        }
+
+
+        foreach (var go in Board) {
+            NumberBlock num = go.transform.GetComponent<NumberBlock>();
+            if (num.HasDestionation(TouchUtil.DragDirection.Up)) {
+                return false;
+            }
+            if (num.HasDestionation(TouchUtil.DragDirection.Down)) {
+                return false;
+            }
+            if (num.HasDestionation(TouchUtil.DragDirection.Left)) {
+                return false;
+            }
+            if (num.HasDestionation(TouchUtil.DragDirection.Right)) {
+                return false;
+            }
+        }
+
+
+        Debug.Log("Lose");
+
+        return true;
+    }
+
+    private void OnWin() {
+        Debug.Log("Game won");
+
+        boardLocked = true;
+        LevelManager.Instance.LevelComplete();
+    }
+
+    private void Reset() {
+        foreach (var go in Board) {
+            Destroy(go);
+        }
+
+        Board.Clear();
+
+        Start();
+    }
+
+    private Vector3 indexToPos(int index) {
+        Vector3 pos = new Vector3(validPos[index % 4], validPos[3 - index / 4], -1);
 
         return pos;
+    }
+
+    private bool IsValidMove() {
+
+        foreach (var go in Board) {
+            NumberBlock num = go?.GetComponent<NumberBlock>();
+            if (num == null) continue;
+            if (num.HasDestionation(touchUtil.SwipeDirection)) return true;
+        }
+
+        return false;
     }
 
     private void CreateNewNumber() {
         List<int> freePos = FreePositions();
 
         int posIndex = freePos[Random.Range(0, freePos.Count)];
+
         Board[posIndex] = Instantiate(number, indexToPos(posIndex), Quaternion.identity);
     }
 
     private List<int> FreePositions() {
         List<int> freePos = new List<int>();
 
-        for(int i = 0; i < 16; i++) {
-            if(Board[i] == null) {
+        for (int i = 0; i < 16; i++) {
+            if (Board[i] == null) {
                 freePos.Add(i);
             }
         }
@@ -62,10 +141,14 @@ public class NumberGameLogic : MonoBehaviour {
         return freePos;
     }
 
+    //Depending on the direction, the objects start 
     void MoveNumbers() {
-        foreach(var number in Board){
-            if(number != null) {
-                number.gameObject.GetComponent<NumberBlock>().MoveInDirection(touchUtil.SwipeDirection);
+
+        if (true) {
+            foreach (var number in Board) {
+                if (number != null) {
+                    number.gameObject.GetComponent<NumberBlock>().MoveInDirection(touchUtil.SwipeDirection);
+                }
             }
         }
     }
@@ -77,15 +160,25 @@ public class NumberGameLogic : MonoBehaviour {
             newBoard.Add(null);
         }
 
-        foreach(var number in Board) {
+        foreach (var number in Board) {
             if (number == null) continue;
 
             int index = number.GetComponent<NumberBlock>().LocationIndex;
-            Debug.Log(index);
             newBoard[index] = number;
         }
 
         Board = newBoard;
+    }
+
+    private bool IsMoving() {
+        foreach (var number in Board) {
+            if (number != null) {
+                if(number.gameObject.GetComponent<NumberBlock>().Dir != NumberBlock.Direction.Stationary) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     IEnumerator PlayTurn(float time) {
@@ -93,8 +186,19 @@ public class NumberGameLogic : MonoBehaviour {
 
         yield return new WaitForSeconds(time);
 
+        while (IsMoving()) {
+            Debug.Log("Was moving");
+            yield return new WaitForSeconds(0.05f);
+        }
+
         SyncPositions();
         CreateNewNumber();
+
+
         boardLocked = false;
+
+        if (IsWin()) {
+            OnWin();
+        }
     }
 }
