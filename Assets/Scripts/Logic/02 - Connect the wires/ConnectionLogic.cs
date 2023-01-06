@@ -29,6 +29,10 @@ public class ConnectionLogic : MonoBehaviour {
     }
 
     void Update() {
+        if (touched) {
+            UpdateTempWireTransformation();
+        }
+
         if (Input.touchCount > 0) {
             
             Touch touch = Input.GetTouch(0); //Getting only the first touch
@@ -49,6 +53,7 @@ public class ConnectionLogic : MonoBehaviour {
                 tempWire.SetActive(false);
                 
                 if (target != Physics2D.OverlapPoint(touchPos)) {
+                    touched = false;
                     return;
                 }
 
@@ -62,12 +67,6 @@ public class ConnectionLogic : MonoBehaviour {
 
                 counter.ConnectWire();
             }
-        }
-    }
-
-    private void FixedUpdate() {
-        if (touched) {
-            UpdateTempWireTransformation();
         }
     }
 

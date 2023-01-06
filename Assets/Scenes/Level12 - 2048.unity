@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 12. 2048
+  m_text: 12. 1024
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   touchUtil: {fileID: 260018487}
   number: {fileID: 2829558602307450209, guid: 462405590c1c04f46ab806f69bb3d5de, type: 3}
   lockTime: 0.2
-  winTier: 10
+  winTier: 9
   retryButton: {fileID: 2141752950}
   playArea: {fileID: 1603387107}
   Board: []

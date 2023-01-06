@@ -33,7 +33,7 @@ public class NumberGameLogic : MonoBehaviour {
     void Update() {
 
         bool touchCompleted = touchUtil.TouchCompleted;
-        //Win / lose conditions
+
         //Retry button
         if (touchCompleted && !boardLocked && touchUtil.IsTouching(retryButton) && touchUtil.SwipeDistance < 20) {
             Reset();
@@ -58,34 +58,6 @@ public class NumberGameLogic : MonoBehaviour {
             if (num.Tier == winTier) return true;
         }
         return false;
-    }
-
-    private bool IsLose() {
-        foreach (var go in Board) {
-            if (go == null) return false;
-        }
-
-
-        foreach (var go in Board) {
-            NumberBlock num = go.transform.GetComponent<NumberBlock>();
-            if (num.HasDestionation(TouchUtil.DragDirection.Up)) {
-                return false;
-            }
-            if (num.HasDestionation(TouchUtil.DragDirection.Down)) {
-                return false;
-            }
-            if (num.HasDestionation(TouchUtil.DragDirection.Left)) {
-                return false;
-            }
-            if (num.HasDestionation(TouchUtil.DragDirection.Right)) {
-                return false;
-            }
-        }
-
-
-        Debug.Log("Lose");
-
-        return true;
     }
 
     private void OnWin() {

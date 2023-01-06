@@ -9,6 +9,11 @@ public class AndoridActivityManager : MonoBehaviour {
     private AndroidJavaObject activity;
 
     void Awake() {
+        if (Instance != null && Instance != this) {
+            Destroy(this);
+            return;
+        }
+
         playerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = playerClass.GetStatic<AndroidJavaObject>("currentActivity");
 
