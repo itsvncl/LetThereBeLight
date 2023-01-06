@@ -123,11 +123,18 @@ public class NumberBlock : MonoBehaviour {
 
     //Returns the object that is occuping the point. Returns null if this!
     GameObject GetOccupant(Vector3 loc) {
-        Collider2D overlap = Physics2D.OverlapPoint(loc);
+        List<Collider2D> colliders = new ();
+        ContactFilter2D filter = new ();
+        filter.NoFilter();
 
-        if (overlap == GetComponent<Collider2D>()) return null;
+        Physics2D.OverlapPoint(loc, filter, colliders);
 
-        return overlap?.gameObject;
+        GameObject number = null;
+        foreach(var collider in colliders) {
+            if (collider.gameObject.CompareTag("Player")) number = collider.gameObject;
+        }
+
+        return number == this ? null : number;
     }
 
     public void MoveInDirection(TouchUtil.DragDirection dir) {
@@ -187,6 +194,7 @@ public class NumberBlock : MonoBehaviour {
         //Calculate with the list
         if(occupancyList.Count == 0) {
             destination = transform.position;
+            return;
         }
         
         occupancyList.Reverse();
@@ -237,7 +245,6 @@ public class NumberBlock : MonoBehaviour {
     public bool HasDestionation(TouchUtil.DragDirection direction) {
         Vector3 currentPos = transform.position;
         List<GameObject> occupancyList = new List<GameObject>();
-        int step = 0;
 
         if (direction == TouchUtil.DragDirection.Up) {
             while (currentPos.y < 1.5f) {
@@ -267,6 +274,7 @@ public class NumberBlock : MonoBehaviour {
         //Calculate with the list
         if (occupancyList.Count == 0) {
             destination = transform.position;
+            return false;
         }
 
         occupancyList.Reverse();
@@ -274,8 +282,7 @@ public class NumberBlock : MonoBehaviour {
 
         foreach (var occupant in occupancyList) {
             if (occupant == null) {
-                step++;
-                continue;
+                return true;
             }
 
             NumberBlock current = occupant?.GetComponent<NumberBlock>();
@@ -286,9 +293,7 @@ public class NumberBlock : MonoBehaviour {
             }
 
             if (previousNumber.tier == current.tier) {
-                step++;
-                previousNumber = null;
-                continue;
+                return true;
             }
             else {
                 previousNumber = current;
@@ -296,10 +301,10 @@ public class NumberBlock : MonoBehaviour {
         }
 
         if (previousNumber != null && previousNumber.tier == tier) {
-            step++;
+            return true;
         }
 
-        return step > 0;
+        return false;
     }
 
     public int LocationIndex {

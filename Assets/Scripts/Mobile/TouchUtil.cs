@@ -8,6 +8,8 @@ public class TouchUtil : MonoBehaviour {
     private Vector3 _beginPosition;
     private Vector3 _endPosition;
     private Vector3 _worldPosition;
+    private Vector3 _endWorldPosition;
+    private Vector3 _beginWorldPosition;
     private TouchState _state;
     private float _swipeDistance;
     private bool _touchCompleted;
@@ -31,6 +33,14 @@ public class TouchUtil : MonoBehaviour {
         return col == Physics2D.OverlapPoint(_worldPosition);
     }
 
+    public bool BeaganTouching(Collider2D col) {
+        return col == Physics2D.OverlapPoint(_beginWorldPosition);
+    }
+
+    public bool EndedTouching(Collider2D col) {
+        return col == Physics2D.OverlapPoint(_endWorldPosition);
+    }
+
     public static DragDirection GetDragDirection(Vector2 directionVector) {
 
         if (Mathf.Abs(directionVector.x) > Mathf.Abs(directionVector.y)) {
@@ -51,11 +61,17 @@ public class TouchUtil : MonoBehaviour {
             if (touch.phase == TouchPhase.Began) {
                 _state = TouchState.Began;
                 _beginPosition = touch.position;
+                _beginWorldPosition = Camera.main.ScreenToWorldPoint(_beginPosition);
+                _beginWorldPosition.z = transform.position.z;
+                
             }
 
             if (touch.phase == TouchPhase.Ended) {
                 _state = TouchState.Ended;
                 _endPosition = touch.position;
+                _endWorldPosition = Camera.main.ScreenToWorldPoint(_endPosition);
+                _endWorldPosition.z = transform.position.z;
+
                 _touchCompleted = true;
                 _swipeDistance = Vector2.Distance(_beginPosition, _endPosition);
 
@@ -84,7 +100,14 @@ public class TouchUtil : MonoBehaviour {
         get { return _swipeDistance; }
     }
 
-    public Vector3 WorldPosition {
+    public Vector3 CurrentPosition {
         get { return _worldPosition; }
+    }
+    public Vector3 BeginPosition {
+        get { return _beginWorldPosition; }
+    }
+    
+    public Vector3 EndPosition {
+        get { return _endPosition; }
     }
 }

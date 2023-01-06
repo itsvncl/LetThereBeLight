@@ -9,6 +9,7 @@ public class NumberGameLogic : MonoBehaviour {
     [SerializeField] private float lockTime;
     [SerializeField] private int winTier;
     [SerializeField] private Collider2D retryButton;
+    [SerializeField] private Collider2D playArea;
 
     public List<GameObject> Board = new List<GameObject>(16);
 
@@ -40,7 +41,7 @@ public class NumberGameLogic : MonoBehaviour {
             return;
         }
         //Play
-        if (touchCompleted && !boardLocked && touchUtil.SwipeDistance > 70) {
+        if (touchCompleted && !boardLocked && touchUtil.BeaganTouching(playArea) && touchUtil.SwipeDistance > 70) {
             if (!IsValidMove()) return;
 
             //Move numbers
