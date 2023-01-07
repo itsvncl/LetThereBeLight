@@ -59,9 +59,6 @@ public class FlowBoard : MonoBehaviour {
         }
 
         FlowGame.Instance.Cells = cells;
-        foreach(FlowCell cell in cells) {
-           cell.GetSiblings();
-        }
     }
 
     void AddOrigins() {

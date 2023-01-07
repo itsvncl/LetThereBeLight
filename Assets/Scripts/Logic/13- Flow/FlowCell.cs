@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlowCell : MonoBehaviour {
-    [SerializeField] private FlowCell LeftSibling;
-    [SerializeField] private FlowCell RightSibling;
-    [SerializeField] private FlowCell TopSibling;
-    [SerializeField] private FlowCell BottomSibling;
-
     private SpriteRenderer originRenderer;
     private SpriteRenderer connectRenderer;
+    private SpriteRenderer backgroundRenderer;
 
     private FlowEntity origin;
     private FlowEntity connect;
@@ -25,6 +21,10 @@ public class FlowCell : MonoBehaviour {
             this.origin = value;
             originRenderer.sprite = GetSprite(origin.Type);
             originRenderer.color = origin.Color;
+
+
+            backgroundRenderer.enabled = true;
+            backgroundRenderer.color = new Color(origin.Color.r, origin.Color.g, origin.Color.b, 0.3f);
         }
     }
     public FlowEntity Connect {
@@ -34,6 +34,9 @@ public class FlowCell : MonoBehaviour {
 
             if (value == null) {
                 connectRenderer.sprite = null;
+                
+                if(origin == null)
+                    backgroundRenderer.enabled = false;
                 return;
             }
 
@@ -41,130 +44,108 @@ public class FlowCell : MonoBehaviour {
             connectRenderer.color = connect.Color;
             //The radius is 30, so an extra 30 is necessary for smooth connection
             connectRenderer.size = new Vector2(1.3f, 1.0f);
+
+            backgroundRenderer.enabled = true;
+            backgroundRenderer.color = new Color(connect.Color.r, connect.Color.g, connect.Color.b, 0.3f);
         }
     }
 
     void Awake() {
         originRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         connectRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        backgroundRenderer = transform.GetChild(2).GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if (FlowGame.Instance.Lock) return;
+
         FlowGame.Instance.CurrentCell = this;
+        FlowCell previousCell = FlowGame.Instance.PreviousCell;
 
-        if (connect != null) {
-            FlowGame.Instance.CanDraw = true;
-            FlowGame.Instance.SetCursorColor(connect);
-            //CleanRoute(this);
-        }
+        //Initial touch
+        if(previousCell == null) {
+            if (IsEmpty()) {
+                return;
+            }
 
-        if (origin != null) {
-            FlowGame.Instance.CanDraw = true;
-            FlowGame.Instance.SetCursorColor(origin);
-            //CleanRoute(this);
-        }
-
-        if (FlowGame.Instance.PreviousCell == null) {
             FlowGame.Instance.PreviousCell = this;
+            FlowGame.Instance.CanDraw = true;
+            FlowGame.Instance.CleanRoute(this);
+
+            if(!FlowGame.Instance.InRoute(this)){
+                FlowGame.Instance.AddToRoute(this);
+            }
+
+            FlowGame.Instance.SetCursorColor(GetColorID());
+
             return;
         }
 
-        if (FlowGame.Instance.CanDraw) {
-            FlowCell previousCell = FlowGame.Instance.PreviousCell;
+        if (!FlowGame.Instance.CanDraw || OutOfBounds(previousCell)) return;
 
-            if(Connect != null || Origin != null) //CleanRoute(this);
+        //Swipe - Has previusCell
 
-            if (IsCross(previousCell)) {
-                OnCross();
-            }
-            else {
-                CreateConnection(previousCell, this);
-            }
+        //If its empty we can connect worry free
+        if (IsEmpty()) {
 
+            HandleConnection(previousCell);
             FlowGame.Instance.PreviousCell = this;
+
+            return;
+        }
+
+        //If its a flow
+        if(connect != null) {
+            //Same color
+            if(connect.ColorID == previousCell.GetColorID()) {
+                FlowGame.Instance.CleanRoute(this);
+                FlowGame.Instance.PreviousCell = this;
+                return;
+            }
+
+            if (origin != null) return;
+
+            //Different color
+            FlowGame.Instance.RemoveFromRoute(this);
+            HandleConnection(previousCell);
+            FlowGame.Instance.PreviousCell = this;
+
+            return;
+        }
+
+        //If its an origin
+        if(origin != null) {
+            //Same color
+            if(origin.ColorID == previousCell.GetColorID()) {
+                if (FlowGame.Instance.InRoute(this)) {
+                    FlowGame.Instance.CleanRoute(this);
+                    FlowGame.Instance.AddToRoute(this);
+                    FlowGame.Instance.PreviousCell = this;
+                }
+                else {
+                    HandleConnection(previousCell);
+                    FlowGame.Instance.PreviousCell = this;
+                    FlowGame.Instance.CanDraw = false;
+                    FlowGame.Instance.CheckForWin();
+                }
+            }
+        }
+    }
+    public void HandleConnection(FlowCell previousCell) {
+        if (IsCross(previousCell)) {
+            OnCross();
+        }
+        else {
+            CreateConnection(previousCell, this);
         }
     }
 
     Sprite GetSprite(FlowEntity.FlowType type) {
         return type == FlowEntity.FlowType.Origin ? FlowLoader.FL.OriginSprite : FlowLoader.FL.FlowSprite;
     }
-    public void GetSiblings() {
-        var cells = FlowGame.Instance.Cells;
-        int size = (int)Mathf.Sqrt(cells.Count);
-
-        if (Row == 0) {
-            TopSibling = null;
-        }
-        else {
-            TopSibling = cells[size * (Row - 1) + Col];
-        }
-
-        if (Row == size - 1) {
-            BottomSibling = null;
-        }
-        else {
-            BottomSibling = cells[size * (Row + 1) + Col];
-        }
-
-        if (Col == 0) {
-            LeftSibling = null;
-        }
-        else {
-            LeftSibling = cells[size * Row + Col - 1];
-        }
-
-        if (Col == size - 1) {
-            RightSibling = null;
-        }
-        else {
-            RightSibling = cells[size * Row + Col + 1];
-        }
-    }
-
-    //Ez nem jó, vezetni kell, hogy mi után mi következett egy tömbbe a FlowGame-be
-    void CleanRouteRecursion(FlowCell cell, FlowCell previousCell, List<FlowCell> cellsToFree, bool originStart) {
-        if (cell.Origin == null && cell.Connect == null) return;
-
-        Color color;
-
-        if (previousCell.Origin != null) color = previousCell.Origin.Color;
-        else color = previousCell.Connect.Color;
-
-        if (originStart || cell.Connect != null && cell.Connect.Color.Equals(color)) {
-            Debug.Log("Igen:)");
-            cellsToFree.Add(cell);
-            if (previousCell != cell.RightSibling) CleanRouteRecursion(cell.RightSibling, cell, cellsToFree, false);
-            if (previousCell != cell.LeftSibling) CleanRouteRecursion(cell.LeftSibling, cell, cellsToFree, false);
-            if (previousCell != cell.TopSibling) CleanRouteRecursion(cell.TopSibling, cell, cellsToFree, false);
-            if (previousCell != cell.BottomSibling) CleanRouteRecursion(cell.BottomSibling, cell, cellsToFree, false);
-        }
-
-        if (cell.Origin != null && cell.Origin.Color.Equals(color)) {
-            Debug.Log("Whytf");
-            cellsToFree.Clear();
-        }
-
-        return;
-    }
-    void CleanRoute(FlowCell cell) {
-        //Vencel, ha kör keletkezne húzás közeben, akkor azt még a create connection elõtt cleanRoutold;
-        List<FlowCell> cellsToFree = new List<FlowCell>();
-        bool isOriginStart = Origin != null;
-
-        CleanRouteRecursion(cell.RightSibling, cell, cellsToFree, isOriginStart);
-        if (cellsToFree.Count == 0) CleanRouteRecursion(cell.LeftSibling, cell, cellsToFree, isOriginStart);
-        if (cellsToFree.Count == 0) CleanRouteRecursion(cell.TopSibling, cell, cellsToFree, isOriginStart);
-        if (cellsToFree.Count == 0) CleanRouteRecursion(cell.BottomSibling, cell, cellsToFree, isOriginStart);
-
-        Debug.Log(cellsToFree.Count);
-
-        foreach (FlowCell c in cellsToFree) {
-            FreeCell(c);
-        }
-    }
-
-    void FreeCell(FlowCell cell) {
-        cell.Connect = null;
+    
+    public void FreeCell() {
+        Connect = null;
     }
 
     void CreateConnection(FlowCell previousCell, FlowCell currentCell) {
@@ -172,7 +153,7 @@ public class FlowCell : MonoBehaviour {
             return;
         }
 
-        Vector3 newPos = Vector3.zero;
+        Vector3 newPos = new Vector3(0,0,-1);
         bool rotate = false;
 
         if (previousCell.Row < currentCell.Row) {
@@ -194,11 +175,18 @@ public class FlowCell : MonoBehaviour {
         currentCell.connectRenderer.gameObject.transform.localRotation = rotate ? Quaternion.Euler(0, 0, 90) : Quaternion.identity;
 
         currentCell.Connect = new FlowEntity(FlowEntity.FlowType.Connection, FlowGame.Instance.CursorColorID);
+
+        FlowGame.Instance.AddToRoute(currentCell);
     }
     bool IsCross(FlowCell other) {
         return other.Row != Row && other.Col != Col;
     }
+    bool OutOfBounds(FlowCell previousCell) {
+        return Mathf.Abs(previousCell.Row - Row) > 1 || Mathf.Abs(previousCell.Col - Col) > 1;
+    }
     void OnCross() {
+        Debug.Log("Cross");
+
         FlowCell previousCell = FlowGame.Instance.PreviousCell;
         List<FlowCell> board = FlowGame.Instance.Cells;
 
@@ -206,26 +194,59 @@ public class FlowCell : MonoBehaviour {
 
         //For indexing
         int size = (int)Mathf.Sqrt(FlowGame.Instance.Cells.Count);
-        //Top left from previous
+        //Bottom left
         if (previousCell.Row < Row && previousCell.Col > Col) {
             skippedCell = board[Row * size + Col + 1];
-        }
-        //Top right from previous
-        if (previousCell.Row < Row && previousCell.Col < Col) {
-            skippedCell = board[Row * size + Col - 1];
-        }
-        //Bottom left from previous
-        if (previousCell.Row > Row && previousCell.Col > Col) {
-            skippedCell = board[Row * size + Col + 1];
+
+            if (!skippedCell.IsEmpty()) {
+                skippedCell = board[(Row-1) * size + Col ];
+            }
         }
         //Bottom right from previous
+        if (previousCell.Row < Row && previousCell.Col < Col) {
+            skippedCell = board[Row * size + Col - 1];
+
+            if (!skippedCell.IsEmpty()) {
+                skippedCell = board[(Row-1) * size + Col];
+            }
+        }
+        //Top left from previous
+        if (previousCell.Row > Row && previousCell.Col > Col) {
+            skippedCell = board[Row * size + Col + 1];
+            
+            if (!skippedCell.IsEmpty()) {
+                skippedCell = board[(Row + 1) * size + Col];
+            }
+        }
+
+        //Top right from previous
         if (previousCell.Row > Row && previousCell.Col < Col) {
             skippedCell = board[Row * size + Col - 1];
+
+            if (!skippedCell.IsEmpty()) {
+                skippedCell = board[(Row + 1) * size + Col];
+            }
+        }
+
+        if (!skippedCell.IsEmpty() ) {
+            FlowGame.Instance.CanDraw = false;
+            return;
         }
 
         CreateConnection(previousCell, skippedCell);
         CreateConnection(skippedCell, this);
     }
 
+    public bool IsEmpty() {
+        return Origin == null && Connect == null;
+    }
+
+    public FlowGame.FlowColor GetColorID() {
+        if(Connect != null) return Connect.ColorID;
+        else if(Origin != null) return Origin.ColorID;
+
+        Debug.LogError("GetColorID error");
+        return 0;
+    }
 
 }
