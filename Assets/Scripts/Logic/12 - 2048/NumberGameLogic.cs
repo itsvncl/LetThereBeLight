@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NumberGameLogic : MonoBehaviour {
 
-    [SerializeField] private TouchUtil touchUtil;
     [SerializeField] private GameObject number;
     [SerializeField] private float lockTime;
     [SerializeField] private int winTier;
@@ -32,16 +31,16 @@ public class NumberGameLogic : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        bool touchCompleted = touchUtil.TouchCompleted;
+        bool touchCompleted = TouchUtil.TU.TouchCompleted;
 
         //Retry button
-        if (touchCompleted && !boardLocked && touchUtil.IsTouching(retryButton) && touchUtil.SwipeDistance < 20) {
+        if (touchCompleted && !boardLocked && TouchUtil.TU.IsTouching(retryButton) && TouchUtil.TU.SwipeDistance < 20) {
             Reset();
 
             return;
         }
         //Play
-        if (touchCompleted && !boardLocked && touchUtil.BeaganTouching(playArea) && touchUtil.SwipeDistance > 70) {
+        if (touchCompleted && !boardLocked && TouchUtil.TU.BeaganTouching(playArea) && TouchUtil.TU.SwipeDistance > 70) {
             if (!IsValidMove()) return;
 
             //Move numbers
@@ -88,7 +87,7 @@ public class NumberGameLogic : MonoBehaviour {
         foreach (var go in Board) {
             NumberBlock num = go?.GetComponent<NumberBlock>();
             if (num == null) continue;
-            if (num.HasDestionation(touchUtil.SwipeDirection)) return true;
+            if (num.HasDestionation(TouchUtil.TU.SwipeDirection)) return true;
         }
 
         return false;
@@ -120,7 +119,7 @@ public class NumberGameLogic : MonoBehaviour {
         if (true) {
             foreach (var number in Board) {
                 if (number != null) {
-                    number.gameObject.GetComponent<NumberBlock>().MoveInDirection(touchUtil.SwipeDirection);
+                    number.gameObject.GetComponent<NumberBlock>().MoveInDirection(TouchUtil.TU.SwipeDirection);
                 }
             }
         }

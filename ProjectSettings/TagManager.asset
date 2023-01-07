@@ -7,6 +7,7 @@ TagManager:
   - Vertical
   - Horizontal
   - Border
+  - Cell
   layers:
   - Default
   - TransparentFX
