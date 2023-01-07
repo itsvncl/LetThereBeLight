@@ -54,14 +54,14 @@ public class FlowCell : MonoBehaviour {
 
         if (connect != null) {
             FlowGame.Instance.CanDraw = true;
-            FlowGame.Instance.CursorColor = connect.Color;
-            CleanRoute(this);
+            FlowGame.Instance.SetCursorColor(connect);
+            //CleanRoute(this);
         }
 
         if (origin != null) {
             FlowGame.Instance.CanDraw = true;
-            FlowGame.Instance.CursorColor = origin.Color;
-            CleanRoute(this);
+            FlowGame.Instance.SetCursorColor(origin);
+            //CleanRoute(this);
         }
 
         if (FlowGame.Instance.PreviousCell == null) {
@@ -72,7 +72,7 @@ public class FlowCell : MonoBehaviour {
         if (FlowGame.Instance.CanDraw) {
             FlowCell previousCell = FlowGame.Instance.PreviousCell;
 
-            if(Connect != null || Origin != null) CleanRoute(this);
+            if(Connect != null || Origin != null) //CleanRoute(this);
 
             if (IsCross(previousCell)) {
                 OnCross();
@@ -193,7 +193,7 @@ public class FlowCell : MonoBehaviour {
         currentCell.connectRenderer.gameObject.transform.localPosition = newPos;
         currentCell.connectRenderer.gameObject.transform.localRotation = rotate ? Quaternion.Euler(0, 0, 90) : Quaternion.identity;
 
-        currentCell.Connect = new FlowEntity(FlowEntity.FlowType.Connection, FlowGame.Instance.CursorColor);
+        currentCell.Connect = new FlowEntity(FlowEntity.FlowType.Connection, FlowGame.Instance.CursorColorID);
     }
     bool IsCross(FlowCell other) {
         return other.Row != Row && other.Col != Col;

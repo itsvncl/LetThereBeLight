@@ -6,7 +6,7 @@ public class FlowBoard : MonoBehaviour {
 
     struct Origin {
         public int index;
-        public Color color;
+        public FlowGame.FlowColor color;
     }
 
     [SerializeField] private int SIZE;
@@ -19,20 +19,20 @@ public class FlowBoard : MonoBehaviour {
 
     void Start() {
         origins = new Origin[]{
-        new Origin { index = 3, color = FlowLoader.FL.Yellow },
-        new Origin { index = 10, color = FlowLoader.FL.Pink },
-        new Origin { index = 18, color = FlowLoader.FL.Orange },
-        new Origin { index = 23, color = FlowLoader.FL.Green },
-        new Origin { index = 24, color = FlowLoader.FL.Blue },
-        new Origin { index = 27, color = FlowLoader.FL.Blue },
-        new Origin { index = 28, color = FlowLoader.FL.Pink },
-        new Origin { index = 30, color = FlowLoader.FL.Yellow },
-        new Origin { index = 45, color = FlowLoader.FL.Orange },
-        new Origin { index = 52, color = FlowLoader.FL.Red },
-        new Origin { index = 56, color = FlowLoader.FL.Red },
-        new Origin { index = 60, color = FlowLoader.FL.Green },
-        new Origin { index = 63, color = FlowLoader.FL.LightBlue },
-        new Origin { index = 75, color = FlowLoader.FL.LightBlue },
+        new Origin { index = 3, color = FlowGame.FlowColor.Yellow },
+        new Origin { index = 10, color = FlowGame.FlowColor.Pink },
+        new Origin { index = 18, color = FlowGame.FlowColor.Orange },
+        new Origin { index = 23, color = FlowGame.FlowColor.Green },
+        new Origin { index = 24, color = FlowGame.FlowColor.Blue },
+        new Origin { index = 27, color = FlowGame.FlowColor.Blue },
+        new Origin { index = 28, color = FlowGame.FlowColor.Pink },
+        new Origin { index = 30, color = FlowGame.FlowColor.Yellow },
+        new Origin { index = 45, color = FlowGame.FlowColor.Orange },
+        new Origin { index = 52, color = FlowGame.FlowColor.Red },
+        new Origin { index = 56, color = FlowGame.FlowColor.Red },
+        new Origin { index = 60, color = FlowGame.FlowColor.Green },
+        new Origin { index = 63, color = FlowGame.FlowColor.LightBlue },
+        new Origin { index = 75, color = FlowGame.FlowColor.LightBlue },
         };
 
         GenerateBoard();
