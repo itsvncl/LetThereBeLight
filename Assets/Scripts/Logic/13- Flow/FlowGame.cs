@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FlowGame : MonoBehaviour {
     public enum FlowColor {
-        Red, Green, Blue, Orange, Yellow, LightBlue, Pink
+        Red, Green, Blue, Orange, Yellow, LightBlue, Pink, NoColor
     }
 
     public static FlowGame Instance { get; private set; }
@@ -46,7 +46,7 @@ public class FlowGame : MonoBehaviour {
             case FlowColor.Pink: return FlowLoader.FL.Pink;
         }
 
-        return new Color(4, 4, 4);
+        return new Color(0, 0, 0, 0);
     }
 
     public void InitRoutes() {
@@ -123,9 +123,5 @@ public class FlowGame : MonoBehaviour {
     public void OnWin() {
         Lock = true;
         LevelManager.Instance.LevelComplete();
-    }
-
-    void DebugPrintRoute() {
-
     }
 }

@@ -34,8 +34,8 @@ public class FlowCell : MonoBehaviour {
 
             if (value == null) {
                 connectRenderer.sprite = null;
-                
-                if(origin == null)
+
+                if (origin == null)
                     backgroundRenderer.enabled = false;
                 return;
             }
@@ -62,8 +62,15 @@ public class FlowCell : MonoBehaviour {
         FlowGame.Instance.CurrentCell = this;
         FlowCell previousCell = FlowGame.Instance.PreviousCell;
 
+        if (previousCell == null) {
+            FlowGame.Instance.SetCursorColor(this.GetColorID());
+        }
+        else {
+            FlowGame.Instance.SetCursorColor(previousCell.GetColorID());
+        }
+
         //Initial touch
-        if(previousCell == null) {
+        if (previousCell == null) {
             if (IsEmpty()) {
                 return;
             }
@@ -72,11 +79,11 @@ public class FlowCell : MonoBehaviour {
             FlowGame.Instance.CanDraw = true;
             FlowGame.Instance.CleanRoute(this);
 
-            if(!FlowGame.Instance.InRoute(this)){
+            if (!FlowGame.Instance.InRoute(this)) {
                 FlowGame.Instance.AddToRoute(this);
             }
 
-            FlowGame.Instance.SetCursorColor(GetColorID());
+
 
             return;
         }
@@ -84,7 +91,6 @@ public class FlowCell : MonoBehaviour {
         if (!FlowGame.Instance.CanDraw || OutOfBounds(previousCell)) return;
 
         //Swipe - Has previusCell
-
         //If its empty we can connect worry free
         if (IsEmpty()) {
 
@@ -95,9 +101,9 @@ public class FlowCell : MonoBehaviour {
         }
 
         //If its a flow
-        if(connect != null) {
+        if (connect != null) {
             //Same color
-            if(connect.ColorID == previousCell.GetColorID()) {
+            if (connect.ColorID == previousCell.GetColorID()) {
                 FlowGame.Instance.CleanRoute(this);
                 FlowGame.Instance.PreviousCell = this;
                 return;
@@ -114,9 +120,9 @@ public class FlowCell : MonoBehaviour {
         }
 
         //If its an origin
-        if(origin != null) {
+        if (origin != null) {
             //Same color
-            if(origin.ColorID == previousCell.GetColorID()) {
+            if (origin.ColorID == previousCell.GetColorID()) {
                 if (FlowGame.Instance.InRoute(this)) {
                     FlowGame.Instance.CleanRoute(this);
                     FlowGame.Instance.AddToRoute(this);
@@ -143,7 +149,7 @@ public class FlowCell : MonoBehaviour {
     Sprite GetSprite(FlowEntity.FlowType type) {
         return type == FlowEntity.FlowType.Origin ? FlowLoader.FL.OriginSprite : FlowLoader.FL.FlowSprite;
     }
-    
+
     public void FreeCell() {
         Connect = null;
     }
@@ -153,7 +159,7 @@ public class FlowCell : MonoBehaviour {
             return;
         }
 
-        Vector3 newPos = new Vector3(0,0,-1);
+        Vector3 newPos = new Vector3(0, 0, -1);
         bool rotate = false;
 
         if (previousCell.Row < currentCell.Row) {
@@ -174,10 +180,11 @@ public class FlowCell : MonoBehaviour {
         currentCell.connectRenderer.gameObject.transform.localPosition = newPos;
         currentCell.connectRenderer.gameObject.transform.localRotation = rotate ? Quaternion.Euler(0, 0, 90) : Quaternion.identity;
 
-        currentCell.Connect = new FlowEntity(FlowEntity.FlowType.Connection, FlowGame.Instance.CursorColorID);
+        currentCell.Connect = new FlowEntity(FlowEntity.FlowType.Connection, previousCell.GetColorID());
 
         FlowGame.Instance.AddToRoute(currentCell);
     }
+
     bool IsCross(FlowCell other) {
         return other.Row != Row && other.Col != Col;
     }
@@ -185,8 +192,6 @@ public class FlowCell : MonoBehaviour {
         return Mathf.Abs(previousCell.Row - Row) > 1 || Mathf.Abs(previousCell.Col - Col) > 1;
     }
     void OnCross() {
-        Debug.Log("Cross");
-
         FlowCell previousCell = FlowGame.Instance.PreviousCell;
         List<FlowCell> board = FlowGame.Instance.Cells;
 
@@ -199,7 +204,7 @@ public class FlowCell : MonoBehaviour {
             skippedCell = board[Row * size + Col + 1];
 
             if (!skippedCell.IsEmpty()) {
-                skippedCell = board[(Row-1) * size + Col ];
+                skippedCell = board[(Row - 1) * size + Col];
             }
         }
         //Bottom right from previous
@@ -207,13 +212,13 @@ public class FlowCell : MonoBehaviour {
             skippedCell = board[Row * size + Col - 1];
 
             if (!skippedCell.IsEmpty()) {
-                skippedCell = board[(Row-1) * size + Col];
+                skippedCell = board[(Row - 1) * size + Col];
             }
         }
         //Top left from previous
         if (previousCell.Row > Row && previousCell.Col > Col) {
             skippedCell = board[Row * size + Col + 1];
-            
+
             if (!skippedCell.IsEmpty()) {
                 skippedCell = board[(Row + 1) * size + Col];
             }
@@ -228,7 +233,7 @@ public class FlowCell : MonoBehaviour {
             }
         }
 
-        if (!skippedCell.IsEmpty() ) {
+        if (!skippedCell.IsEmpty()) {
             FlowGame.Instance.CanDraw = false;
             return;
         }
@@ -242,11 +247,10 @@ public class FlowCell : MonoBehaviour {
     }
 
     public FlowGame.FlowColor GetColorID() {
-        if(Connect != null) return Connect.ColorID;
-        else if(Origin != null) return Origin.ColorID;
+        if (Connect != null) return Connect.ColorID;
+        else if (Origin != null) return Origin.ColorID;
 
-        Debug.LogError("GetColorID error");
-        return 0;
+        return FlowGame.FlowColor.NoColor;
     }
 
 }

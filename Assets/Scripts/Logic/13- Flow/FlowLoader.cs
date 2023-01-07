@@ -19,8 +19,6 @@ public class FlowLoader : MonoBehaviour
 
     void Awake() {
         FL = this;
-        Debug.Log("Woke");
-
     }
 
     public Sprite FlowSprite { get { return _flow; }}
