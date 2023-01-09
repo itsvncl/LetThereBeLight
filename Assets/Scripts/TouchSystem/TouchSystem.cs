@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -32,7 +31,7 @@ public class TouchSystem : MonoBehaviour
                     HandleNewTouch(touch);
                 }
 
-                //Existing moving touch continous
+                //Ongoing touch
                 if (touch.phase != TouchPhase.Began && touch.phase != TouchPhase.Ended) {
                     HandleOngoingTouch(touch);
                 }
@@ -41,7 +40,6 @@ public class TouchSystem : MonoBehaviour
                 if (touch.phase == TouchPhase.Ended) {
                     HandleFinishedTouch(touch);
                 }
-
 
                 if (touch.phase == TouchPhase.Canceled) {
                     _touchDictionary.Remove(touch.fingerId);
@@ -107,7 +105,9 @@ public class TouchSystem : MonoBehaviour
                 //Currently the OnClick is not restricted to distance
                 if (beginGameObject.Equals(endObject)) {
                     IClickable clickEvent = beginGameObject.GetComponent<IClickable>();
-                    clickEvent.OnClick(endTouchData);
+                    if(clickEvent != null) {
+                        clickEvent.OnClick(endTouchData);
+                    }
                 }
             }
 
