@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TouchUtil : MonoBehaviour {
 
+    public static TouchUtil TU;
+
     private DragDirection _dragDirection;
     private Vector3 _beginPosition;
     private Vector3 _endPosition;
@@ -13,6 +15,11 @@ public class TouchUtil : MonoBehaviour {
     private TouchState _state;
     private float _swipeDistance;
     private bool _touchCompleted;
+    private bool _touchInProgress;
+
+    void Awake() {
+        TU = this;
+    }
 
     public enum DragDirection {
         Up, Down, Left, Right
@@ -64,6 +71,7 @@ public class TouchUtil : MonoBehaviour {
                 _beginWorldPosition = Camera.main.ScreenToWorldPoint(_beginPosition);
                 _beginWorldPosition.z = transform.position.z;
                 
+                _touchInProgress = true;
             }
 
             if (touch.phase == TouchPhase.Ended) {
@@ -73,6 +81,7 @@ public class TouchUtil : MonoBehaviour {
                 _endWorldPosition.z = transform.position.z;
 
                 _touchCompleted = true;
+                _touchInProgress = false;
                 _swipeDistance = Vector2.Distance(_beginPosition, _endPosition);
 
                 _dragDirection = GetDragDirection((_endPosition - _beginPosition).normalized);
@@ -94,6 +103,10 @@ public class TouchUtil : MonoBehaviour {
             _touchCompleted = false;
             return value;
         }
+    }
+
+    public bool TouchInProgress {
+        get { return _touchInProgress; }
     }
 
     public float SwipeDistance { 
