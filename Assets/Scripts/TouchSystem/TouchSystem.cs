@@ -112,7 +112,7 @@ public class TouchSystem : MonoBehaviour
             }
 
             //If the touch began without touching a game object
-            if (endObject != null) {
+            if (endObject != null && endObject != beginGameObject) {
                 ITouchEndEvent endEvent = endObject.GetComponent<ITouchEndEvent>();
                 if (endEvent != null) {
                     endEvent.OnTouchEnd(endTouchData);
