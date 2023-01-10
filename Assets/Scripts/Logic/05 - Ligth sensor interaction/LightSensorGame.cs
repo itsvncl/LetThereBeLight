@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSensorLogic : MonoBehaviour
+public class LightSensorGame : MonoBehaviour
 {
     [SerializeField] private float luxTarget = 3000f;
 

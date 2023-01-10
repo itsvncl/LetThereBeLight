@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 739904790}
   - component: {fileID: 739904791}
   m_Layer: 0
-  m_Name: LightSensorGuard
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

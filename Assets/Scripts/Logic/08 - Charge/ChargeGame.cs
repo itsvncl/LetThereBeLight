@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ChargeLogic : MonoBehaviour
+public class ChargeGame : MonoBehaviour
 {
     bool win = false;
 
-    void Update()
+    void FixedUpdate()
     {
         if(SystemInfo.batteryStatus == BatteryStatus.Charging && !win) {
             win = true;
