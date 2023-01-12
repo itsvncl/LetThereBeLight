@@ -99,7 +99,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
             public void onTorchModeChanged(@NonNull String cameraId, boolean enabled) {
                 if(enabled){
                     Log.i(LOGTAG, "Flash enabled");
-                    UnityPlayer.UnitySendMessage("FlashlightGuard", "FlashOn", "");
+                    UnityPlayer.UnitySendMessage("GameController", "FlashOn", "");
                     super.onTorchModeChanged(cameraId, true);
                     disableFlashlightGuard();
                     return;
@@ -127,7 +127,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
 
                 if(sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT){
                     if(sensorEvent.values[0] >= targetValue){
-                        UnityPlayer.UnitySendMessage("LightSensorGuard", "LightTargetReached", "");
+                        UnityPlayer.UnitySendMessage("GameController", "LightTargetReached", "");
                         disableLightSensorGuard();
                     }
                 }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 885765862}
   - component: {fileID: 885765861}
   m_Layer: 0
-  m_Name: ProximitySensorGuard
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceTarget: 1
+  timeTarget: 5
 --- !u!4 &885765862
 Transform:
   m_ObjectHideFlags: 0

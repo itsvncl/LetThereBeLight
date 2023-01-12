@@ -56,7 +56,7 @@ public class ScreenshotDetector {
                 final String fileName = cursor.getString(displayNameColIndex);
 
                 if(fileName.toLowerCase().contains("screenshot")){
-                    UnityPlayer.UnitySendMessage("ScreenshotGuard", "ScreenshotTaken", "");
+                    UnityPlayer.UnitySendMessage("GameController", "ScreenshotTaken", "");
                     Log.i(LOGTAG, "Screenshot taken");
                 }
             }

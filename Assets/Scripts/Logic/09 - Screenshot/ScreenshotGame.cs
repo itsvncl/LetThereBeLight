@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ScreenshotLogic : MonoBehaviour
+public class ScreenshotGame : MonoBehaviour
 {
     void Start() {
         AndoridActivityManager.Instance.StartScreenshotDetector();

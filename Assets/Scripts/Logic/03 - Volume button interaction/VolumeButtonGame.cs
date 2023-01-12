@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class LightLogic : MonoBehaviour
+public class VolumeButtonGame : MonoBehaviour
 {
     [SerializeField] private Image image;
     private float alpha = 0f;
@@ -37,7 +34,7 @@ public class LightLogic : MonoBehaviour
 
     public void IncrementAlphaUp(string s = "") {
         if (alphaTarget >= 1f) {
-            onWin();
+            OnWin();
             return;
         }
 
@@ -50,9 +47,7 @@ public class LightLogic : MonoBehaviour
         alphaTarget -= 0.1f;
     }
 
-    private void onWin() {
-        Debug.Log("Level 03 is completed");
-
+    private void OnWin() {
         AndoridActivityManager.Instance.UnlockVolumeButton();
         LevelManager.Instance.LevelComplete();
     }

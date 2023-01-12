@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ProximityLogic : MonoBehaviour
+public class SleepGame : MonoBehaviour
 {
     [SerializeField] private float distanceTarget = 1.0f;
     [SerializeField] private float timeTarget = 5.0f;
