@@ -3796,8 +3796,8 @@ MonoBehaviour:
   smoothingSpeed: 15
   followSpeed: 20
   cutoffSpeed: 0.05
-  lockX: 0
-  lockY: 1
+  lockX: 1
+  lockY: 0
 --- !u!114 &1123354571
 MonoBehaviour:
   m_ObjectHideFlags: 0
