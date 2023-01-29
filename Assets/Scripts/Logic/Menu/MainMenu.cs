@@ -4,6 +4,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject levelSelector;
+    public GameObject languageSelector;
 
     public void StartGame() {
         //Load the last saved level
@@ -15,6 +16,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void OpenLevelSelector() {
+        languageSelector.SetActive(false);
         mainMenu.SetActive(false);
         levelSelector.SetActive(true);
     }
@@ -23,4 +25,9 @@ public class MainMenu : MonoBehaviour
         levelSelector.SetActive(false);
         mainMenu.SetActive(true);
     }
+
+    public void OpenLanguageSelector() {
+        languageSelector.SetActive(!languageSelector.activeSelf);
+    }
+
 }
