@@ -4,10 +4,22 @@ using UnityEngine.EventSystems;
 
 public class TouchSystem : MonoBehaviour
 {
-
+    [SerializeField] private bool touchEnabled = true;
     private Vector3 _worldPosition;
     private int _tapCount;
     private Dictionary<int, TouchData> _touchDictionary = new();
+
+    public static TouchSystem Instance = null;
+
+    private void Awake() {
+        if (Instance != null && Instance != this) {
+            Destroy(this);
+        }
+        else {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
 
     //Adding raycaster to the camera, if not already present
     void Start() {
@@ -18,6 +30,7 @@ public class TouchSystem : MonoBehaviour
     }
 
     void Update() {
+        if (!touchEnabled) return;
         if (Input.touchCount > 0) {
 
             //Multi touch support
@@ -153,5 +166,12 @@ public class TouchSystem : MonoBehaviour
                 return directionVector.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
             }
         }
+    }
+
+    public void Enable() {
+        touchEnabled = true;
+    }
+    public void Disable() {
+        touchEnabled = false;
     }
 }

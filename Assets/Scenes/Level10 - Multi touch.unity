@@ -572,6 +572,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6778637910862837744, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 1742723682304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778637910862837744, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:84866a2293cede54cb89a0989702a688
+      objectReference: {fileID: 0}
     - target: {fileID: 8788301406181327754, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_Color.b
       value: 0
