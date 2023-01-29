@@ -6,7 +6,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
-    private int maxLevel = 50;
+    private int maxLevel = 32;
+    private int progression = 0;
     private int currentLevel = 0;
 
     [SerializeField] private Animator animator;
@@ -45,6 +46,7 @@ public class LevelManager : MonoBehaviour {
 
     public void SwitchToLevel(int level) {
         if (level > maxLevel) {
+            Debug.Log(level);
             throw new System.Exception("Level index is out of bounds!");
         }
         currentLevel = level;
@@ -60,9 +62,15 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void DebugPreviousLevel() {
-        if(currentLevel > 0) {
+        if (currentLevel > 0) {
             currentLevel--;
         }
         SceneManager.LoadScene(currentLevel);
     }
+
+    public int GetMaxLevel() {
+        return maxLevel;
+    }
+
+    public int GetProgression() { return progression; }
 }
