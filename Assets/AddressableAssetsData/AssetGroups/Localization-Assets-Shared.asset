@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5e1222a79b747614ca4d7a3801fffd31
+  m_SerializeEntries:
+  - m_GUID: 84866a2293cede54cb89a0989702a688
+    m_Address: Assets/Localization/Tables/Level Clues Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 1e73b28081502f24ea0b86f5aa6f9b1b
+    m_Address: Assets/Localization/Tables/General Text Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 5c89c83ae1f586e4fb7fb9a636b6e976, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b2dbdd2786cd153488cf7a4312d3b185, type: 2}
+    - {fileID: 11400000, guid: 73a08b62662b91f40a64c97701afdf30, type: 2}

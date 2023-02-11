@@ -8,6 +8,7 @@ TagManager:
   - Horizontal
   - Border
   - Cell
+  - blurPanel
   layers:
   - Default
   - TransparentFX
