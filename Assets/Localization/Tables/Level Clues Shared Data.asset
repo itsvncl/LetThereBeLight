@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: ZoomLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 4706708382093312
+    m_Key: RubLevel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

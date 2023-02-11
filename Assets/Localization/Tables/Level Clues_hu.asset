@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: hu
   m_SharedData: {fileID: 11400000, guid: 84866a2293cede54cb89a0989702a688, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 8445354575488614410
   m_TableData:
   - m_Id: 24107618304
     m_Localized: 1. AHOGY SZOKTAD
@@ -39,9 +40,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 433144532992
-    m_Localized: "6. JELEZZ A SEG\xCDTS\xC9G\xC9RT"
+    m_Localized: "6. JELEZZ SEG\xCDTS\xC9G\xC9RT"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 8445354575488614410
   - m_Id: 438022508544
     m_Localized: 7. FEKTESS LE
     m_Metadata:
@@ -74,6 +76,14 @@ MonoBehaviour:
     m_Localized: "14. NAGY\xCDT\xC1S"
     m_Metadata:
       m_Items: []
+  - m_Id: 4706708382093312
+    m_Localized: "15. CSIN\xC1LJ MELEGET"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8445354575488614410
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00106dd964000000

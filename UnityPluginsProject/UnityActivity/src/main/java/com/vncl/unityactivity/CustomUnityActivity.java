@@ -38,12 +38,12 @@ public class CustomUnityActivity extends UnityPlayerActivity {
             switch (event.getKeyCode()) {
                 case KeyEvent.KEYCODE_VOLUME_UP:
                     Log.i(LOGTAG, "Volume up pressed (locked)");
-                    UnityPlayer.UnitySendMessage("LightImage", "IncrementAlphaUp", "");
+                    UnityPlayer.UnitySendMessage("GameController", "IncrementAlphaUp", "");
 
                     return true;
                 case KeyEvent.KEYCODE_VOLUME_DOWN:
                     Log.i(LOGTAG, "Volume down pressed (locked)");
-                    UnityPlayer.UnitySendMessage("LightImage", "IncrementAlphaDown", "");
+                    UnityPlayer.UnitySendMessage("GameController", "IncrementAlphaDown", "");
 
                     return true;
                 default:

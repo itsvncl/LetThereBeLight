@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
     private int maxLevel = 32;
-    private int progression = 0;
+    private int progression = 1;
     private int currentLevel = 0;
 
     [SerializeField] private Animator animator;
@@ -21,6 +21,14 @@ public class LevelManager : MonoBehaviour {
         else {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
+        }
+
+        if (PlayerPrefs.HasKey("progression")) {
+            progression = PlayerPrefs.GetInt("progression");
+        }
+        else {
+            PlayerPrefs.SetInt("progression", 1);
+            progression = 1;
         }
     }
 
@@ -37,6 +45,11 @@ public class LevelManager : MonoBehaviour {
     public void LevelComplete() {
         currentLevel++;
 
+        if (currentLevel > progression) {
+            progression = currentLevel;
+            PlayerPrefs.SetInt("progression", progression);
+        }
+
         if (currentLevel > maxLevel) {
             throw new System.Exception("Level index is out of bounds!");
         }
@@ -50,6 +63,16 @@ public class LevelManager : MonoBehaviour {
             throw new System.Exception("Level index is out of bounds!");
         }
         currentLevel = level;
+
+        StartCoroutine(Load());
+    }
+
+    public void Continue() {
+        currentLevel = progression;
+
+        if (currentLevel > maxLevel) {
+            throw new System.Exception("Level index is out of bounds!");
+        }
 
         StartCoroutine(Load());
     }

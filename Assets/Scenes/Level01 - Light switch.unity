@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3244414593046727654, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -44.953857
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823274539407543502, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
     - target: {fileID: 4527856791576817581, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_text
       value: 1. JUST THE USUAL
@@ -225,6 +233,22 @@ PrefabInstance:
     - target: {fileID: 4527856793032966694, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_Name
       value: Overlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164623194792066141, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -44.953857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270796454739768172, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678528472399694189, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702300863267674488, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0007324219
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}

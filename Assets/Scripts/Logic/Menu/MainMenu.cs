@@ -7,12 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject languageSelector;
 
     public void StartGame() {
-        //Load the last saved level
-
-
-
-        //Placeholder:
-        LevelManager.Instance.SwitchToLevel(1);
+        LevelManager.Instance.Continue();
     }
 
     public void OpenLevelSelector() {

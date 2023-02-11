@@ -17,7 +17,6 @@ public class TouchSystem : MonoBehaviour
         }
         else {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
     }
 

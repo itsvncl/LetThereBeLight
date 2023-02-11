@@ -10,6 +10,10 @@ public class LevelSelector : MonoBehaviour
     [SerializeField] private GameObject levelContainer;
 
     void Start() {
+        int completedUntil = PlayerPrefs.GetInt("progression");
+
+        Debug.Log(completedUntil);
+
         for (int i = 0; i < LevelManager.Instance.GetMaxLevel(); i++) {
             GameObject level = Instantiate(levelPrefab);
             level.transform.SetParent(levelContainer.transform, false);
@@ -19,6 +23,10 @@ public class LevelSelector : MonoBehaviour
             
             Button button = level.GetComponent<Button>();
             button.onClick.AddListener( () => { LevelManager.Instance.SwitchToLevel(int.Parse(text.text)); } );
+
+            if (i >= completedUntil) {
+                button.interactable = false;
+            }
         }
     }
 }

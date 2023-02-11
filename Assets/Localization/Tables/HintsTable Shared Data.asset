@@ -10,41 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: General Text Shared Data
+  m_Name: HintsTable Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: General Text
-  m_TableCollectionNameGuidString: 1e73b28081502f24ea0b86f5aa6f9b1b
+  m_TableCollectionName: HintsTable
+  m_TableCollectionNameGuidString: dbc30d8f6db399f4a9f080ea9b22b2ed
   m_Entries:
-  - m_Id: 5354885120
-    m_Key: 'HintQuestion
-
-'
+  - m_Id: 125681078272
+    m_Key: LightSwitchLevelHint01
     m_Metadata:
       m_Items: []
-  - m_Id: 49101475840
-    m_Key: Yes
-    m_Metadata:
-      m_Items: []
-  - m_Id: 63030759424
-    m_Key: No
-    m_Metadata:
-      m_Items: []
-  - m_Id: 312742842368
-    m_Key: SelectLevel
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4666272242274304
-    m_Key: Ok
+  - m_Id: 1036201562112
+    m_Key: New Entry
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 1730402177063584093
+    rid: 8445354575488614404
   references:
     version: 2
     RefIds:
-    - rid: 1730402177063584093
+    - rid: 8445354575488614404
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1675023795624
+        m_CustomEpoch: 1676136368338

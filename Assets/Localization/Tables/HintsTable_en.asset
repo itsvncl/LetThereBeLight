@@ -10,32 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: General Text_de
+  m_Name: HintsTable_en
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: de
-  m_SharedData: {fileID: 11400000, guid: 1e73b28081502f24ea0b86f5aa6f9b1b, type: 2}
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: dbc30d8f6db399f4a9f080ea9b22b2ed, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 5354885120
-    m_Localized: Tip du?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49101475840
-    m_Localized: Ja
-    m_Metadata:
-      m_Items: []
-  - m_Id: 63030759424
-    m_Localized: Nein
-    m_Metadata:
-      m_Items: []
-  - m_Id: 312742842368
-    m_Localized: Level das ist
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4666272242274304
-    m_Localized: OK
+  - m_Id: 125681078272
+    m_Localized: h1
     m_Metadata:
       m_Items: []
   references:

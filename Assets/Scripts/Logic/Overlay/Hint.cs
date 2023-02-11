@@ -5,16 +5,11 @@ using UnityEngine;
 public class Hint : MonoBehaviour
 {
     [SerializeField] private GameObject hintWindow;
-    [SerializeField] private GameObject noButton;
-    [SerializeField] private GameObject yesButton;
+    [SerializeField] private GameObject question;
+    [SerializeField] private GameObject hint;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool gotHint = false;
 
-    // Update is called once per frame
     void Update() {
         if (Application.platform == RuntimePlatform.Android) {
             if (Input.GetKey(KeyCode.Escape)) {
@@ -31,6 +26,22 @@ public class Hint : MonoBehaviour
 
     public void HintClick() {
         hintWindow.SetActive(true);
+
+        if (gotHint) {
+            question.SetActive(false);
+            hint.SetActive(true);
+        }
+        else {
+            question.SetActive(true);
+            hint.SetActive(false);  
+        }
+
         TouchSystem.Instance.Disable();
+    }
+
+    public void OnYesClick() {
+        gotHint = true;
+        question.SetActive(false);
+        hint.SetActive(true);
     }
 }

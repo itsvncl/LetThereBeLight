@@ -34,6 +34,10 @@ MonoBehaviour:
     m_Localized: "V\xE1lassz szintet"
     m_Metadata:
       m_Items: []
+  - m_Id: 4666272242274304
+    m_Localized: Ok
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

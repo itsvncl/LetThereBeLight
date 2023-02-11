@@ -6,12 +6,16 @@ using UnityEngine.Localization.Settings;
 public class LanguageSelector : MonoBehaviour {
     private bool inProgress = false;
 
+    [SerializeField] private GameObject languageSelector;
+
+
     IEnumerator SetLanguage(int id) { 
         inProgress = true;
 
         yield return LocalizationSettings.InitializationOperation;
 
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[id];
+        languageSelector.SetActive(false);
         
         inProgress = false;
     }

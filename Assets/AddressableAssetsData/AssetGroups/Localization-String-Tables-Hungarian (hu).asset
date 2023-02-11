@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-hu
     - Preload
+  - m_GUID: 6ecd3a00c431930489f866d01183b508
+    m_Address: HintsTable_hu
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-hu
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5c89c83ae1f586e4fb7fb9a636b6e976, type: 2}
   m_SchemaSet:
