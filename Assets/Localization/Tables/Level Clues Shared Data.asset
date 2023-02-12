@@ -75,6 +75,14 @@ MonoBehaviour:
     m_Key: RubLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 4903852032462848
+    m_Key: LightbulbLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4918326659452928
+    m_Key: PlumberLevel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

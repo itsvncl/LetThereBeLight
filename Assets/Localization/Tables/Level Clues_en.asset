@@ -78,6 +78,14 @@ MonoBehaviour:
     m_Localized: 15. GENERATE HEAT
     m_Metadata:
       m_Items: []
+  - m_Id: 4903852032462848
+    m_Localized: 17. FIND THE WORKING BULB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4918326659452928
+    m_Localized: 18. PLUMBER
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
