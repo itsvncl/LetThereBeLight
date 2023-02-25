@@ -86,6 +86,10 @@ MonoBehaviour:
     m_Localized: 18. PLUMBER
     m_Metadata:
       m_Items: []
+  - m_Id: 9788826070093824
+    m_Localized: 19. DAS LABYRINT
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

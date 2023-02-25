@@ -86,6 +86,10 @@ MonoBehaviour:
     m_Localized: "18. VEZET\xC9K SZEREL\u0150"
     m_Metadata:
       m_Items: []
+  - m_Id: 9788826070093824
+    m_Localized: 19. LABIRINTUS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
