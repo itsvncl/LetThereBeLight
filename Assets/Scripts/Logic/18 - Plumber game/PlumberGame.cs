@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlumberGame : MonoBehaviour
-{
+public class PlumberGame : MonoBehaviour {
     [SerializeField] private int SIZE;
     [SerializeField] private float PADDING;
     [SerializeField] private float Y_OFFSET;
@@ -20,7 +19,7 @@ public class PlumberGame : MonoBehaviour
 
     private void Start() {
         GenerateBoard();
-        revealRoute();
+        RevealRoute();
     }
 
     void GenerateBoard() {
@@ -32,8 +31,8 @@ public class PlumberGame : MonoBehaviour
         int idx = 0;
 
         for (int y = SIZE; y > 0; y--) {
-            List<Pipe> row = new List<Pipe> ();
-            for (int x = 1; x < SIZE-1; x++) {
+            List<Pipe> row = new List<Pipe>();
+            for (int x = 1; x < SIZE - 1; x++) {
                 GameObject prefab = pipeLayout[idx] == PipeType.Straight ? StraightPipePrefab : BendingPipePrefab;
 
                 GameObject newCellGo = Instantiate(prefab, new Vector3(startPoint + cellSize * x, startPoint + cellSize * y + Y_OFFSET, 0), Quaternion.identity);
@@ -55,7 +54,7 @@ public class PlumberGame : MonoBehaviour
         p.game = this;
         p.SetHighlighted(true);
 
-        newCell = Instantiate(StraightPipePrefab, new Vector3(startPoint + cellSize * (SIZE-1), startPoint + cellSize * (SIZE - endPos) + Y_OFFSET, 0), Quaternion.identity);
+        newCell = Instantiate(StraightPipePrefab, new Vector3(startPoint + cellSize * (SIZE - 1), startPoint + cellSize * (SIZE - endPos) + Y_OFFSET, 0), Quaternion.identity);
         newCell.transform.localScale = new Vector3(cellSize, cellSize, 1);
         p = newCell.GetComponent<Pipe>();
         p.LockOrientation();
@@ -71,7 +70,7 @@ public class PlumberGame : MonoBehaviour
 
         var directions = PipeGameUtil.PU.GetDirections();
 
-        foreach ( var direction in directions[pipe.type][pipe.orientation] ) {
+        foreach (var direction in directions[pipe.type][pipe.orientation]) {
             switch (direction) {
                 case PipeOrientation.Up:
                     if (row > 0) {
@@ -83,7 +82,7 @@ public class PlumberGame : MonoBehaviour
                     }
                     break;
                 case PipeOrientation.Down:
-                    if (row < SIZE-1) {
+                    if (row < SIZE - 1) {
                         var downPipe = board[row + 1][col];
 
                         if (downPipe.IsHighlighted == false && directions[downPipe.type][downPipe.orientation].Contains(PipeOrientation.Up)) {
@@ -101,7 +100,7 @@ public class PlumberGame : MonoBehaviour
                     }
                     break;
                 case PipeOrientation.Right:
-                    if (col < SIZE-3) {
+                    if (col < SIZE - 3) {
                         var rightPipe = board[row][col + 1];
 
                         if (rightPipe.IsHighlighted == false && directions[rightPipe.type][rightPipe.orientation].Contains(PipeOrientation.Left)) {
@@ -112,20 +111,23 @@ public class PlumberGame : MonoBehaviour
             }
         };
     }
-    public void revealRoute() {
+    public void RevealRoute() {
         var pipe = board[startPos][0];
 
-        foreach(var list in board) {
-            foreach(var p in list) {
+        foreach (var list in board) {
+            foreach (var p in list) {
                 p.SetHighlighted(false);
             }
         }
 
-        if(pipe.type == PipeType.Straight && (pipe.orientation == PipeOrientation.Left || pipe.orientation == PipeOrientation.Right)) {
+        if (pipe.type == PipeType.Straight && (pipe.orientation == PipeOrientation.Left || pipe.orientation == PipeOrientation.Right)) {
             routeRecursion(pipe, startPos, 0);
-        }else if (pipe.type == PipeType.Bending && pipe.orientation == PipeOrientation.Down || pipe.orientation == PipeOrientation.Left) {
+        } else if (pipe.type == PipeType.Bending && pipe.orientation == PipeOrientation.Down || pipe.orientation == PipeOrientation.Left) {
             routeRecursion(pipe, startPos, 0);
         }
+    }
 
+    public bool IsWin() {
+        return board[endPos][SIZE - 3].inFlow;
     }
 }

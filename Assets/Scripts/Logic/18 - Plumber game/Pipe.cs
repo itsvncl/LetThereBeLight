@@ -33,9 +33,14 @@ public class Pipe : MonoBehaviour, IClickable
         if (locked) return;
 
         rotate();
-        game.revealRoute();
-        orientate();
+        game.RevealRoute();
 
+        if (game.IsWin()) {
+            TouchSystem.Instance.Disable();
+            LevelManager.Instance.LevelComplete();
+        }
+        
+        orientate();
     }
 
     void orientate() {

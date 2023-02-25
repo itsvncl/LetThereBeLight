@@ -12,12 +12,7 @@ public class TouchSystem : MonoBehaviour
     public static TouchSystem Instance = null;
 
     private void Awake() {
-        if (Instance != null && Instance != this) {
-            Destroy(this);
-        }
-        else {
-            Instance = this;
-        }
+        Instance = this;
     }
 
     //Adding raycaster to the camera, if not already present
@@ -171,6 +166,7 @@ public class TouchSystem : MonoBehaviour
         touchEnabled = true;
     }
     public void Disable() {
+        Debug.Log("TouchSystem disabled");
         touchEnabled = false;
     }
 }
