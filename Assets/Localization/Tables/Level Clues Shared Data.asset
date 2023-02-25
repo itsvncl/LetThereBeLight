@@ -83,6 +83,10 @@ MonoBehaviour:
     m_Key: PlumberLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 9788826070093824
+    m_Key: LabyrinthLevel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
