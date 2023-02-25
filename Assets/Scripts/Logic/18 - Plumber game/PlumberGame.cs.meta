@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b4e13a612fa930c459e3899e6a90f253
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - CELL_PREFAB: {fileID: 541741658788708518, guid: c85288f52f0832e469ee0bfc4182551e, type: 3}
+  - BendingPipePrefab: {fileID: 541741658788708518, guid: 1ca4ec8dca783454f97eebd52e23b4ee, type: 3}
+  - StraightPipePrefab: {fileID: 541741658788708518, guid: 1f38aefde63525441b16c61d715a69b4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
