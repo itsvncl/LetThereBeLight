@@ -10,17 +10,40 @@ public class MazeGenerator : MonoBehaviour {
     [SerializeField] private int endPosX = 5;
     [SerializeField] private int endPosY = 9;
 
-    [SerializeField] GameObject Tile;
+    [SerializeField] private GameObject TilePrefab;
+    [SerializeField] private GameObject BorderPrefab;
+    [SerializeField] private GameObject PlayerPrefab;
+    [SerializeField] private GameObject EndPrefab;
+
+    private GameObject Player;
 
     private List<List<MazeNode>> nodes = new List<List<MazeNode>>();
     private List<MazeNode> visitedNodesWithUnvisitedNeighbours = new List<MazeNode>();
+    private List<GameObject> generatedObjects = new List<GameObject>();
 
-    void Start() {
+    public void Generate() {
+        if (generatedObjects.Count != 0) return;
+
         InitNodes();
         GenereateMainRoute();
         GenerateSubRoutes();
+        PlaceEntities();
+        FitToScreen();
     }
 
+    public void ResetGame() {
+        nodes.Clear();
+        visitedNodesWithUnvisitedNeighbours.Clear();
+        
+        foreach(var obj in generatedObjects) {
+            Destroy(obj);
+        }
+
+        generatedObjects.Clear();
+
+        transform.localScale = Vector3.one;
+        transform.position = new Vector3(0, 0, -4.0f);
+    }
 
     private void InitNodes() {
         //Generating the nodes
@@ -39,8 +62,8 @@ public class MazeGenerator : MonoBehaviour {
             for (int j = 0; j < size; j++) {
                 MazeNode node = nodes[i][j];
 
-                if (i > 0) node.TopNeighbour = nodes[i - 1][j];
-                if (i < size - 1) node.BottomNeighbour = nodes[i + 1][j];
+                if (i > 0) node.BottomNeighbour = nodes[i - 1][j];
+                if (i < size - 1) node.TopNeighbour = nodes[i + 1][j];
                 if (j > 0) node.LeftNeighbour = nodes[i][j - 1];
                 if (j < size - 1) node.RightNeighbour = nodes[i][j + 1];
             }
@@ -55,6 +78,8 @@ public class MazeGenerator : MonoBehaviour {
 
             visitedNodesWithUnvisitedNeighbours.Add(currentNode);
             UpdateVisitedNodesWithUnvisitedNeighbours();
+
+            if (visitedNodesWithUnvisitedNeighbours.Count == 0) break;
 
             if (!visitedNodesWithUnvisitedNeighbours.Contains(currentNode)) {
                 currentNode = GetRandomVisitedNodeWithUnvisitedNeighbours();
@@ -76,6 +101,8 @@ public class MazeGenerator : MonoBehaviour {
             visitedNodesWithUnvisitedNeighbours.Add(currentNode);
             UpdateVisitedNodesWithUnvisitedNeighbours();
 
+            if (visitedNodesWithUnvisitedNeighbours.Count == 0) break;
+
             if (!visitedNodesWithUnvisitedNeighbours.Contains(currentNode)) {
                 currentNode = visitedNodesWithUnvisitedNeighbours[Random.Range(0, visitedNodesWithUnvisitedNeighbours.Count)];
             }
@@ -84,7 +111,34 @@ public class MazeGenerator : MonoBehaviour {
         }
     }
 
-    private enum Direction {
+    private void PlaceEntities() {
+        Player = Instantiate(PlayerPrefab, new Vector3(beginPosX, beginPosY, -6.0f), Quaternion.identity);
+        Player.transform.SetParent(this.transform);
+
+        GameObject endTrigger = Instantiate(EndPrefab, new Vector3((float)endPosX, (float)endPosY, -6.0f), Quaternion.identity);
+        endTrigger.transform.SetParent(this.transform);
+
+        BorderPrefab.transform.position = new Vector3(size / 2.0f - 0.5f, size / 2.0f - 0.5f, -4.0f);
+        BorderPrefab.transform.localScale = new Vector3(size, size, 1.0f);
+
+        generatedObjects.Add(endTrigger);
+        generatedObjects.Add(Player);
+
+        WinTrigger trigger = endTrigger.GetComponent<WinTrigger>();
+        trigger.SetWinObjects(new GameObject[] { Player });
+    }
+
+    private void FitToScreen() {
+
+        float scale = ScreenManager.SM.ScreenWidth / size;
+        transform.localScale = new Vector3(scale, scale, 1.0f);
+
+        float pos = (-(size / 2.0f) + 0.5f) * scale;
+        transform.position = new Vector3(pos, pos, -4.0f);
+    }
+
+
+    public enum Direction {
         Up, Down, Left, Right 
     }
     private bool HasUnvisitedNeighbour(MazeNode node) {
@@ -131,29 +185,46 @@ public class MazeGenerator : MonoBehaviour {
         List<Direction> availableDirections = GetAvailableDirections(currentNode);
         Direction travelDirection = GetRandomDirection(availableDirections);
 
+        GameObject newTile = null;
+
         switch (travelDirection) {
             case Direction.Up:
-                GameObject newTile = Instantiate(Tile, new Vector3(currentNode.XIndex * 1.0f, currentNode.YIndex - 0.5f, -5.0f), Quaternion.identity);
+                newTile = Instantiate(TilePrefab, new Vector3(currentNode.XIndex * 1.0f, currentNode.YIndex + 0.5f, -5.0f), Quaternion.identity);
+                newTile.transform.SetParent(this.transform);
                 newTile.transform.localScale = new Vector3(0.8f, 1.8f, 1.0f);
+
                 currentNode = currentNode.TopNeighbour;
                 break;
             case Direction.Down:
-                GameObject newTile2 = Instantiate(Tile, new Vector3(currentNode.XIndex * 1.0f, currentNode.YIndex + 0.5f, -5.0f), Quaternion.identity);
-                newTile2.transform.localScale = new Vector3(0.8f, 1.8f, 1.0f);
+                newTile = Instantiate(TilePrefab, new Vector3(currentNode.XIndex * 1.0f, currentNode.YIndex - 0.5f, -5.0f), Quaternion.identity);
+                newTile.transform.SetParent(this.transform);
+                newTile.transform.localScale = new Vector3(0.8f, 1.8f, 1.0f);
+
                 currentNode = currentNode.BottomNeighbour;
                 break;
             case Direction.Left:
-                GameObject newTile3 = Instantiate(Tile, new Vector3(currentNode.XIndex - 0.5f, currentNode.YIndex * 1.0f, -5.0f), Quaternion.identity);
-                newTile3.transform.localScale = new Vector3(1.8f, 0.8f, 1.0f);
+                newTile = Instantiate(TilePrefab, new Vector3(currentNode.XIndex - 0.5f, currentNode.YIndex * 1.0f, -5.0f), Quaternion.identity);
+                newTile.transform.SetParent(this.transform);
+                newTile.transform.localScale = new Vector3(1.8f, 0.8f, 1.0f);
+
                 currentNode = currentNode.LeftNeighbour;
                 break;
             case Direction.Right:
-                GameObject newTile4 = Instantiate(Tile, new Vector3(currentNode.XIndex + 0.5f, currentNode.YIndex * 1.0f, -5.0f), Quaternion.identity);
-                newTile4.transform.localScale = new Vector3(1.8f, 0.8f, 1.0f);
+                newTile = Instantiate(TilePrefab, new Vector3(currentNode.XIndex + 0.5f, currentNode.YIndex * 1.0f, -5.0f), Quaternion.identity);
+                newTile.transform.SetParent(this.transform);
+                newTile.transform.localScale = new Vector3(1.8f, 0.8f, 1.0f);
+
                 currentNode = currentNode.RightNeighbour;
                 break;
         }
 
+        generatedObjects.Add(newTile);
+
         return currentNode;
+    }
+
+
+    public GameObject GetPlayer() {
+        return Player;
     }
 }

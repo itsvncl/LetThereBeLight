@@ -57,6 +57,10 @@ public class LevelManager : MonoBehaviour {
         StartCoroutine(Load());
     }
 
+    public void ReloadLevel() {
+        SwitchToLevel(currentLevel);
+    }
+
     public void SwitchToLevel(int level) {
         if (level > maxLevel) {
             Debug.Log(level);

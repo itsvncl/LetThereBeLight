@@ -87,6 +87,14 @@ MonoBehaviour:
     m_Key: LabyrinthLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 10006908369702912
+    m_Key: DeathyrinthLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10172720112013312
+    m_Key: FindTheSunLevel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

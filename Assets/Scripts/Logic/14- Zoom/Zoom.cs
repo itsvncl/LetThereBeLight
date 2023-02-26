@@ -17,6 +17,8 @@ public class Zoom : MonoBehaviour, IDraggable, ITouchBeginEvent, ITouchEndEvent 
     private float verticalBoundary;
     private float horizontalBoundary;
 
+    private bool levelComplete = false;
+
     void Start() {
         verticalBoundary = ScreenManager.SM.ScreenHeight / 2.0f;
         horizontalBoundary = ScreenManager.SM.ScreenWidth / 2.0f;
@@ -26,7 +28,9 @@ public class Zoom : MonoBehaviour, IDraggable, ITouchBeginEvent, ITouchEndEvent 
         Vector3 whitePos = whiteness.transform.position;
         float whiteScale = whiteness.transform.localScale.x;
         
-        if(ScreenManager.SM.ScreenHeight - (whiteScale - Mathf.Abs(whitePos.y) * 2) <= 0) {
+        if(ScreenManager.SM.ScreenHeight - (whiteScale - Mathf.Abs(whitePos.y) * 2) <= 0 && !levelComplete) {
+            levelComplete = true;
+
             LevelManager.Instance.LevelComplete();
             TouchSystem.Instance.Disable();
         }

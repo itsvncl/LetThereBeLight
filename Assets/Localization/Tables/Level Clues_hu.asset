@@ -90,6 +90,14 @@ MonoBehaviour:
     m_Localized: 19. LABIRINTUS
     m_Metadata:
       m_Items: []
+  - m_Id: 10006908369702912
+    m_Localized: "20. HAL\xC1LRINTUS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10172720112013312
+    m_Localized: "21. N\xC9ZZ A NAPRA"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
