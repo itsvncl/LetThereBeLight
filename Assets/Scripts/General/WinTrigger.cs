@@ -26,4 +26,8 @@ public class WinTrigger : MonoBehaviour
             }
         }
     }
+
+    public void SetWinObjects(GameObject[] winObjects) {
+        this.winObjects = winObjects;
+    }
 }
