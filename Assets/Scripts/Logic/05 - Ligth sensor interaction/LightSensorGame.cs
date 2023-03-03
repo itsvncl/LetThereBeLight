@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightSensorGame : MonoBehaviour
 {
     [SerializeField] private float luxTarget = 3000f;
+    [SerializeField] private Image lightImage;
 
     void Start()
     {

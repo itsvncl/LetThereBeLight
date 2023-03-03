@@ -16,6 +16,8 @@ public class RubGame : MonoBehaviour, IDraggable, ITouchBeginEvent {
     [SerializeField] Image lightImage;
     
     public void OnDrag(TouchData touchData) {
+        if (touchData.FingerID != 0) return;
+
         if (positive && touchData.Position.y > prevPos.y) {
             lightLevel += increaseSpeed;
             positive = false;

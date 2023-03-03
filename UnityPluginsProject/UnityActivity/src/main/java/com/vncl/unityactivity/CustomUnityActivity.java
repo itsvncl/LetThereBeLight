@@ -1,10 +1,13 @@
 package com.vncl.unityactivity;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -97,6 +100,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         flashCallback = new CameraManager.TorchCallback() {
             @Override
             public void onTorchModeChanged(@NonNull String cameraId, boolean enabled) {
+                Log.i(LOGTAG, "Flash changed on Camera: " + cameraId + " to: " + enabled);
                 if(enabled){
                     Log.i(LOGTAG, "Flash enabled");
                     UnityPlayer.UnitySendMessage("GameController", "FlashOn", "");
@@ -105,6 +109,11 @@ public class CustomUnityActivity extends UnityPlayerActivity {
                     return;
                 }
                 super.onTorchModeChanged(cameraId, false);
+            }
+
+            @Override
+            public void onTorchModeUnavailable(String cameraId){
+                Log.i(LOGTAG, "Unavailable on camera: " + cameraId);
             }
         };
 
@@ -153,6 +162,12 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     public void disableScreenshotDetector(){
         screenshotDetector.stop();
         screenshotDetector = null;
+    }
+
+    public boolean deviceHasFlash(){
+        boolean hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+        Log.i(LOGTAG, "Device flash available: " + hasFlash);
+        return hasFlash;
     }
 }
 

@@ -57,6 +57,11 @@ public class AndoridActivityManager : MonoBehaviour {
         activity.Call("disableScreenshotDetector");
     }
 
+    public bool DeviceHasFlash() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasFlash");
+    }
+
     private void NullCheck() {
         if (activity == null) {
             throw new System.Exception("Activity is null!");

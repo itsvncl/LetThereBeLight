@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FPS : MonoBehaviour {
     void Start() {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Application.targetFrameRate = 60;
     }
 

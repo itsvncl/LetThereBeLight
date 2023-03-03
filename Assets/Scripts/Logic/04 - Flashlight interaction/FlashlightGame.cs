@@ -4,6 +4,10 @@ public class FlashlightGame : MonoBehaviour
 {
     void Start(){
         AndoridActivityManager.Instance.StartFlashlightGuard();
+
+        if (!AndoridActivityManager.Instance.DeviceHasFlash()) {
+            //TODO: Level cant be played popup.
+        }
     }
 
     void OnDestroy() {

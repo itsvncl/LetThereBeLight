@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SunCalcNet;
@@ -56,10 +55,10 @@ public class SunGame : MonoBehaviour {
 
             sun.transform.position = AzimuthToVector3((float)(sunPos.Azimuth + Math.PI), (float)sunPos.Altitude);
 
-            /* Debug.Log(sun.transform.position);
+/*            Debug.Log(sun.transform.position);
             Debug.Log("Web success");
             Debug.Log("lat: " + lat + " lon: " + lon);
-            Debug.Log("Azi: " + Mathf.Rad2Deg * (sunPos.Azimuth + Math.PI) +" Alti: " + sunPos.Altitude * Mathf.Rad2Deg);*/
+            Debug.Log("Azi: " + Mathf.Rad2Deg * (sunPos.Azimuth + Math.PI) + " Alti: " + sunPos.Altitude * Mathf.Rad2Deg);*/
         }
     }
 
