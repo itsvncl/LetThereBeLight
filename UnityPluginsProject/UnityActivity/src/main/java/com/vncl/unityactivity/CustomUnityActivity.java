@@ -127,34 +127,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         Log.i(LOGTAG, "Flashlight guard disabled");
     }
 
-    public void enableLightSensorGuard(float targetValue){
-        lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-
-        lightSensorEventListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-
-                if(sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT){
-                    if(sensorEvent.values[0] >= targetValue){
-                        UnityPlayer.UnitySendMessage("GameController", "LightTargetReached", "");
-                        disableLightSensorGuard();
-                    }
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {}
-        };
-
-        sensorManager.registerListener(lightSensorEventListener, lightSensor, 1000);
-        Log.i(LOGTAG, "Light sensor listener enabled with target value: " + targetValue);
-    }
-    public void disableLightSensorGuard(){
-        sensorManager.unregisterListener(lightSensorEventListener);
-        lightSensorEventListener = null;
-        Log.i(LOGTAG, "Light sensor listener disabled");
-    }
-
     public void enableScreenshotDetector(){
         screenshotDetector = new ScreenshotDetector(this);
         screenshotDetector.start();
