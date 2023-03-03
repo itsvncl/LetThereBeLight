@@ -62,6 +62,11 @@ public class AndoridActivityManager : MonoBehaviour {
         return activity.Call<bool>("deviceHasFlash");
     }
 
+    public bool DeviceHasProximitySensor() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasProximity");
+    }
+
     private void NullCheck() {
         if (activity == null) {
             throw new System.Exception("Activity is null!");

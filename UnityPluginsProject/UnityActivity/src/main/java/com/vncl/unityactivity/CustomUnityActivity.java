@@ -10,12 +10,17 @@ import android.hardware.SensorManager;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 
 import com.unity3d.player.UnityPlayer;
+
+import java.lang.reflect.Field;
 
 //TODO: onPause remove event listener
 //TODO: onResume re add event listener
@@ -140,6 +145,13 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         boolean hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
         Log.i(LOGTAG, "Device flash available: " + hasFlash);
         return hasFlash;
+    }
+
+    public boolean deviceHasProximity(){
+        boolean hasProxy = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
+        Log.i(LOGTAG, "Device proximity sensor available: " + hasProxy);
+
+        return hasProxy;
     }
 }
 
