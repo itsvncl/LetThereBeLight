@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class FlashlightGame : MonoBehaviour
 {
+    [SerializeField] private GameObject unplayableOverlay;
+
     void Start(){
         AndoridActivityManager.Instance.StartFlashlightGuard();
 
         if (!AndoridActivityManager.Instance.DeviceHasFlash()) {
-            //TODO: Level cant be played popup.
+            unplayableOverlay.SetActive(true);
         }
     }
 

@@ -67,7 +67,7 @@ public class BrightnessGame : MonoBehaviour
     }
 
     private float GetLevel() {
-        return isXiaomi ? Mathf.Log(Screen.brightness, xiaomiMax) : Screen.brightness;
+        return isXiaomi ? Mathf.Log(Screen.brightness+1.0f, xiaomiMax) : Screen.brightness;
     }
 
     private void AdjustProgress() {

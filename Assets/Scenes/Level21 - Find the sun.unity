@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 43.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3291284940349539300, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3823274539407543502, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.20037842
@@ -324,6 +328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+--- !u!1 &656800916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6744410118692501651, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+  m_PrefabInstance: {fileID: 656800915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1024558995 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4527856793032966690, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
@@ -364,6 +373,7 @@ MonoBehaviour:
   defaultAzimuth: 264
   defaultAltitude: 64
   sunDistance: 3.5
+  unplayableOverlay: {fileID: 656800916}
 --- !u!4 &1165599412
 Transform:
   m_ObjectHideFlags: 0

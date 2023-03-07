@@ -14,6 +14,8 @@ public class SunGame : MonoBehaviour {
     [SerializeField] private float defaultAltitude = 64f;
     [SerializeField] private float sunDistance = 5.0f;
 
+    [SerializeField] private GameObject unplayableOverlay;
+
     private Plane[] cameraFrustum;
     private Collider sunCollider;
 
@@ -21,6 +23,13 @@ public class SunGame : MonoBehaviour {
     bool win = false;
 
     void Awake() {
+        if (!AndoridActivityManager.Instance.DeviceHasAccelerometer()) {
+            unplayableOverlay.SetActive(true);
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void Start() {
         sunCollider = sun.GetComponent<Collider>();
         sun.transform.position = AzimuthToVector3(Mathf.Deg2Rad * defaultAzimuth, Mathf.Deg2Rad * defaultAltitude);
 

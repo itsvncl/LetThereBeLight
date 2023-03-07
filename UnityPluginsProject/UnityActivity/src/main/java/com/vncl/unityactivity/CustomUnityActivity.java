@@ -147,11 +147,25 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         return hasFlash;
     }
 
-    public boolean deviceHasProximity(){
-        boolean hasProxy = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
-        Log.i(LOGTAG, "Device proximity sensor available: " + hasProxy);
+    public boolean deviceHasAccelerometer(){
+        boolean hasAccelerometer = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_ACCELEROMETER);
+        Log.i(LOGTAG, "Device accelerometer available: " + hasAccelerometer);
 
-        return hasProxy;
+        return hasAccelerometer;
+    }
+
+    public boolean deviceHasTwoTouchSupport(){
+        boolean hasTouchSupport = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT);
+        Log.i(LOGTAG, "Device two touch support available: " + hasTouchSupport);
+
+        return hasTouchSupport;
+    }
+
+    public boolean deviceHasFiveTouchSupport(){
+        boolean hasTouchSupport = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND);
+        Log.i(LOGTAG, "Device five touch support available: " + hasTouchSupport);
+
+        return hasTouchSupport;
     }
 }
 

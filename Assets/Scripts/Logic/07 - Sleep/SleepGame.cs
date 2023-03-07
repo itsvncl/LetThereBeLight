@@ -15,15 +15,20 @@ public class SleepGame : MonoBehaviour
     private bool deviceHasProxy;
 
     void Start() {
-        InputSystem.EnableDevice(ProximitySensor.current);
-        deviceHasProxy = AndoridActivityManager.Instance.DeviceHasProximitySensor();
+        deviceHasProxy = ProximitySensor.current != null;
+
+        if (deviceHasProxy) {
+            InputSystem.EnableDevice(ProximitySensor.current);
+        }
     }
 
     void FixedUpdate() {
         if (win) return;
 
-        if (( !deviceHasProxy || ProximitySensor.current.distance.ReadValue() < distanceTarget) && Input.deviceOrientation == DeviceOrientation.FaceDown) {
-            timeDuration = Time.time - beginTime;
+        if (Input.deviceOrientation == DeviceOrientation.FaceDown) {
+            if(!deviceHasProxy || (deviceHasProxy && ProximitySensor.current.distance.ReadValue() < distanceTarget)) {
+                timeDuration = Time.time - beginTime;
+            }
         }
         else {
             beginTime = Time.time;
@@ -38,7 +43,11 @@ public class SleepGame : MonoBehaviour
 
         if(timeDuration >= timeTarget) {
             win = true;
-            InputSystem.DisableDevice(ProximitySensor.current);
+
+            if (deviceHasProxy) {
+                InputSystem.DisableDevice(ProximitySensor.current);
+            }
+
             LevelManager.Instance.LevelComplete();
         }
     }

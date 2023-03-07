@@ -62,9 +62,19 @@ public class AndoridActivityManager : MonoBehaviour {
         return activity.Call<bool>("deviceHasFlash");
     }
 
-    public bool DeviceHasProximitySensor() {
+    public bool DeviceHasAccelerometer() {
         NullCheck();
-        return activity.Call<bool>("deviceHasProximity");
+        return activity.Call<bool>("deviceHasAccelerometer");
+    }
+
+    public bool DeviceHasTwoTouchSupport() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasTwoTouchSupport");
+    }
+
+    public bool DeviceHasFiveTouchSupport() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasFiveTouchSupport");
     }
 
     private void NullCheck() {

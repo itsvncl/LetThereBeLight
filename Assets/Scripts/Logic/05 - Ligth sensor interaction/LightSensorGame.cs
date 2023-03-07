@@ -15,8 +15,16 @@ public class LightSensorGame : MonoBehaviour
     private float startTime;
     private float waitTime = 2.0f;
 
+    [SerializeField] private GameObject unplayableOverlay;
+
     void Awake()
     {
+        if (LightSensor.current == null) {
+            unplayableOverlay.SetActive(true);
+            gameObject.SetActive(false);
+            return;
+        }
+
         InputSystem.EnableDevice(LightSensor.current);
         initial = LightSensor.current.lightLevel.ReadValue();
     }

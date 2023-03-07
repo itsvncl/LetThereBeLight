@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class MultiTouchLogic : MonoBehaviour
 {
+    [SerializeField] private GameObject singleTouch;
+    [SerializeField] private GameObject[] twoTouch;
+    [SerializeField] private GameObject[] fiveTouch;
+
     private Collider2D[] collidersInRange;
     bool win = false;
+
+    void Awake() {
+        if (AndoridActivityManager.Instance.DeviceHasFiveTouchSupport()){
+            foreach(var go in fiveTouch) {
+                go.SetActive(true);
+            }
+        }
+        else if (AndoridActivityManager.Instance.DeviceHasTwoTouchSupport()){
+            foreach (var go in twoTouch) {
+                go.SetActive(true);
+            }
+        }
+        else {
+            singleTouch.SetActive(true);
+        }
+    }
 
     void Start() {
         collidersInRange = Physics2D.OverlapCircleAll(Vector2.zero, 5);
     }
 
     void Update() {
-        if (Input.touchCount < 7) return;
 
         bool touched = false;
         foreach( Collider2D col in collidersInRange) {
