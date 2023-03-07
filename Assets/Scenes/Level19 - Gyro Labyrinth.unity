@@ -458,6 +458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+--- !u!1 &7103114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6744410118692501651, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+  m_PrefabInstance: {fileID: 7103113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &33598023
 GameObject:
   m_ObjectHideFlags: 0
@@ -8991,6 +8996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e81d2698fb129a49ac00a9f66029a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maze: {fileID: 0}
+  unplayableOverlay: {fileID: 0}
 --- !u!1 &720372191
 GameObject:
   m_ObjectHideFlags: 0
@@ -19316,6 +19323,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1819297214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819297216}
+  - component: {fileID: 1819297217}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819297216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819297214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.5024514}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819297217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819297214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e81d2698fb129a49ac00a9f66029a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maze: {fileID: 702147583}
+  unplayableOverlay: {fileID: 7103114}
 --- !u!1 &1820642248
 GameObject:
   m_ObjectHideFlags: 0

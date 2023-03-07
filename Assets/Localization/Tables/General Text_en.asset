@@ -38,6 +38,15 @@ MonoBehaviour:
     m_Localized: OK
     m_Metadata:
       m_Items: []
+  - m_Id: 13227970226098176
+    m_Localized: You can't play this level on your device due to not having the required
+      sensors/features.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13230298945622016
+    m_Localized: Skip level
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

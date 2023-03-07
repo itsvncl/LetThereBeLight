@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class DeathLogic : MonoBehaviour
 {
-    [SerializeField] private DeathyrinthController controller;
+    [SerializeField] private DeathyrinthGame game;
 
     private void Start() {
-        controller = GameObject.Find("GameController").GetComponent<DeathyrinthController>();
+        game = GameObject.Find("GameController").GetComponent<DeathyrinthGame>();
     }
 
     void OnTriggerExit2D(Collider2D other) {        
         Collider2D[] hits = Physics2D.OverlapPointAll(this.gameObject.transform.position);
             
         if(hits.Length < 2) {
-            controller.ResetGame();
+            game.ResetGame();
         }
     }
 }

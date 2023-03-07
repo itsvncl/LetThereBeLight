@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathyrinthController : MonoBehaviour
+public class DeathyrinthGame : MonoBehaviour
 {
     [SerializeField] private MazeGenerator generator;
+    [SerializeField] private GameObject unplayableOverlay;
 
     bool reset = false;
+
+
+    void Awake() {
+        if (!SystemInfo.supportsGyroscope) {
+            unplayableOverlay.SetActive(true);
+            gameObject.SetActive(false);
+        }
+    }
 
     void Start()
     {

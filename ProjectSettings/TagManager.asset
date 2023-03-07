@@ -9,6 +9,8 @@ TagManager:
   - Border
   - Cell
   - blurPanel
+  - Unplayable
+  - Overlay
   layers:
   - Default
   - TransparentFX

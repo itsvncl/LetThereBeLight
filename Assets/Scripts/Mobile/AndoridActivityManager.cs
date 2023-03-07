@@ -57,6 +57,26 @@ public class AndoridActivityManager : MonoBehaviour {
         activity.Call("disableScreenshotDetector");
     }
 
+    public bool DeviceHasFlash() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasFlash");
+    }
+
+    public bool DeviceHasMagnetometer() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasMagnetometer");
+    }
+
+    public bool DeviceHasTwoTouchSupport() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasTwoTouchSupport");
+    }
+
+    public bool DeviceHasFiveTouchSupport() {
+        NullCheck();
+        return activity.Call<bool>("deviceHasFiveTouchSupport");
+    }
+
     private void NullCheck() {
         if (activity == null) {
             throw new System.Exception("Activity is null!");

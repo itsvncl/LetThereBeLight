@@ -95,6 +95,10 @@ MonoBehaviour:
     m_Key: FindTheSunLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 13344283179159552
+    m_Key: LightSwitchGlassLevel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -37,6 +37,14 @@ MonoBehaviour:
     m_Key: Ok
     m_Metadata:
       m_Items: []
+  - m_Id: 13227970226098176
+    m_Key: SorryText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13230298945622016
+    m_Key: SkipText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

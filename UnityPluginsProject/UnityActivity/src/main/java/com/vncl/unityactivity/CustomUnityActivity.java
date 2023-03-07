@@ -1,18 +1,26 @@
 package com.vncl.unityactivity;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 
 import com.unity3d.player.UnityPlayer;
+
+import java.lang.reflect.Field;
 
 //TODO: onPause remove event listener
 //TODO: onResume re add event listener
@@ -97,6 +105,7 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         flashCallback = new CameraManager.TorchCallback() {
             @Override
             public void onTorchModeChanged(@NonNull String cameraId, boolean enabled) {
+                Log.i(LOGTAG, "Flash changed on Camera: " + cameraId + " to: " + enabled);
                 if(enabled){
                     Log.i(LOGTAG, "Flash enabled");
                     UnityPlayer.UnitySendMessage("GameController", "FlashOn", "");
@@ -105,6 +114,11 @@ public class CustomUnityActivity extends UnityPlayerActivity {
                     return;
                 }
                 super.onTorchModeChanged(cameraId, false);
+            }
+
+            @Override
+            public void onTorchModeUnavailable(String cameraId){
+                Log.i(LOGTAG, "Unavailable on camera: " + cameraId);
             }
         };
 
@@ -118,34 +132,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         Log.i(LOGTAG, "Flashlight guard disabled");
     }
 
-    public void enableLightSensorGuard(float targetValue){
-        lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-
-        lightSensorEventListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-
-                if(sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT){
-                    if(sensorEvent.values[0] >= targetValue){
-                        UnityPlayer.UnitySendMessage("GameController", "LightTargetReached", "");
-                        disableLightSensorGuard();
-                    }
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {}
-        };
-
-        sensorManager.registerListener(lightSensorEventListener, lightSensor, 1000);
-        Log.i(LOGTAG, "Light sensor listener enabled with target value: " + targetValue);
-    }
-    public void disableLightSensorGuard(){
-        sensorManager.unregisterListener(lightSensorEventListener);
-        lightSensorEventListener = null;
-        Log.i(LOGTAG, "Light sensor listener disabled");
-    }
-
     public void enableScreenshotDetector(){
         screenshotDetector = new ScreenshotDetector(this);
         screenshotDetector.start();
@@ -153,6 +139,33 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     public void disableScreenshotDetector(){
         screenshotDetector.stop();
         screenshotDetector = null;
+    }
+
+    public boolean deviceHasFlash(){
+        boolean hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+        Log.i(LOGTAG, "Device flash available: " + hasFlash);
+        return hasFlash;
+    }
+
+    public boolean deviceHasMagnetometer(){
+        boolean hasMagnetometer = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_COMPASS);
+        Log.i(LOGTAG, "Device magnetometer available: " + hasMagnetometer);
+
+        return hasMagnetometer;
+    }
+
+    public boolean deviceHasTwoTouchSupport(){
+        boolean hasTouchSupport = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT);
+        Log.i(LOGTAG, "Device two touch support available: " + hasTouchSupport);
+
+        return hasTouchSupport;
+    }
+
+    public boolean deviceHasFiveTouchSupport(){
+        boolean hasTouchSupport = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND);
+        Log.i(LOGTAG, "Device five touch support available: " + hasTouchSupport);
+
+        return hasTouchSupport;
     }
 }
 

@@ -293,7 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dotPrefab: {fileID: 8643996826433729992, guid: 62378a0aa0e4af5418d9461b84bd84ac, type: 3}
   dashPrefab: {fileID: 508969174441848091, guid: e9776c9210fc0cf49ae80ba9f1c009d7, type: 3}
-  longPressTime: 0.5
+  longPressTime: 0.2
   morseGap: 0.1
   maximumSize: 10
 --- !u!1 &957920658
