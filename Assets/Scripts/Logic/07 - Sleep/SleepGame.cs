@@ -29,6 +29,10 @@ public class SleepGame : MonoBehaviour
             if(!deviceHasProxy || (deviceHasProxy && ProximitySensor.current.distance.ReadValue() < distanceTarget)) {
                 timeDuration = Time.time - beginTime;
             }
+            else {
+                beginTime = Time.time;
+                timeDuration -= 0.05f;
+            }
         }
         else {
             beginTime = Time.time;

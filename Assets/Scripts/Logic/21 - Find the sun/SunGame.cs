@@ -23,7 +23,7 @@ public class SunGame : MonoBehaviour {
     bool win = false;
 
     void Awake() {
-        if (!AndoridActivityManager.Instance.DeviceHasAccelerometer()) {
+        if (!AndoridActivityManager.Instance.DeviceHasMagnetometer()) {
             unplayableOverlay.SetActive(true);
             gameObject.SetActive(false);
         }

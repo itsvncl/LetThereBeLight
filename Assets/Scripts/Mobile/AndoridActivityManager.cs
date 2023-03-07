@@ -62,9 +62,9 @@ public class AndoridActivityManager : MonoBehaviour {
         return activity.Call<bool>("deviceHasFlash");
     }
 
-    public bool DeviceHasAccelerometer() {
+    public bool DeviceHasMagnetometer() {
         NullCheck();
-        return activity.Call<bool>("deviceHasAccelerometer");
+        return activity.Call<bool>("deviceHasMagnetometer");
     }
 
     public bool DeviceHasTwoTouchSupport() {

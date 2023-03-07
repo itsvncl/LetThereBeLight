@@ -147,11 +147,11 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         return hasFlash;
     }
 
-    public boolean deviceHasAccelerometer(){
-        boolean hasAccelerometer = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_ACCELEROMETER);
-        Log.i(LOGTAG, "Device accelerometer available: " + hasAccelerometer);
+    public boolean deviceHasMagnetometer(){
+        boolean hasMagnetometer = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_COMPASS);
+        Log.i(LOGTAG, "Device magnetometer available: " + hasMagnetometer);
 
-        return hasAccelerometer;
+        return hasMagnetometer;
     }
 
     public boolean deviceHasTwoTouchSupport(){
