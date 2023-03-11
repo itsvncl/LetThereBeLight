@@ -132,7 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 23237554260475147, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 427184427008
+      value: 14840609045811200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291284940349539300, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4527856791576817581, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_text

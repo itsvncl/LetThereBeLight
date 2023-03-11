@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level15 - Heat.unity
     guid: 97da988f9b9b3fa40a7eab0420e7fb96
   - enabled: 1
-    path: Assets/Scenes/Level16 - Paint.unity
+    path: Assets/Scenes/Level16 - Light switch orientation.unity
     guid: 418d90faf024ceb478c85aea7d3baaf5
   - enabled: 1
     path: Assets/Scenes/Level17 - Lightbulb.unity
@@ -78,11 +78,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Level22 - Brightness interaction.unity
     guid: 719ab66ad2f19ca45b59f11486871f9b
   - enabled: 1
+    path: Assets/Scenes/Level23 - Light switch glass.unity
+    guid: 7f658b56f2496714eb8642af57f045ce
+  - enabled: 1
+    path: Assets/Scenes/Level24 - Notification.unity
+    guid: 4ec8a1ea854910f49826d7839641287b
+  - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: 01ffac2df1497cd418a02ba440496d50
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1ffabe64357d50343b946cc381274375, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: e012eb0683fe12f4d8b711a6bdcf79db, type: 2}
-    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9d4bafdedaf25f04d8c41b6f21e6e0e1, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 904ff2495030cd14ca37b1508faaa6b6, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 37faf1ea3c419b947a964bb6fa1f9776, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 7ae3d22542eea104fa014a5d9133a831, type: 2}

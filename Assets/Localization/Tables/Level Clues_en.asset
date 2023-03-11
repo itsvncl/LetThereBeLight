@@ -99,7 +99,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13344283179159552
-    m_Localized: 22. EMERGENY LIGHT
+    m_Localized: 23. EMERGENCY LIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14739444434014208
+    m_Localized: 16. NOT AS USUAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14840339087822848
+    m_Localized: 24. THE HIDDEN SWITCH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14840609045811200
+    m_Localized: 22. INCREASE THE BRIGHTNESS
     m_Metadata:
       m_Items: []
   references:

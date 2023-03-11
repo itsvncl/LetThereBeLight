@@ -45,6 +45,14 @@ MonoBehaviour:
     m_Key: SkipText
     m_Metadata:
       m_Items: []
+  - m_Id: 14807335426658304
+    m_Key: NotificationTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14807563965894656
+    m_Key: NotificationText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

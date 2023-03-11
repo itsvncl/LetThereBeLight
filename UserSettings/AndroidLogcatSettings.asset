@@ -2,46 +2,40 @@
     "m_SelectedDeviceId": "207a5b98",
     "m_SelectedPackage": {
         "deviceId": "207a5b98",
-        "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 20146,
+        "name": "com.vncl.lettherebelight",
+        "processId": 5075,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "207a5b98",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 4269,
-            "exited": false
+            "name": "com.vncl.lettherebelight",
+            "processId": 25726,
+            "exited": true
         },
         {
             "deviceId": "207a5b98",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 5315,
-            "exited": false
+            "name": "com.vncl.lettherebelight",
+            "processId": 28398,
+            "exited": true
         },
         {
             "deviceId": "207a5b98",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 14659,
-            "exited": false
+            "name": "com.vncl.lettherebelight",
+            "processId": 3148,
+            "exited": true
         },
         {
             "deviceId": "207a5b98",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 17158,
-            "exited": false
+            "name": "com.vncl.lettherebelight",
+            "processId": 4719,
+            "exited": true
         },
         {
             "deviceId": "207a5b98",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 18816,
-            "exited": false
-        },
-        {
-            "deviceId": "207a5b98",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 20146,
+            "name": "com.vncl.lettherebelight",
+            "processId": 5075,
             "exited": false
         }
     ],

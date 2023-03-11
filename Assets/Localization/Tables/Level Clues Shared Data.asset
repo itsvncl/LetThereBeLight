@@ -99,6 +99,22 @@ MonoBehaviour:
     m_Key: LightSwitchGlassLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 14739444434014208
+    m_Key: LightSwitchOrientationLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14840339087822848
+    m_Key: NotificationLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14840609045811200
+    m_Key: BrightnessLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14846074161008640
+    m_Key: 
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

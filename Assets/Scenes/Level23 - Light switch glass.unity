@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23237554260475147, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 13344283179159552
+      objectReference: {fileID: 0}
     - target: {fileID: 3244414593046727654, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -44.953857
@@ -378,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winObjects:
   - {fileID: 861421024}
+  freezeAfterWin: 0
 --- !u!1 &253366800
 GameObject:
   m_ObjectHideFlags: 0

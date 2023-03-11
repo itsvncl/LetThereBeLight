@@ -21,11 +21,9 @@ public class DevTools : MonoBehaviour
 
     void Update()
     {
-        if(Input.touchCount == 1 && Time.time - prevTime > 0.5f) {
-            if(Input.GetTouch(0).tapCount >= 5 && Input.GetTouch(0).phase == TouchPhase.Ended && Time.time - prevTime > 0.5f) {
+        if(Input.touchCount == 6 && Time.time - prevTime > 0.5f) {
                 prevTime = Time.time;
                 LevelManager.Instance.DebugNextLevel();
-            }
         }
         if (Input.touchCount == 10 && Time.time - prevTime > 0.5f) {
             prevTime = Time.time;
