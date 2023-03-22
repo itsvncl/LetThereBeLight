@@ -111,10 +111,6 @@ MonoBehaviour:
     m_Key: BrightnessLevel
     m_Metadata:
       m_Items: []
-  - m_Id: 14846074161008640
-    m_Key: 
-    m_Metadata:
-      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
