@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
-    private int maxLevel = 32;
+    private int maxLevel = 24;
     private int progression = 1;
     private int currentLevel = 0;
 
@@ -97,6 +97,10 @@ public class LevelManager : MonoBehaviour {
 
     public int GetMaxLevel() {
         return maxLevel;
+    }
+
+    public int GetCurrentLevel() {
+        return currentLevel;
     }
 
     public int GetProgression() { return progression; }

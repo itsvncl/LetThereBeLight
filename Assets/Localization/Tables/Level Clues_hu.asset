@@ -16,104 +16,133 @@ MonoBehaviour:
     m_Code: hu
   m_SharedData: {fileID: 11400000, guid: 84866a2293cede54cb89a0989702a688, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3547996990398005254
   m_TableData:
   - m_Id: 24107618304
-    m_Localized: 1. AHOGY SZOKTAD
+    m_Localized: '{L.LevelNumber}. AHOGY SZOKTAD'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 221097299968
-    m_Localized: "2. BEK\xD6T\xC9S"
+    m_Localized: "{L.LevelNumber}. BEK\xD6T\xC9S"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 418955202560
-    m_Localized: "3. HADD SZ\xD3LJON"
+    m_Localized: "{L.LevelNumber}. HADD SZ\xD3LJON"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 423774457856
-    m_Localized: 4. CSAK KAPCSOLD BE
+    m_Localized: '{L.LevelNumber}. CSAK KAPCSOLD BE'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 427184427008
-    m_Localized: "5. VIL\xC1G\xCDTS NEKEM"
+    m_Localized: "{L.LevelNumber}. VIL\xC1G\xCDTS NEKEM"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 433144532992
-    m_Localized: "6. JELEZZ SEG\xCDTS\xC9G\xC9RT"
+    m_Localized: "{L.LevelNumber}. JELEZZ SEG\xCDTS\xC9G\xC9RT"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 438022508544
     m_Localized: 7. FEKTESS LE
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 1735673057280
-    m_Localized: "8. LEMER\xDCLVE"
+    m_Localized: "{L.LevelNumber}. LEMER\xDCLVE"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 1741247287296
-    m_Localized: "9. \xD6R\xD6K\xCDTSD MEG"
+    m_Localized: "{L.LevelNumber}. \xD6R\xD6K\xCDTSD MEG"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 1742723682304
-    m_Localized: "10. FEDD EL A HIB\xC1KAT"
+    m_Localized: "{L.LevelNumber}. FEDD EL A HIB\xC1KAT"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 2514312040448
-    m_Localized: 11. SLIDE PUZZLE
+    m_Localized: '{L.LevelNumber}. SLIDE PUZZLE'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 2839152496640
-    m_Localized: 12. 1024
+    m_Localized: '{L.LevelNumber}. 1024'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 2954130952192
-    m_Localized: 13. FLOW
+    m_Localized: '{L.LevelNumber}. FLOW'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 3101883699200
-    m_Localized: "14. NAGY\xCDT\xC1S"
+    m_Localized: "{L.LevelNumber}. NAGY\xCDT\xC1S"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 4706708382093312
-    m_Localized: "15. CSIN\xC1LJ MELEGET"
+    m_Localized: "{L.LevelNumber}. CSIN\xC1LJ MELEGET"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 4903852032462848
-    m_Localized: "17. KERESSD A M\u0170K\xD6D\u0150 K\xD6RT\xC9T"
+    m_Localized: "{L.LevelNumber}. KERESSD A M\u0170K\xD6D\u0150 K\xD6RT\xC9T"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 4918326659452928
-    m_Localized: "18. VEZET\xC9K SZEREL\u0150"
+    m_Localized: "{L.LevelNumber}. VEZET\xC9K SZEREL\u0150"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 9788826070093824
-    m_Localized: 19. LABIRINTUS
+    m_Localized: '{L.LevelNumber}. LABIRINTUS'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 10006908369702912
-    m_Localized: "20. HAL\xC1LRINTUS"
+    m_Localized: "{L.LevelNumber}. HAL\xC1LRINTUS"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 10172720112013312
-    m_Localized: "21. N\xC9ZZ A NAPRA"
+    m_Localized: "{L.LevelNumber}. N\xC9ZZ A NAPRA"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 13344283179159552
-    m_Localized: "23. V\xC9SZHELYZETI VIL\xC1G\xCDT\xC1S"
+    m_Localized: "{L.LevelNumber}. V\xC9SZHELYZETI VIL\xC1G\xCDT\xC1S"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 14739444434014208
-    m_Localized: 16. NEM AHOGY SZOKTAD
+    m_Localized: '{L.LevelNumber}. NEM AHOGY SZOKTAD'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 14840609045811200
-    m_Localized: "22. VEDD FEL A F\xC9NYER\u0150T"
+    m_Localized: "{L.LevelNumber}. VEDD FEL A F\xC9NYER\u0150T"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   - m_Id: 14840339087822848
-    m_Localized: "24. AZ ELREJTETT KAPCSOL\xD3"
+    m_Localized: "{L.LevelNumber}. AZ ELREJTETT KAPCSOL\xD3"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3547996990398005254
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3547996990398005254
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0010ed9c0500000000106d7a330000000010ad8b610000000010edaa6200000000102d766300000000106dd96400000000102dfc6500000000102d1e9401000000106d6a9501000000106dc2950100000010ad68490200000010ad0a950200000010edcfaf0200000010ad36d202000000102df1b9b8100000106d06076c110000106d29317911000010adace2c622000010adea3a8d23000010adf8082424000010ad0a8e682f000010ad55725d34000010adb335b9340000106d8e74b93400

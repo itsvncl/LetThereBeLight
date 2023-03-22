@@ -2519,6 +2519,7 @@ GameObject:
   - component: {fileID: 8002826396946094813}
   - component: {fileID: 2148319547710368282}
   - component: {fileID: 23237554260475147}
+  - component: {fileID: 1254863557160793755}
   m_Layer: 5
   m_Name: Clue
   m_TagString: Untagged
@@ -2574,7 +2575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. AHOGY SZOKTAD
+  m_text: Clue (CurrentLevelNumberData). AHOGY SZOKTAD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -2601,7 +2602,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.05
+  m_fontSize: 21.4
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2662,8 +2663,11 @@ MonoBehaviour:
       m_KeyId: 24107618304
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+    m_WaitForCompletion: 1
+    m_LocalVariables:
+    - name: L
+      variable:
+        rid: 3547996990398005264
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -2682,7 +2686,23 @@ MonoBehaviour:
         m_CallState: 2
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3547996990398005264
+      type: {class: ObjectVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: {fileID: 1254863557160793755}
+--- !u!114 &1254863557160793755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7793768635089407460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6f3be7910331545a22f824256458f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7978958532873095911
 GameObject:
   m_ObjectHideFlags: 0
