@@ -50,7 +50,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 438022508544
-    m_Localized: 7. SLEPEN
+    m_Localized: '{L.LevelNumber}. SLEPEN'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255

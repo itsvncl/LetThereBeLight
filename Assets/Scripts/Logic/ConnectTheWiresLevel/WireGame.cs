@@ -9,13 +9,22 @@ public class WireGame : MonoBehaviour
 
     private void Start() {
         Instance = this;
+        ConnectedWireCount = 0;
     }
 
     public static void WireConnected() {
         ConnectedWireCount++;
 
-        if(ConnectedWireCount >= Instance.WireCount) {
-            LevelManager.Instance.LevelComplete();
+        if(ConnectedWireCount == Instance.WireCount) {
+            try {
+                LevelManager.Instance.LevelComplete();
+            } catch {
+                Debug.Log("LevelManager not inited");
+            }
         }
+    }
+
+    public void SetWireCount(int count) {
+        WireCount = count;
     }
 }

@@ -31,7 +31,7 @@ public class SunGame : MonoBehaviour {
 
     private void Start() {
         sunCollider = sun.GetComponent<Collider>();
-        sun.transform.position = AzimuthToVector3(Mathf.Deg2Rad * defaultAzimuth, Mathf.Deg2Rad * defaultAltitude);
+        sun.transform.position = AzimuthToVector3(Mathf.Deg2Rad * defaultAzimuth, Mathf.Deg2Rad * defaultAltitude, sunDistance);
 
         PositionSun();
     }
@@ -62,20 +62,15 @@ public class SunGame : MonoBehaviour {
 
             var sunPos = SunCalc.GetSunPosition(current, lat, lon);
 
-            sun.transform.position = AzimuthToVector3((float)(sunPos.Azimuth + Math.PI), (float)sunPos.Altitude);
-
-/*            Debug.Log(sun.transform.position);
-            Debug.Log("Web success");
-            Debug.Log("lat: " + lat + " lon: " + lon);
-            Debug.Log("Azi: " + Mathf.Rad2Deg * (sunPos.Azimuth + Math.PI) + " Alti: " + sunPos.Altitude * Mathf.Rad2Deg);*/
+            sun.transform.position = AzimuthToVector3((float)(sunPos.Azimuth + Math.PI), (float)sunPos.Altitude, sunDistance);
         }
     }
 
-    Vector3 AzimuthToVector3(float azimuth, float altitude) {
+    public static Vector3 AzimuthToVector3(float azimuth, float altitude, float distance) {
 
-        float x = Mathf.Round(sunDistance * (Mathf.Cos(altitude) * Mathf.Sin(azimuth)));
-        float y = Mathf.Round(sunDistance * (Mathf.Cos(altitude) * Mathf.Cos(azimuth)));
-        float z = Mathf.Round(sunDistance * Mathf.Sin(altitude));
+        float x = distance * (Mathf.Cos(altitude) * Mathf.Sin(azimuth));
+        float y = distance * (Mathf.Cos(altitude) * Mathf.Cos(azimuth));
+        float z = distance * Mathf.Sin(altitude);
 
         Vector3 point = new Vector3(x, y, z);
 

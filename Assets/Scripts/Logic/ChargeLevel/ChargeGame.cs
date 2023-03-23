@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ChargeGame : MonoBehaviour
 {
-    bool win = false;
+    public bool win = false;
     public GameObject charge;
     public GameObject fullCharge;
 

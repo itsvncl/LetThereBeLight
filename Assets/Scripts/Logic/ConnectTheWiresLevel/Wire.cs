@@ -2,18 +2,22 @@ using UnityEngine;
 
 public class Wire : MonoBehaviour, IDraggable, ITouchBeginEvent, ITouchEndEvent
 {
-    [SerializeField] private WireColor _color;
+    [SerializeField] public WireColor _color;
     private bool _connected = false;
 
-    [SerializeField] private GameObject exposedWire;
-    [SerializeField] private GameObject finalWire;
-    [SerializeField] private GameObject tempWire;
+    [SerializeField] public GameObject exposedWire;
+    [SerializeField] public GameObject finalWire;
+    [SerializeField] public GameObject tempWire;
 
     void Start()
     {
-        exposedWire = transform.GetChild(0).gameObject;
-        finalWire = transform.GetChild(1).gameObject;
-        tempWire = transform.GetChild(2).gameObject;
+        try {
+            exposedWire = transform.GetChild(0).gameObject;
+            finalWire = transform.GetChild(1).gameObject;
+            tempWire = transform.GetChild(2).gameObject;
+        } catch {
+            Debug.Log("Transform childs are missing");
+        }
     }
 
     public void OnDrag(TouchData touchData) {

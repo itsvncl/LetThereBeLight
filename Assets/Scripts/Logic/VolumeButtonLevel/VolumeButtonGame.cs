@@ -3,10 +3,13 @@ using UnityEngine.UI;
 
 public class VolumeButtonGame : MonoBehaviour
 {
-    [SerializeField] private Image image;
-    [SerializeField] private GameObject progress;
+    [SerializeField] public Image image;
+    [SerializeField] public GameObject progress;
     private float alpha = 0f;
-    private float alphaTarget = 0f;
+    public float alphaTarget = 0f;
+    public float incrementValue = 0.1f;
+    public float winTarget = 1.0f;
+    public bool win = false;
 
     private float progressScaleMin = 0f;
     private float progressScaleMax = 2.7f;
@@ -17,55 +20,76 @@ public class VolumeButtonGame : MonoBehaviour
     private float progressPosStep;
 
     void Start() {
-        AndoridActivityManager.Instance.LockVolumeButton();
+        try {
+            AndoridActivityManager.Instance.LockVolumeButton();
+        } catch {
+            Debug.Log("AndroidActivityManager not inited");
+        }
         progressScaleStep = (progressScaleMax - progressScaleMin) / 11;
         progressPosStep = Mathf.Abs((progressPosMax - progressPosMin) / 11);
     }
     void OnDestroy() {
-        AndoridActivityManager.Instance.UnlockVolumeButton();
+        try {
+            AndoridActivityManager.Instance.UnlockVolumeButton();
+        } catch {
+            Debug.Log("AndroidActivityManager not inited");
+        }
     }
 
     void FixedUpdate() {
         if(alphaTarget > alpha) {
             alpha += 0.01f;
 
-            var tempColor = image.color;
-            tempColor.a = alpha;
-
-            image.color = tempColor;
-        }else if(alphaTarget + 0.02f < alpha) {
+            AdjustImageAlpha();
+        }
+        else if(alphaTarget + 0.02f < alpha) {
             alpha -= 0.01f;
 
-            var tempColor = image.color;
-            tempColor.a = alpha;
-
-            image.color = tempColor;
+            AdjustImageAlpha();
         }
     }
 
+    private void AdjustImageAlpha() {
+        try {
+            var tempColor = image.color;
+            tempColor.a = alpha;
+
+            image.color = tempColor;
+        } catch {
+            Debug.Log("Image not inited");
+        }
+    }
+
+
     public void IncrementAlphaUp(string s = "") {
-        if (alphaTarget >= 1f) {
+        if (alphaTarget >= winTarget) {
             OnWin();
             return;
         }
 
-        alphaTarget += 0.1f;
+        alphaTarget += incrementValue;
 
         progress.transform.position = new Vector3(progress.transform.position.x, progress.transform.position.y + progressPosStep, progress.transform.position.z);
         progress.transform.localScale = new Vector3(progress.transform.localScale.x, progress.transform.localScale.y + progressScaleStep, progress.transform.localScale.z);
     }
 
+
     public void IncrementAlphaDown(string s = "") {
         if (alphaTarget <= 0f) return;
 
-        alphaTarget -= 0.1f;
+        alphaTarget -= incrementValue;
 
         progress.transform.position = new Vector3(progress.transform.position.x, progress.transform.position.y - progressPosStep, progress.transform.position.z);
         progress.transform.localScale = new Vector3(progress.transform.localScale.x, progress.transform.localScale.y - progressScaleStep, progress.transform.localScale.z);
     }
 
     private void OnWin() {
-        AndoridActivityManager.Instance.UnlockVolumeButton();
-        LevelManager.Instance.LevelComplete();
+        win = true;
+        try {
+            LevelManager.Instance.LevelComplete();
+            AndoridActivityManager.Instance.UnlockVolumeButton();
+        } catch {
+            Debug.Log("LevelManager and AndoridActivityManager are not inited");
+        }
     }
 }

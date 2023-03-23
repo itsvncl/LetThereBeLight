@@ -50,7 +50,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 438022508544
-    m_Localized: 7. FEKTESS LE
+    m_Localized: '{L.LevelNumber}. FEKTESS LE'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254

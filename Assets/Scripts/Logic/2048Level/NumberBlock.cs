@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,7 @@ public class NumberBlock : MonoBehaviour {
         //Start values are between 2 and 4. 4 has 1/4 chance of spawning
         rb = GetComponent<Rigidbody2D>();
 
-        if (Random.Range(0, 4) == 0) {
+        if (UnityEngine.Random.Range(0, 4) == 0) {
             tier = 1;
         }
 
@@ -33,7 +34,8 @@ public class NumberBlock : MonoBehaviour {
         locationIndex = LocationToIndex();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = numberSprites[tier];
+        UpdateSprite(tier);
+
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class NumberBlock : MonoBehaviour {
             case Direction.Up:
                 newPos.y += movementSpeed;
 
-                if(newPos.y >= destination.y) {
+                if (newPos.y >= destination.y) {
                     Settle(destination);
                     return;
                 }
@@ -90,7 +92,7 @@ public class NumberBlock : MonoBehaviour {
     void HandleCollision(GameObject collision) {
         NumberBlock other = collision.GetComponent<NumberBlock>();
         //Meaning that the other is not a number
-        if(other == null) {
+        if (other == null) {
             //Settle(destination);
             return;
         }
@@ -99,7 +101,7 @@ public class NumberBlock : MonoBehaviour {
             if (other.direction == Direction.Stationary) {
                 Destroy(other.gameObject);
                 Merge();
-            }else if (direction == Direction.Stationary) {
+            } else if (direction == Direction.Stationary) {
                 Destroy(this.gameObject);
                 other.Merge();
             }
@@ -109,8 +111,15 @@ public class NumberBlock : MonoBehaviour {
     void Merge() {
         if (merged) return;
         tier++;
-        spriteRenderer.sprite = numberSprites[tier];
+        UpdateSprite(tier);
         merged = true;
+    }
+
+    void UpdateSprite(int tier) {
+        try {
+            spriteRenderer.sprite = numberSprites[tier];
+        } catch {
+        }
     }
 
     void Settle(Vector3 newPos) {
