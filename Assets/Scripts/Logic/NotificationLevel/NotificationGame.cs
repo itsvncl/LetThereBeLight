@@ -10,20 +10,16 @@ public class NotificationGame : MonoBehaviour
     [SerializeField] private LocalizedString notificationTitle;
     [SerializeField] private LocalizedString notificationText;
 
+    [SerializeField] private GameObject unplayableOverlay;
+
     void Start()
     {
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
-            Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
-        }
-
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
-            Debug.Log("Baj van");
-        }
+        PreparePermissions();
 
         var channel = new AndroidNotificationChannel() {
             Id = "LetThereBeLight",
             Name = "Game",
-            Importance = Importance.Low,
+            Importance = Importance.High,
             Description = "Game completion notification",
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
@@ -45,5 +41,25 @@ public class NotificationGame : MonoBehaviour
     private void OnDestroy() {
         AndroidNotificationCenter.CancelAllNotifications();
         AndroidNotificationCenter.CancelAllDisplayedNotifications();
+    }
+
+
+    private void PreparePermissions() {
+        if (AndroidActivityManager.getAPILevel() < 33) return;
+
+        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
+            Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
+        }
+
+        StartCoroutine(CheckPermissionAccess());
+    }
+
+    IEnumerator CheckPermissionAccess() {
+        yield return new WaitForSeconds(0.5f);
+
+        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
+            unplayableOverlay.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

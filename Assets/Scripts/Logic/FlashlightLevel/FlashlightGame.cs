@@ -5,15 +5,15 @@ public class FlashlightGame : MonoBehaviour
     [SerializeField] private GameObject unplayableOverlay;
 
     void Start(){
-        AndoridActivityManager.Instance.StartFlashlightGuard();
+        AndroidActivityManager.Instance.StartFlashlightGuard();
 
-        if (!AndoridActivityManager.Instance.DeviceHasFlash()) {
+        if (!AndroidActivityManager.Instance.DeviceHasFlash()) {
             unplayableOverlay.SetActive(true);
         }
     }
 
     void OnDestroy() {
-        AndoridActivityManager.Instance.StopFlashlightGuard();
+        AndroidActivityManager.Instance.StopFlashlightGuard();
     }
 
     public void FlashOn(string s = "") {

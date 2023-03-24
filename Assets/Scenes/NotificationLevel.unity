@@ -353,6 +353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+--- !u!1 &1187282195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6744410118692501651, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+  m_PrefabInstance: {fileID: 1187282194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788691375
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +420,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  unplayableOverlay: {fileID: 1187282195}
   references:
     version: 2
     RefIds: []

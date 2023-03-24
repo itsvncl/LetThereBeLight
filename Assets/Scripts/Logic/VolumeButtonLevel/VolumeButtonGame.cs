@@ -21,7 +21,7 @@ public class VolumeButtonGame : MonoBehaviour
 
     void Start() {
         try {
-            AndoridActivityManager.Instance.LockVolumeButton();
+            AndroidActivityManager.Instance.LockVolumeButton();
         } catch {
             Debug.Log("AndroidActivityManager not inited");
         }
@@ -30,7 +30,7 @@ public class VolumeButtonGame : MonoBehaviour
     }
     void OnDestroy() {
         try {
-            AndoridActivityManager.Instance.UnlockVolumeButton();
+            AndroidActivityManager.Instance.UnlockVolumeButton();
         } catch {
             Debug.Log("AndroidActivityManager not inited");
         }
@@ -87,9 +87,9 @@ public class VolumeButtonGame : MonoBehaviour
         win = true;
         try {
             LevelManager.Instance.LevelComplete();
-            AndoridActivityManager.Instance.UnlockVolumeButton();
+            AndroidActivityManager.Instance.UnlockVolumeButton();
         } catch {
-            Debug.Log("LevelManager and AndoridActivityManager are not inited");
+            Debug.Log("LevelManager and AndroidActivityManager are not inited");
         }
     }
 }

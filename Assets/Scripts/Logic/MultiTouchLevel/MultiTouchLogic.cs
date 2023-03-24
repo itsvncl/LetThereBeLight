@@ -12,12 +12,12 @@ public class MultiTouchLogic : MonoBehaviour
     bool win = false;
 
     void Awake() {
-        if (AndoridActivityManager.Instance.DeviceHasFiveTouchSupport()){
+        if (AndroidActivityManager.Instance.DeviceHasFiveTouchSupport()){
             foreach(var go in fiveTouch) {
                 go.SetActive(true);
             }
         }
-        else if (AndoridActivityManager.Instance.DeviceHasTwoTouchSupport()){
+        else if (AndroidActivityManager.Instance.DeviceHasTwoTouchSupport()){
             foreach (var go in twoTouch) {
                 go.SetActive(true);
             }

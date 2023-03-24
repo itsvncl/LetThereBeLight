@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class AndoridActivityManager : MonoBehaviour {
-    public static AndoridActivityManager Instance;
-    
+public class AndroidActivityManager : MonoBehaviour {
+    public static AndroidActivityManager Instance;
+
     private AndroidJavaClass playerClass;
     private AndroidJavaObject activity;
 
@@ -16,6 +16,12 @@ public class AndoridActivityManager : MonoBehaviour {
         activity = playerClass.GetStatic<AndroidJavaObject>("currentActivity");
 
         Instance = this;
+    }
+
+    public static int getAPILevel() {
+        using (var version = new AndroidJavaClass("android.os.Build$VERSION")) {
+            return version.GetStatic<int>("SDK_INT");
+        }
     }
 
     public void LockVolumeButton() {
