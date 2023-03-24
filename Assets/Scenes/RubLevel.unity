@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseSpeed: 0.0015
   increaseSpeed: 0.02
+  lightLevel: 0
   lightImage: {fileID: 1072634987}
 --- !u!1 &728739816
 GameObject:
@@ -306,6 +307,10 @@ PrefabInstance:
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 4706708382093312
       objectReference: {fileID: 0}
+    - target: {fileID: 3291284940349539300, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3823274539407543502, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.20037842
@@ -397,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 4527856793032966694, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_Name
       value: Overlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113823751700616496, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 14926985091158016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}

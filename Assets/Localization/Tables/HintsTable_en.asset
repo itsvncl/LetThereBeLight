@@ -19,7 +19,108 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 125681078272
-    m_Localized: h1
+    m_Localized: Drag the switch to the On position.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036201562112
+    m_Localized: Blocks with the same number will perform an addition by merging
+      together.  All the blocks will move in the direction of a swipe, if they have
+      space to do so.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14919806263037952
+    m_Localized: Where else do you usually controll the brigtness?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920032948391936
+    m_Localized: What do you do with your phone when it's low on battery?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920355620392960
+    m_Localized: Same colors can connect together.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920814452084736
+    m_Localized: You controll the ball by tilting your phone. The phone should be
+      facing straight up for a neutral position. In this level the walls will reset
+      the game and the level aswell.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921644781670400
+    m_Localized: Look around with your phone. It must be sunwhere!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921896632848384
+    m_Localized: You know, the so called "flashlight" wich also triggers while taking
+      a photo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14922380764581888
+    m_Localized: Connect all the dots while using every square on the board. Look
+      out! Orange does a big detour.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923047348539392
+    m_Localized: You controll the ball by tilting your phone. The phone should be
+      facing straight up for a neutral position. Sometimes you gotta move down, to
+      get up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923459048837120
+    m_Localized: Most mobilephones are equipped with a sensor, that changes the brightness
+      of the screen according to real world birhtness.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924647282577408
+    m_Localized: It takes quite a lot of punches, to break this glass.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924935095717888
+    m_Localized: Use gravity!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925050749456384
+    m_Localized: S.O.S.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925192256884736
+    m_Localized: Use your fingers! By not seeing something, we can pretend it's not
+      even there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925677625937920
+    m_Localized: The arrow is pointing towards it's hiding place. It's probabbly
+      cozy around all those settings and messages.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926287112835072
+    m_Localized: Rotate the wires by tapping on them and connect the left and right
+      most wires witch eachother.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926730215886848
+    m_Localized: Phones like to sleep on their belly!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926985091158016
+    m_Localized: Friction!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927161595858944
+    m_Localized: Wish I could just take a photo of the screen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927451040583680
+    m_Localized: White blocks move move towards their shorter edge. Move the green
+      block to the right side of the screen by rearranging the white ones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928093977055232
+    m_Localized: Sound = Light. Then let's turn it up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928314165432320
+    m_Localized: Enlarge that small speck of light!
     m_Metadata:
       m_Items: []
   references:

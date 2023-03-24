@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Overlay
       objectReference: {fileID: 0}
+    - target: {fileID: 5113823751700616496, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 14923047348539392
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
 --- !u!1 &7103114 stripped
@@ -11299,7 +11303,7 @@ SpriteRenderer:
   m_Size: {x: 3.22, y: 3.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &953996072
@@ -17023,8 +17027,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52b1b7c314007645bbaacc63a2c00d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  win: 0
   winObjects:
   - {fileID: 1386251984}
+  freezeAfterWin: 0
 --- !u!212 &1584926734
 SpriteRenderer:
   m_ObjectHideFlags: 0

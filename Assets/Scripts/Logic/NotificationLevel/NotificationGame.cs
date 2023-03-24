@@ -7,6 +7,7 @@ using UnityEngine.Localization;
 
 public class NotificationGame : MonoBehaviour
 {
+    private bool win = false;
     [SerializeField] private LocalizedString notificationTitle;
     [SerializeField] private LocalizedString notificationText;
 
@@ -35,6 +36,9 @@ public class NotificationGame : MonoBehaviour
     }
 
     public void Win(string s1) {
+        if (win) return;
+        win = true;
+
         LevelManager.Instance.LevelComplete();
     }
 

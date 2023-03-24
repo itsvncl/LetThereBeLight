@@ -53,6 +53,20 @@ MonoBehaviour:
     m_Key: NotificationText
     m_Metadata:
       m_Items: []
+  - m_Id: 19579581206695936
+    m_Key: CreditHeading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579669664567296
+    m_Key: CreditBody
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579700400427008
+    m_Key: 'BackToMenuButton
+
+'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

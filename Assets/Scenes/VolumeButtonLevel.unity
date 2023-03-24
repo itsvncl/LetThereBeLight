@@ -420,6 +420,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1144033677}
   progress: {fileID: 524966167}
+  alphaTarget: 0
+  incrementValue: 0.1
+  winTarget: 1
+  win: 0
 --- !u!4 &836792289
 Transform:
   m_ObjectHideFlags: 0
@@ -527,6 +531,10 @@ PrefabInstance:
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 418955202560
       objectReference: {fileID: 0}
+    - target: {fileID: 3291284940349539300, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4527856793032966689, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -622,6 +630,10 @@ PrefabInstance:
     - target: {fileID: 4730611618639816472, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113823751700616496, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 14928093977055232
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}

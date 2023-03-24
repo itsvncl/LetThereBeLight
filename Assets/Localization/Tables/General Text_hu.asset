@@ -54,6 +54,21 @@ MonoBehaviour:
     m_Localized: "\xC9rintsen a felkapcsol\xE1shoz"
     m_Metadata:
       m_Items: []
+  - m_Id: 19579581206695936
+    m_Localized: "K\xF6sz\xF6n\xF6m, hogy j\xE1tszott\xE1l a Let There Be Light-al!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579669664567296
+    m_Localized: "Ennek a j\xE1t\xE9knak a megalkot\xE1sa a szeretet munk\xE1ja volt,
+      \xE9s sz\xE1momra a vil\xE1got jelenti, hogy id\u0151t szak\xEDtott arra, hogy
+      kiprob\xE1lja. Rem\xE9lem, hogy ez a j\xE1t\xE9k egy kis f\xE9nyt hozott az
+      \xE9letedbe, mint ahogy az elk\xE9sz\xEDt\xE9se hozott az eny\xE9mbe. -vncl."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579700400427008
+    m_Localized: "Vissza a men\xFCbe"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

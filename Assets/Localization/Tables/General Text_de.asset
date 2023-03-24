@@ -54,6 +54,18 @@ MonoBehaviour:
     m_Localized: TAP DU
     m_Metadata:
       m_Items: []
+  - m_Id: 19579581206695936
+    m_Localized: "Danke f\xFCr playen!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579669664567296
+    m_Localized: Loven moven timen -vncl.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579700400427008
+    m_Localized: Das Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -55,6 +55,21 @@ MonoBehaviour:
     m_Localized: Tap to turn on lights
     m_Metadata:
       m_Items: []
+  - m_Id: 19579581206695936
+    m_Localized: Thank you, for playing Let There Be Light!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579669664567296
+    m_Localized: Creating this game was a labor of love, and it means the world to
+      me that you took the time to experience it for yourself. I hope that this game
+      has brought a bit of light into your life, just as it brought into mine while
+      developing it. -vncl.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19579700400427008
+    m_Localized: Back To Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
