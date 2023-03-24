@@ -17,6 +17,8 @@ public class PlumberGame : MonoBehaviour {
 
     private List<List<Pipe>> board = new();
 
+    private Pipe endPipe;
+
     private void Start() {
         GenerateBoard();
         RevealRoute();
@@ -60,7 +62,9 @@ public class PlumberGame : MonoBehaviour {
         p.LockOrientation();
         p.SetOrientation(PipeOrientation.Right);
         p.game = this;
-        p.SetHighlighted(true);
+        p.SetHighlighted(false);
+
+        endPipe = p;
     }
 
 
@@ -128,6 +132,10 @@ public class PlumberGame : MonoBehaviour {
     }
 
     public bool IsWin() {
-        return board[endPos][SIZE - 3].inFlow;
+        bool win = board[endPos][SIZE - 3].inFlow;
+
+        endPipe.SetHighlighted(win);
+
+        return win;
     }
 }
