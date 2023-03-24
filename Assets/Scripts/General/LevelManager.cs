@@ -6,8 +6,9 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
-    private int maxLevel = 24;
+    private int maxLevel = 25;
     private int progression = 1;
+    private int lastLevel = 1;
     private int currentLevel = 0;
 
     [SerializeField] private Animator animator;
@@ -30,6 +31,14 @@ public class LevelManager : MonoBehaviour {
             PlayerPrefs.SetInt("progression", 1);
             progression = 1;
         }
+
+        if (PlayerPrefs.HasKey("lastLevelPlayed")) {
+            lastLevel = PlayerPrefs.GetInt("lastLevelPlayed");
+        }
+        else {
+            PlayerPrefs.SetInt("lastLevelPlayed", 1);
+            lastLevel = 1;
+        }
     }
 
     IEnumerator Load() {
@@ -42,6 +51,7 @@ public class LevelManager : MonoBehaviour {
         animator.SetTrigger("FadeIn");
     }
 
+
     public void LevelComplete() {
         currentLevel++;
 
@@ -53,6 +63,12 @@ public class LevelManager : MonoBehaviour {
         if (currentLevel > maxLevel) {
             throw new System.Exception("Level index is out of bounds!");
         }
+
+        if (currentLevel != maxLevel) {
+            PlayerPrefs.SetInt("lastLevelPlayed", currentLevel);
+            lastLevel = currentLevel;
+        }
+
 
         StartCoroutine(Load());
     }
@@ -68,17 +84,20 @@ public class LevelManager : MonoBehaviour {
         }
         currentLevel = level;
 
+        if (level != 0) {
+            PlayerPrefs.SetInt("lastLevelPlayed", level);
+            lastLevel = level;
+        }
+
         StartCoroutine(Load());
     }
 
     public void Continue() {
-        currentLevel = progression;
-
-        if (currentLevel > maxLevel) {
+        if (lastLevel > maxLevel) {
             throw new System.Exception("Level index is out of bounds!");
         }
 
-        StartCoroutine(Load());
+        SwitchToLevel(lastLevel);
     }
 
     public void DebugNextLevel() {
