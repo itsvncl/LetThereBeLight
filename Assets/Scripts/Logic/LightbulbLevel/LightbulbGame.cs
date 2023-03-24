@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class LightbulbGame : MonoBehaviour
 {
-    private bool win = false;
+    public bool win = false;
     public void onClick() {
         if (win) return;
 
         win = true;
-        LevelManager.Instance.LevelComplete();
+
+        try {
+            LevelManager.Instance.LevelComplete();
+        } catch {
+            Debug.Log("LevelManager is not inited");
+        }
     }
 }

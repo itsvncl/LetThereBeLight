@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LightSwitchGlassGame : MonoBehaviour
 {
-    [SerializeField] private Sprite[] glassTextures;
-    [SerializeField] private GameObject glass;
-    [SerializeField] private int tapPerLevel = 10;
-    [SerializeField] private int levels = 4;
+    [SerializeField] public Sprite[] glassTextures;
+    [SerializeField] public GameObject glass;
+    [SerializeField] public int tapPerLevel = 10;
+    [SerializeField] public int levels = 4;
 
-    private int tapCount = 0;
-    private int currentLevel = 0;
-    private int maxTaps;
-    private SpriteRenderer glassRenderer;
+    public int tapCount = 0;
+    public int currentLevel = 0;
+    public int maxTaps;
+    public SpriteRenderer glassRenderer;
 
     void Start() {
         maxTaps = levels * tapPerLevel;

@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WinTrigger : MonoBehaviour {
-    bool win = false;
+    public bool win = false;
     [SerializeField] GameObject[] winObjects;
     [SerializeField] bool freezeAfterWin;
 
     void OnTriggerEnter2D(Collider2D col) {
+        Debug.Log("Collision with gameobject");
         WinLogic(col.gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("Collision with gameobject");
         WinLogic(collision.gameObject);
     }
 
@@ -23,7 +25,12 @@ public class WinTrigger : MonoBehaviour {
                 win = true;
                 FreezeAfterWin();
                 Debug.Log("Level completed by WinTrigger");
-                LevelManager.Instance.LevelComplete();
+
+                try {
+                    LevelManager.Instance.LevelComplete();
+                } catch {
+                    Debug.Log("Level manager is not inited.");
+                }
             }
         }
     }

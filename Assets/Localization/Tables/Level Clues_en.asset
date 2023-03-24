@@ -50,7 +50,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005253
   - m_Id: 438022508544
-    m_Localized: 7. LET IT REST
+    m_Localized: '{L.LevelNumber}. LET IT REST'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005253

@@ -5,10 +5,10 @@ public class MorseGame : MonoBehaviour
 {
     public static MorseGame Instance;
 
-    [SerializeField] private GameObject dotPrefab;
-    [SerializeField] private GameObject dashPrefab;
+    [SerializeField] public GameObject dotPrefab;
+    [SerializeField] public GameObject dashPrefab;
 
-    [SerializeField] private float longPressTime = 0.5f;
+    [SerializeField] public float longPressTime = 0.5f;
     [SerializeField] private float morseGap = 0.2f;
     [SerializeField] private int maximumSize = 10;
     public float LongPressTime { get { return longPressTime; } private set { longPressTime = value;  } }
@@ -16,7 +16,7 @@ public class MorseGame : MonoBehaviour
     private int dotCount = 0;
     private int dashCount = 0;
 
-    private bool gameInProgress = true;
+    public bool gameInProgress = true;
 
     public enum MorseType {
         DOT,DASH
@@ -26,8 +26,8 @@ public class MorseGame : MonoBehaviour
         Instance = this;    
     }
 
-    private List<MorseType> morseString = new List<MorseType>();
-    private List<GameObject> morseObejcts = new List<GameObject>();
+    public List<MorseType> morseString = new List<MorseType>();
+    public List<GameObject> morseObejcts = new List<GameObject>();
 
     public void AddMorse(MorseType type) {
         if (!gameInProgress) return;
@@ -117,6 +117,11 @@ public class MorseGame : MonoBehaviour
 
     private void OnWin() {
         gameInProgress = false;
-        LevelManager.Instance.LevelComplete();
+
+        try {
+            LevelManager.Instance.LevelComplete();
+        } catch {
+            Debug.Log("LevelManager not inited");
+        }
     }
 }

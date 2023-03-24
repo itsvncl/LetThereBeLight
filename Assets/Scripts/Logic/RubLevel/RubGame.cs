@@ -7,10 +7,10 @@ public class RubGame : MonoBehaviour, IDraggable, ITouchBeginEvent {
 
     private Vector3 prevPos;
     [SerializeField] float decreaseSpeed = 0.04f;
-    [SerializeField] float increaseSpeed = 0.05f;
+    [SerializeField] public float increaseSpeed = 0.05f;
 
     bool positive = true;
-    float lightLevel = 0.0f;
+    public float lightLevel = 0.0f;
     bool win = false;
 
     [SerializeField] Image lightImage;
@@ -44,13 +44,26 @@ public class RubGame : MonoBehaviour, IDraggable, ITouchBeginEvent {
     }
 
     void Update() {
-        Color c = lightImage.color;
-        c.a = lightLevel;
-        lightImage.color = c;
+        UpdateImage();
 
-        if(lightLevel >= 1.0f && !win) {
+        if (lightLevel >= 1.0f && !win) {
             win = true;
-            LevelManager.Instance.LevelComplete();
+
+            try {
+                LevelManager.Instance.LevelComplete();
+            } catch {
+                Debug.Log("LevelManager not inited");
+            }
+        }
+    }
+
+    private void UpdateImage() {
+        try {
+            Color c = lightImage.color;
+            c.a = lightLevel;
+            lightImage.color = c;
+        } catch {
+            Debug.Log("Image is not loaded");
         }
     }
 }
