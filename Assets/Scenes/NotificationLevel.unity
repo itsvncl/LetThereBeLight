@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 906178102}
   - component: {fileID: 906178101}
   - component: {fileID: 906178100}
+  - component: {fileID: 906178104}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -304,6 +305,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &906178104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906178097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c92808e7179614dbe518efbe081e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchEnabled: 1
 --- !u!1001 &1187282194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,6 +336,10 @@ PrefabInstance:
     - target: {fileID: 3823274539407543502, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417810650603548769, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4527856791576817581, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_text

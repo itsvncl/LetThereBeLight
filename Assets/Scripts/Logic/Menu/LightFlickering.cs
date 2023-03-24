@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LightFlickering : MonoBehaviour
 {
-    public Image light;
+    public Image lightSource;
 
     public bool on = true;
 
@@ -25,7 +25,7 @@ public class LightFlickering : MonoBehaviour
 
     void FixedUpdate() {
         if(Time.time > switchTime) {
-            light.gameObject.SetActive(on);
+            lightSource.gameObject.SetActive(on);
             on = !on;
 
             if (on) {

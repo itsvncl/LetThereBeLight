@@ -7,6 +7,7 @@ public class Hint : MonoBehaviour
     [SerializeField] private GameObject hintWindow;
     [SerializeField] private GameObject question;
     [SerializeField] private GameObject hint;
+    [SerializeField] private GameObject skipButton;
 
     bool gotHint = false;
 
@@ -27,6 +28,7 @@ public class Hint : MonoBehaviour
     public void HintClick() {
         hintWindow.SetActive(true);
 
+
         if (gotHint) {
             question.SetActive(false);
             hint.SetActive(true);
@@ -34,6 +36,10 @@ public class Hint : MonoBehaviour
         else {
             question.SetActive(true);
             hint.SetActive(false);  
+        }
+
+        if(gotHint) {
+            skipButton.SetActive(true);
         }
 
         TouchSystem.Instance.Disable();

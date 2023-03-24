@@ -18,6 +18,15 @@ public class AndroidActivityManager : MonoBehaviour {
         Instance = this;
     }
 
+    private void Update() {
+        if (Input.GetKey(KeyCode.Escape)) {
+
+            if(LevelManager.Instance.GetCurrentLevel() == 0) {
+                Application.Quit();
+            }
+        }
+    }
+
     public static int getAPILevel() {
         using (var version = new AndroidJavaClass("android.os.Build$VERSION")) {
             return version.GetStatic<int>("SDK_INT");
