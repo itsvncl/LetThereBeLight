@@ -15,11 +15,11 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 43
-    width: 1920
-    height: 997
+    y: 42.666668
+    width: 1280
+    height: 637.3334
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 263
-    width: 683
-    height: 404
+    y: 387.33334
+    width: 247.33337
+    height: 100
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
@@ -67,14 +67,14 @@ MonoBehaviour:
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 1237
+    x: 1032.6666
     y: 0
-    width: 683
-    height: 667
+    width: 247.33337
+    height: 487.33334
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 2956
+  controlID: 47
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,8 +95,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 997
+    width: 1280
+    height: 637.3333
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1280
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 977
-    width: 1920
+    y: 617.3333
+    width: 1280
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 947
+    width: 1280
+    height: 587.3333
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 216
+  controlID: 44
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,12 +189,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 947
+    width: 1280
+    height: 587.3333
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 217
+  controlID: 45
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,12 +216,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 667
+    width: 1280
+    height: 487.33334
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 218
+  controlID: 46
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,12 +241,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 455
-    height: 667
+    width: 303.33334
+    height: 487.33334
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 275
+  controlID: 61
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,10 +264,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 455
-    height: 283
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 303.33334
+    height: 215.33333
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -289,9 +289,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 283
-    width: 455
-    height: 384
+    y: 215.33333
+    width: 303.33334
+    height: 272
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -314,12 +314,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 455
+    x: 303.33334
     y: 0
-    width: 433
-    height: 667
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 303.33334
+    height: 487.33334
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -341,10 +341,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 888
+    x: 606.6667
     y: 0
-    width: 349
-    height: 667
+    width: 425.99994
+    height: 487.33334
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
@@ -369,10 +369,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 683
-    height: 263
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 247.33337
+    height: 387.33334
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -394,11 +394,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 667
-    width: 1920
-    height: 280
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    y: 487.33334
+    width: 1280
+    height: 99.99997
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -424,21 +424,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -30763
-    y: -31707
-    width: 682
-    height: 383
+    x: 1032.6667
+    y: 460
+    width: 246.33337
+    height: 79
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 3014
+    ID: 327
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 235
-    - 78
+    - 32
+    - 32
     relativeSizes:
     - 0.75
     - 0.25
@@ -448,7 +448,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 313
+    lastTotalSize: 44
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -493,9 +493,9 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[Let There Be Light][suite]'
     - id: 1001
-      uniqueId: PlayMode.dll/[PlayMode][BrightnessLevelTests][suite]
-      name: BrightnessLevelTests
-      fullName: BrightnessLevelTests
+      uniqueId: PlayMode.dll/[PlayMode][ConnectTheWiresLevelTest][suite]
+      name: ConnectTheWiresLevelTest
+      fullName: ConnectTheWiresLevelTest
       resultStatus: 0
       duration: 0
       messages: 
@@ -506,12 +506,12 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
+      parentId: 1033
       parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1003
-      uniqueId: PlayMode.dll/BrightnessLevelTests/[PlayMode][BrightnessLevelTests.BrightnessLevelTestsWithEnumeratorPasses]
-      name: BrightnessLevelTestsWithEnumeratorPasses
-      fullName: BrightnessLevelTests.BrightnessLevelTestsWithEnumeratorPasses
+      uniqueId: PlayMode.dll/ConnectTheWiresLevelTest/[PlayMode][ConnectTheWiresLevelTest.ConnectingAlreadyConnected]
+      name: ConnectingAlreadyConnected
+      fullName: ConnectTheWiresLevelTest.ConnectingAlreadyConnected
       resultStatus: 0
       duration: 0
       messages: 
@@ -524,11 +524,11 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: PlayMode.dll/[PlayMode][BrightnessLevelTests][suite]
+      parentUniqueId: PlayMode.dll/[PlayMode][ConnectTheWiresLevelTest][suite]
     - id: 1002
-      uniqueId: PlayMode.dll/BrightnessLevelTests/[PlayMode][BrightnessLevelTests.IsXiaomiMethod]
-      name: IsXiaomiMethod
-      fullName: BrightnessLevelTests.IsXiaomiMethod
+      uniqueId: PlayMode.dll/ConnectTheWiresLevelTest/[PlayMode][ConnectTheWiresLevelTest.GoodConnection]
+      name: GoodConnection
+      fullName: ConnectTheWiresLevelTest.GoodConnection
       resultStatus: 0
       duration: 0
       messages: 
@@ -541,7 +541,493 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: PlayMode.dll/[PlayMode][BrightnessLevelTests][suite]
+      parentUniqueId: PlayMode.dll/[PlayMode][ConnectTheWiresLevelTest][suite]
+    - id: 1004
+      uniqueId: PlayMode.dll/ConnectTheWiresLevelTest/[PlayMode][ConnectTheWiresLevelTest.MissmatchingColor]
+      name: MissmatchingColor
+      fullName: ConnectTheWiresLevelTest.MissmatchingColor
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/[PlayMode][ConnectTheWiresLevelTest][suite]
+    - id: 1005
+      uniqueId: PlayMode.dll/ConnectTheWiresLevelTest/[PlayMode][ConnectTheWiresLevelTest.SelfConnection]
+      name: SelfConnection
+      fullName: ConnectTheWiresLevelTest.SelfConnection
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/[PlayMode][ConnectTheWiresLevelTest][suite]
+    - id: 1006
+      uniqueId: PlayMode.dll/[PlayMode][FindTheSunLevelTest][suite]
+      name: FindTheSunLevelTest
+      fullName: FindTheSunLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1007
+      uniqueId: PlayMode.dll/FindTheSunLevelTest/[PlayMode][FindTheSunLevelTest.AzimuthToVector3Test]
+      name: AzimuthToVector3Test
+      fullName: FindTheSunLevelTest.AzimuthToVector3Test
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: PlayMode.dll/[PlayMode][FindTheSunLevelTest][suite]
+    - id: 1008
+      uniqueId: PlayMode.dll/[PlayMode][LightbulbLevelTest][suite]
+      name: LightbulbLevelTest
+      fullName: LightbulbLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1009
+      uniqueId: PlayMode.dll/LightbulbLevelTest/[PlayMode][LightbulbLevelTest.ClickIsWin]
+      name: ClickIsWin
+      fullName: LightbulbLevelTest.ClickIsWin
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: PlayMode.dll/[PlayMode][LightbulbLevelTest][suite]
+    - id: 1010
+      uniqueId: PlayMode.dll/[PlayMode][LightSwitchGlassGameLevelTest][suite]
+      name: LightSwitchGlassGameLevelTest
+      fullName: LightSwitchGlassGameLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1013
+      uniqueId: PlayMode.dll/LightSwitchGlassGameLevelTest/[PlayMode][LightSwitchGlassGameLevelTest.Break]
+      name: Break
+      fullName: LightSwitchGlassGameLevelTest.Break
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: PlayMode.dll/[PlayMode][LightSwitchGlassGameLevelTest][suite]
+    - id: 1011
+      uniqueId: PlayMode.dll/LightSwitchGlassGameLevelTest/[PlayMode][LightSwitchGlassGameLevelTest.ControllerTest]
+      name: ControllerTest
+      fullName: LightSwitchGlassGameLevelTest.ControllerTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: PlayMode.dll/[PlayMode][LightSwitchGlassGameLevelTest][suite]
+    - id: 1012
+      uniqueId: PlayMode.dll/LightSwitchGlassGameLevelTest/[PlayMode][LightSwitchGlassGameLevelTest.Level]
+      name: Level
+      fullName: LightSwitchGlassGameLevelTest.Level
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: PlayMode.dll/[PlayMode][LightSwitchGlassGameLevelTest][suite]
+    - id: 1014
+      uniqueId: PlayMode.dll/[PlayMode][LightSwitchLevelTest][suite]
+      name: LightSwitchLevelTest
+      fullName: LightSwitchLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1015
+      uniqueId: PlayMode.dll/LightSwitchLevelTest/[PlayMode][LightSwitchLevelTest.WinTriggerTest]
+      name: WinTriggerTest
+      fullName: LightSwitchLevelTest.WinTriggerTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: PlayMode.dll/[PlayMode][LightSwitchLevelTest][suite]
+    - id: 1016
+      uniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+      name: MorseLevelTest
+      fullName: MorseLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1018
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.Dash]
+      name: Dash
+      fullName: MorseLevelTest.Dash
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1017
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.Dot]
+      name: Dot
+      fullName: MorseLevelTest.Dot
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1021
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.NotSOSNotWinV1]
+      name: NotSOSNotWinV1
+      fullName: MorseLevelTest.NotSOSNotWinV1
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1022
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.NotSOSNotWinV2]
+      name: NotSOSNotWinV2
+      fullName: MorseLevelTest.NotSOSNotWinV2
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1023
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.NotSOSNotWinV3]
+      name: NotSOSNotWinV3
+      fullName: MorseLevelTest.NotSOSNotWinV3
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1019
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.RetryButton]
+      name: RetryButton
+      fullName: MorseLevelTest.RetryButton
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1020
+      uniqueId: PlayMode.dll/MorseLevelTest/[PlayMode][MorseLevelTest.SOSWin]
+      name: SOSWin
+      fullName: MorseLevelTest.SOSWin
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: PlayMode.dll/[PlayMode][MorseLevelTest][suite]
+    - id: 1024
+      uniqueId: PlayMode.dll/[PlayMode][RubLevelTest][suite]
+      name: RubLevelTest
+      fullName: RubLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1025
+      uniqueId: PlayMode.dll/RubLevelTest/[PlayMode][RubLevelTest.BeginDirection]
+      name: BeginDirection
+      fullName: RubLevelTest.BeginDirection
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: PlayMode.dll/[PlayMode][RubLevelTest][suite]
+    - id: 1026
+      uniqueId: PlayMode.dll/RubLevelTest/[PlayMode][RubLevelTest.CorrectRub]
+      name: CorrectRub
+      fullName: RubLevelTest.CorrectRub
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: PlayMode.dll/[PlayMode][RubLevelTest][suite]
+    - id: 1027
+      uniqueId: PlayMode.dll/RubLevelTest/[PlayMode][RubLevelTest.IncorrectRub]
+      name: IncorrectRub
+      fullName: RubLevelTest.IncorrectRub
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: PlayMode.dll/[PlayMode][RubLevelTest][suite]
+    - id: 1028
+      uniqueId: PlayMode.dll/[PlayMode][VolumeButtonGameLevelTest][suite]
+      name: VolumeButtonGameLevelTest
+      fullName: VolumeButtonGameLevelTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[PlayMode][F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1032
+      uniqueId: PlayMode.dll/VolumeButtonGameLevelTest/[PlayMode][VolumeButtonGameLevelTest.CanWin]
+      name: CanWin
+      fullName: VolumeButtonGameLevelTest.CanWin
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][VolumeButtonGameLevelTest][suite]
+    - id: 1030
+      uniqueId: PlayMode.dll/VolumeButtonGameLevelTest/[PlayMode][VolumeButtonGameLevelTest.VolumeDownTest]
+      name: VolumeDownTest
+      fullName: VolumeButtonGameLevelTest.VolumeDownTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][VolumeButtonGameLevelTest][suite]
+    - id: 1031
+      uniqueId: PlayMode.dll/VolumeButtonGameLevelTest/[PlayMode][VolumeButtonGameLevelTest.VolumeDownTestNotNegative]
+      name: VolumeDownTestNotNegative
+      fullName: VolumeButtonGameLevelTest.VolumeDownTestNotNegative
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][VolumeButtonGameLevelTest][suite]
+    - id: 1029
+      uniqueId: PlayMode.dll/VolumeButtonGameLevelTest/[PlayMode][VolumeButtonGameLevelTest.VolumeUpTest]
+      name: VolumeUpTest
+      fullName: VolumeButtonGameLevelTest.VolumeUpTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][VolumeButtonGameLevelTest][suite]
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
@@ -642,14 +1128,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -32000
-    y: -31970
-    width: 454
-    height: 262
+    x: 0
+    y: 72.66667
+    width: 302.33334
+    height: 194.33333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -657,9 +1143,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d4100000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6240ffffc440ffff0843ffffd447ffff3648ffff7a4affff3e4fffffa04fffffe651ffff7664ffffd864ffff0e7cffff168afffffeb6ffff66b7ffff1cb8ffffa8c0ffff14c1ffffccc3ffffb0c4ffff96c5ffff78c6ffff5cc7ffff46c8ffff2cc9ffff12cafffff8caffffdecbffffc4ccffffa8cdffff90ceffff74cfffff58d0ffff44d1ffff2ad2ffff10d3fffffad3ffffded4ffffccd5ffffb4d6ffff9ad7ffff82d8ffff7cd9ffff84d9ffffc8d9ffffd0defffff4e1ffff74e4ffffc4eaffff96edffff98edffffc0f3ffffe8f5ffffeaf5ffff52f6ffff54f8ffff58f8ffff1cfbffff56b4000094b40000ccba00006ac90000a8c90000
+      m_SelectedIDs: 16fbffff
+      m_LastClickedID: -1258
+      m_ExpandedIDs: 20fbffff22fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -699,14 +1185,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -32000
-    y: -31687
-    width: 454
-    height: 363
+    x: 0
+    y: 288
+    width: 302.33334
+    height: 251
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -723,8 +1209,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scripts/Logic/ChargeLevel
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -739,7 +1224,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 26640000
     m_LastClickedID: 25638
-    m_ExpandedIDs: 00000000ca6f0000cc6f0000ce6f0000d06f0000d26f0000d46f0000d66f0000d86f0000da6f0000dc6f0000de6f0000e06f0000e26f0000e46f0000e66f0000e86f0000ea6f0000ec6f0000ee6f0000f06f0000f26f0000f46f0000f66f0000f86f0000fa6f0000fc6f0000fe6f00000070000002700000
+    m_ExpandedIDs: 0000000006700000087000000a7000000c7000000e70000010700000127000001470000016700000187000001a7000001c7000001e70000020700000227000002470000026700000287000002a7000002c7000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000046700000487000004a7000004c7000004e7000005070000052700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -764,10 +1249,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 203}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ca6f0000cc6f0000ce6f0000d06f0000d26f0000d46f0000d66f0000d86f0000da6f0000de6f0000e06f0000e26f0000e46f0000e66f0000e86f0000ea6f0000ec6f0000ee6f0000f06f0000f26f0000f46f0000f66f0000f86f0000fa6f0000fc6f0000fe6f00000070000002700000a4700000aa70000090770000ae7700002a7e00005a83000026b600002eb6000038b60000
+    m_ExpandedIDs: ffffffff0000000006700000087000000a7000000c7000000e70000010700000127000001470000016700000187000001a7000001c7000001e70000020700000227000002470000026700000287000002a7000002c7000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000046700000487000004a7000004c7000004e7000005070000052700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -839,14 +1324,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -31545
-    y: -31970
-    width: 431
-    height: 646
+    x: 303.33334
+    y: 72.66667
+    width: 301.33334
+    height: 466.33334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -857,7 +1342,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -101, y: -26}
+      snapOffsetDelta: {x: -98.66666, y: -26}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -878,7 +1363,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -922,7 +1407,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 26}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -955,9 +1440,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: -126, y: -193}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 0
       id: Scene View/Camera
       index: 1
       layout: 4
@@ -1070,9 +1555,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 523.20544, y: 1956.2181, z: -0.19302414}
+    m_Target: {x: 540.45386, y: 1169.4423, z: 0}
     speed: 2
-    m_Value: {x: 523.20544, y: 1956.2181, z: -0.19302414}
+    m_Value: {x: 540.45386, y: 1169.4423, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1123,9 +1608,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 448.24847
+    m_Target: 10
     speed: 2
-    m_Value: 448.24847
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1166,7 +1651,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animator
-    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1230,14 +1715,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Simulator
-    m_Image: {fileID: 8720083202187608617, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 3038311277492192215, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -31112
-    y: -31970
-    width: 347
-    height: 646
+    x: 606.6667
+    y: 72.66667
+    width: 423.99994
+    height: 466.33334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1271,7 +1756,7 @@ MonoBehaviour:
     - '{"m_SerializationStates":{"thermalFoldout":false,"performanceFoldout":false,"developerFoldout":false,"indexerFoldout":false,"scalersFoldout":false,"deviceSettingsFoldout":false}}'
     - '{}'
     - '{}'
-    scale: 25
+    scale: 18
     fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
@@ -1294,14 +1779,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -30763
-    y: -31970
-    width: 682
-    height: 242
+    x: 1032.6667
+    y: 72.66667
+    width: 246.33337
+    height: 366.33334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1335,14 +1820,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -32000
-    y: -31303
-    width: 1920
-    height: 259
+    x: 0
+    y: 560
+    width: 1280
+    height: 78.99997
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
