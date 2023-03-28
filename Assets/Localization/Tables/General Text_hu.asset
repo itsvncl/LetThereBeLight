@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 5354885120
-    m_Localized: "Szeretn\xE9l tippet k\xE9rni?"
+    m_Localized: "Szeretne tippet k\xE9rni?"
     m_Metadata:
       m_Items: []
   - m_Id: 49101475840
@@ -31,11 +31,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 312742842368
-    m_Localized: "V\xE1lassz szintet"
+    m_Localized: "V\xE1lasszon szintet"
     m_Metadata:
       m_Items: []
   - m_Id: 4666272242274304
-    m_Localized: Ok
+    m_Localized: OK
     m_Metadata:
       m_Items: []
   - m_Id: 13227970226098176
@@ -59,10 +59,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19579669664567296
-    m_Localized: "Ennek a j\xE1t\xE9knak a megalkot\xE1sa a szeretet munk\xE1ja volt,
-      \xE9s sz\xE1momra a vil\xE1got jelenti, hogy id\u0151t szak\xEDtott arra, hogy
-      kiprob\xE1lja. Rem\xE9lem, hogy ez a j\xE1t\xE9k egy kis f\xE9nyt hozott az
-      \xE9letedbe, mint ahogy az elk\xE9sz\xEDt\xE9se hozott az eny\xE9mbe. -vncl."
+    m_Localized: "A j\xE1t\xE9k megalkot\xE1s\xE1t a programoz\xE1s ir\xE1nti szenved\xE9lyem
+      \xE9s a kitart\xE1som vez\xE9relte, melyet az \xFAj ismeretek elsaj\xE1t\xEDt\xE1sa
+      inspir\xE1lt. (Ennek a j\xE1t\xE9knak a megalkot\xE1sa a szeretet munk\xE1ja
+      volt.) K\xF6sz\xF6n\xF6m, hogy id\u0151t sz\xE1nt arra, hogy kiprob\xE1lja.
+      B\xEDzom benne, hogy ez a j\xE1t\xE9k egy kis f\xE9nyt hozott az \xE9let\xE9be,
+      ahogy annak elk\xE9sz\xEDt\xE9se az eny\xE9mbe. -vncl"
     m_Metadata:
       m_Items: []
   - m_Id: 19579700400427008

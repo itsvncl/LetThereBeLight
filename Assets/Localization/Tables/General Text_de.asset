@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 5354885120
-    m_Localized: Tip du?
+    m_Localized: "M\xF6chten Sie einen Tipp bitten?"
     m_Metadata:
       m_Items: []
   - m_Id: 49101475840
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 312742842368
-    m_Localized: Level das ist
+    m_Localized: "W\xE4hlen Sie eine Stufe"
     m_Metadata:
       m_Items: []
   - m_Id: 4666272242274304
@@ -39,31 +39,35 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13227970226098176
-    m_Localized: Du Mobile nein gut
+    m_Localized: "Leider wird dieses Handy auf Ihrem Ger\xE4t nicht unterst\xFCtzt."
     m_Metadata:
       m_Items: []
   - m_Id: 13230298945622016
-    m_Localized: Nein play
+    m_Localized: Auslassung der Stufe
     m_Metadata:
       m_Items: []
   - m_Id: 14807335426658304
-    m_Localized: NEIN VIZIBEL LIGT
+    m_Localized: Der versteckte Lichtschalter
     m_Metadata:
       m_Items: []
   - m_Id: 14807563965894656
-    m_Localized: TAP DU
+    m_Localized: Tippen Sie auf den Bildschirm, um ihn anzuschalten
     m_Metadata:
       m_Items: []
   - m_Id: 19579581206695936
-    m_Localized: "Danke f\xFCr playen!"
+    m_Localized: "Vielen Dank f\xFCr das Spielen mit Let There Be Light!"
     m_Metadata:
       m_Items: []
   - m_Id: 19579669664567296
-    m_Localized: Loven moven timen -vncl.
+    m_Localized: "Die Zubereitung des Spiels wurde von meiner Leidenschaft f\xFCr
+      das Programmieren und meiner Beharrlichkeit angetrieben, die durch den Erwerb
+      neuer Kenntnisse inspiriert wurde. Vielen Dank, dass Sie sich die Zeit genommen
+      haben, es auszuprobieren. Ich hoffe, dieses Spiel hat ein wenig Licht in Ihr
+      Leben gebracht, so wie es ein wenig Licht in mein Leben gebracht hat."
     m_Metadata:
       m_Items: []
   - m_Id: 19579700400427008
-    m_Localized: Das Menu
+    m_Localized: "Zur\xFCck zum Men\xFC"
     m_Metadata:
       m_Items: []
   references:

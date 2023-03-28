@@ -41,9 +41,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14920814452084736
-    m_Localized: You controll the ball by tilting your phone. The phone should be
+    m_Localized: You control the ball by tilting your phone. The phone should be
       facing straight up for a neutral position. In this level the walls will reset
-      the game and the level aswell.
+      the game and the level as well.
     m_Metadata:
       m_Items: []
   - m_Id: 14921644781670400
@@ -95,11 +95,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14926287112835072
     m_Localized: Rotate the wires by tapping on them and connect the left and right
-      most wires witch eachother.
+      most wires with eachother.
     m_Metadata:
       m_Items: []
   - m_Id: 14926730215886848
-    m_Localized: Phones like to sleep on their belly!
+    m_Localized: Phones like to sleep on their belly.
     m_Metadata:
       m_Items: []
   - m_Id: 14926985091158016
