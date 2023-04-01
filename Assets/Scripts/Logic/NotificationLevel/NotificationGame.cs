@@ -20,7 +20,7 @@ public class NotificationGame : MonoBehaviour
         var channel = new AndroidNotificationChannel() {
             Id = "LetThereBeLight",
             Name = "Game",
-            Importance = Importance.High,
+            Importance = Importance.Low,
             Description = "Game completion notification",
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
