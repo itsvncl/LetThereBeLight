@@ -19,7 +19,111 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 125681078272
-    m_Localized: h1
+    m_Localized: Ziehen Sie den Schalter in die Position ON.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036201562112
+    m_Localized: "Nummernbl\xF6cke mit gleicher Nummer k\xF6nnen ineinander \xFCbergehen.
+      Das summiert sich. Jeder Block bewegt sich in die Richtung der angegebenen
+      Bewegung, wenn er kann."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14919806263037952
+    m_Localized: Wo regeln Sie normalerweise die Helligkeit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920032948391936
+    m_Localized: Was machst Sie mit Ihrem Handy, wenn der Akku fast leer ist?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920355620392960
+    m_Localized: "Gleiche Farben k\xF6nnen miteinander verbunden werden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920814452084736
+    m_Localized: Der Ball kann durch Neigen des Handys gesteuert werden. Halten Sie
+      das Handy so, dass der Bildschirm perfekt nach oben zeigt. Wenn der Ball in
+      diesem Level die Wand trifft, beginnt die Stufe von vorne und das Labyrinth
+      wird neu generiert.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925050749456384
+    m_Localized: S.O.S.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921896632848384
+    m_Localized: Sie wissen schon, die sogenannte "Taschenlampe", die manchmal beim
+      Fotografieren aufblitzt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921644781670400
+    m_Localized: Schauen Sie herum, er sonnt dort irgendwo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14922380764581888
+    m_Localized: "Verbinde die Punkte so, dass alle Quadrate auf dem Brett verwendet
+      werden. Achtung! Orange macht einen gro\xDFen Umweg."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923047348539392
+    m_Localized: Der Ball kann durch Neigen des Handys gesteuert werden. Halten Sie
+      das Handy so, dass der Bildschirm perfekt nach oben zeigt. Manchmal muss man
+      runter um rauf zu kommen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923459048837120
+    m_Localized: Die meisten Handys haben einen Sensor, der die Helligkeit des Handys
+      auf dem Umgebungslicht anpasst.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924647282577408
+    m_Localized: "Dieses Glas kann viele Z\xFCge ertragen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924935095717888
+    m_Localized: Nutzen Sie die Schwerkraft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925192256884736
+    m_Localized: Benutzen Sie Ihre Finger! Wenn man den Fehler nicht sieht, existiert
+      er nicht.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926287112835072
+    m_Localized: "Drehen Sie die Kabel durch Ber\xFChrung und verbinden Sie das linke
+      und das rechte Ende miteinander."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926730215886848
+    m_Localized: Handys schlafen gerne auf dem Bauch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925677625937920
+    m_Localized: "Der Pfeil zeigt auf sein Versteck. Zwischen den vielen Meldungen
+      und Schaltfl\xE4chen f\xFChlt er sich wohl."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927161595858944
+    m_Localized: "Es w\xE4re gut, wenn es eine M\xF6glichkeit g\xE4be, ein Bild vom
+      Bildschirm zu machen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926985091158016
+    m_Localized: Reibung!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928314165432320
+    m_Localized: "Vergr\xF6\xDFern Sie diesen kleinen Lichtfelck!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927451040583680
+    m_Localized: "Bl\xF6cke bewegen sich zu ihrer k\xFCrzeren Kante. Bewegen Sie
+      den gr\xFCnen Block auf die rechte Seite des Bildschirms, indem Sie die wei\xDFen
+      neu anordnen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928093977055232
+    m_Localized: Stimme = Licht. Machen sie es laut!
     m_Metadata:
       m_Items: []
   references:

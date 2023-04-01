@@ -14,7 +14,7 @@ public class LevelSelector : MonoBehaviour
 
         Debug.Log(completedUntil);
 
-        for (int i = 0; i < LevelManager.Instance.GetMaxLevel(); i++) {
+        for (int i = 0; i < LevelManager.Instance.GetMaxLevel()-1; i++) {
             GameObject level = Instantiate(levelPrefab);
             level.transform.SetParent(levelContainer.transform, false);
             

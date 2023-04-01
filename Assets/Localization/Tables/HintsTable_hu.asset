@@ -19,7 +19,111 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 125681078272
-    m_Localized: h1
+    m_Localized: "H\xFAzza fel a kapcsol\xF3t az ON poz\xEDci\xF3ba."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036201562112
+    m_Localized: "Az azonos sz\xE1mmal rendelkez\u0151 sz\xE1mblokkok k\xE9pesek
+      egym\xE1sba menni. Ezzel \xF6sszead\xF3dnak. Minden egyes blokk az adott h\xFAz\xE1s
+      ir\xE1ny\xE1ba fog mozogni, ha erre k\xE9pes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14919806263037952
+    m_Localized: "Hol m\xE1shol szokta \xE1ll\xEDtani a f\xE9nyer\u0151t?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920032948391936
+    m_Localized: "Mit tesz a telefonj\xE1val, amikor az akkumul\xE1tor szint alacsony?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920355620392960
+    m_Localized: "K\xE9t ugyanolyan sz\xEDn\u0171 k\xE1bel \xF6sszek\xF6thet\u0151."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920814452084736
+    m_Localized: "A labda a telefon d\xF6nt\xF6get\xE9s\xE9vel ir\xE1ny\xEDthat\xF3.
+      Tartsa \xFAgy a telefont, hogy a k\xE9perny\u0151je t\xF6k\xE9letesen felfele
+      n\xE9zzen. Ezen a szinten, ha a labda a falnak \xE9r, akkor el\u0151r\u0151l
+      kezd\u0151dik a szint \xE9s \xFAjra gener\xE1l\xF3dik a labirintus."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921644781670400
+    m_Localized: "N\xE9zzen k\xF6rbe a telefonj\xE1val. Ott napul valahol!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921896632848384
+    m_Localized: "Tudja, az \xFAgynevezett \"zsebl\xE1mpa\", ami fot\xF3z\xE1s k\xF6zben
+      is n\xE9ha villan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14922380764581888
+    m_Localized: "K\xF6sse \xF6ssze a pontokat \xFAgy, hogy a t\xE1bl\xE1n l\xE9v\u0151
+      \xF6sszes n\xE9gyzet fel legyen haszn\xE1lva. Figyelem! A narancs nagy kit\xE9r\u0151t
+      tesz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923047348539392
+    m_Localized: "A labda a telefon d\xF6nt\xF6get\xE9s\xE9vel ir\xE1ny\xEDthat\xF3.
+      A telefont tartsa \xFAgy, hogy a k\xE9perny\u0151je t\xF6k\xE9letesen felfele
+      n\xE9zzen. N\xE9ha felfele kell elindulni, hogy lefele haladjunk."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923459048837120
+    m_Localized: "A legt\xF6bb mobiltelefon rendelkezik egy szenzorral, amely a k\xF6rnyezeti
+      vil\xE1goss\xE1ghoz k\xE9pest \xE1ll\xEDtja a telefon k\xE9perny\u0151 f\xE9nyerej\xE9t."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924647282577408
+    m_Localized: "Sok \xFCt\xE9st kib\xEDr ez az \xFCveg."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924935095717888
+    m_Localized: "Haszn\xE1lja a gravit\xE1ci\xF3t!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925050749456384
+    m_Localized: S.O.S.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925192256884736
+    m_Localized: "Haszn\xE1lja az ujjait! Ha nem l\xE1tjuk a hib\xE1t, akkor nem
+      is l\xE9tezik."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925677625937920
+    m_Localized: "A ny\xEDl a kapcsol\xF3 rejtekhelye fel\xE9 mutat. Biztosan k\xE9nyelmesen
+      \xE9rzi mag\xE1t a sok \xE9rtes\xEDt\xE9s \xE9s gomb k\xF6z\xF6tt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926287112835072
+    m_Localized: "Forgassa a k\xE1beleket \xE9rint\xE9ssel \xE9s k\xF6sse \xF6ssze
+      a bal \xE9s jobb sz\xE9ls\u0151ket egym\xE1ssal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926730215886848
+    m_Localized: A telefonok szeretnek hason aludni.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926985091158016
+    m_Localized: "S\xFArl\xF3d\xE1s!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927161595858944
+    m_Localized: "B\xE1rcsak lehetne egy m\xF3d k\xE9pet k\xE9sz\xEDteni a k\xE9perny\u0151r\u0151l."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927451040583680
+    m_Localized: "A blokkok a r\xF6videbb oldaluk fel\xE9 k\xE9pesek mozogni. Juttassa
+      el a z\xF6ld blokkot a k\xE9perny\u0151 jobb oldal\xE1ra a feh\xE9r blokkok
+      \xE1trendez\xE9s\xE9vel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928093977055232
+    m_Localized: "Hang = F\xE9ny. Akkor adjon r\xE1 kaka\xF3t!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928314165432320
+    m_Localized: "Nagy\xEDtsa fel azt a kis f\xE9nyfoltot!"
     m_Metadata:
       m_Items: []
   references:

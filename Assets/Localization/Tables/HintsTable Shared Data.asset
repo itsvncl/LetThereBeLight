@@ -16,11 +16,95 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: dbc30d8f6db399f4a9f080ea9b22b2ed
   m_Entries:
   - m_Id: 125681078272
-    m_Key: LightSwitchLevelHint01
+    m_Key: LightSwitchLevelHint
     m_Metadata:
       m_Items: []
   - m_Id: 1036201562112
-    m_Key: New Entry
+    m_Key: 2048LevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14919806263037952
+    m_Key: BrightnessLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920032948391936
+    m_Key: ChargeLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920355620392960
+    m_Key: ConnectTheWiresLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14920814452084736
+    m_Key: DeathyrinthLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921644781670400
+    m_Key: FindTheSunLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14921896632848384
+    m_Key: FlashlightLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14922380764581888
+    m_Key: FlowLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923047348539392
+    m_Key: LabyrinthLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14923459048837120
+    m_Key: LightSensorLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924647282577408
+    m_Key: LightSwitchGlassLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14924935095717888
+    m_Key: LightSwitchOrientationLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925050749456384
+    m_Key: MorseLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925192256884736
+    m_Key: MultiTouchLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14925677625937920
+    m_Key: NotificationLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926287112835072
+    m_Key: PlumberLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926730215886848
+    m_Key: ProximityLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14926985091158016
+    m_Key: RubLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927161595858944
+    m_Key: ScreenshotLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14927451040583680
+    m_Key: SlidePuzzleLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928093977055232
+    m_Key: VolumeButtonLevelHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14928314165432320
+    m_Key: ZoomLevelHint
     m_Metadata:
       m_Items: []
   m_Metadata:

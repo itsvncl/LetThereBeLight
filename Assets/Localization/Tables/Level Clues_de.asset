@@ -20,52 +20,52 @@ MonoBehaviour:
     - rid: 3547996990398005255
   m_TableData:
   - m_Id: 24107618304
-    m_Localized: '{L.LevelNumber}. I DONT KNOW GERMAN'
+    m_Localized: '{L.LevelNumber}. NUR DAS NORMALE'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 221097299968
-    m_Localized: '{L.LevelNumber}. I DONT KNOW GERMAN'
+    m_Localized: '{L.LevelNumber}. VERBINDEN SIE DIE KABEL'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 418955202560
-    m_Localized: '{L.LevelNumber}. NO GERMANITO'
+    m_Localized: '{L.LevelNumber}. MACHEN SIE ES LAUT'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 423774457856
-    m_Localized: '{L.LevelNumber}. NO'
+    m_Localized: '{L.LevelNumber}. EINFACH EINSCHALTEN'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 427184427008
-    m_Localized: "{L.LevelNumber}. ICH BIN F\xC9NY"
+    m_Localized: '{L.LevelNumber}. LASSEN SIE MICH BESSER SEHEN'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 433144532992
-    m_Localized: '{L.LevelNumber}. ?'
+    m_Localized: "{L.LevelNumber}. SIGNAL F\xDCR HILFE"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 438022508544
-    m_Localized: '{L.LevelNumber}. SLEPEN'
+    m_Localized: '{L.LevelNumber}. LASS ES RUHEN'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 1735673057280
-    m_Localized: '{L.LevelNumber}. NEIN POWER'
+    m_Localized: '{L.LevelNumber}. AKKU FAST LEER'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 1741247287296
-    m_Localized: '{L.LevelNumber}. PEW PEW'
+    m_Localized: '{L.LevelNumber}. MACHEN SIE EIN FOTO'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 1742723682304
-    m_Localized: '{L.LevelNumber}. PANZER'
+    m_Localized: '{L.LevelNumber}. BEDECKEN SIE DIE FEHLER'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
@@ -85,57 +85,57 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 3101883699200
-    m_Localized: '{L.LevelNumber}. ZOOM'
+    m_Localized: "{L.LevelNumber}. VERGR\xD6\xDFERUNG"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 4706708382093312
-    m_Localized: '{L.LevelNumber}. DER HOT'
+    m_Localized: "{L.LevelNumber}. ERZEUGEN SIE W\xC4RME"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 4903852032462848
-    m_Localized: '{L.LevelNumber}. DDDDDDDAAA'
+    m_Localized: '{L.LevelNumber}. FINDEN SIE DIE FUNKTIONIERTE BIRNE'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 4918326659452928
-    m_Localized: '{L.LevelNumber}. PLUMBER'
+    m_Localized: '{L.LevelNumber}. KLEMPNER'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 9788826070093824
-    m_Localized: '{L.LevelNumber}. DAS LABYRINT'
+    m_Localized: '{L.LevelNumber}. LABYRINTH'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 10006908369702912
-    m_Localized: '{L.LevelNumber}. XD'
+    m_Localized: '{L.LevelNumber}. TODRYNTH'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 10172720112013312
-    m_Localized: '{L.LevelNumber}. DER EYES ON DAS SUNN'
+    m_Localized: '{L.LevelNumber}. SCHAUEN SIE DIE SONNE AN'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 13344283179159552
-    m_Localized: '{L.LevelNumber}. EMREGNSPILEN LIGHTE'
+    m_Localized: '{L.LevelNumber}. NOTFALLBELEUCHTUNG'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 14739444434014208
-    m_Localized: '{L.LevelNumber}. NEIN DAS JA'
+    m_Localized: '{L.LevelNumber}. NICHT WIE GEWOHNT'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 14840609045811200
-    m_Localized: '{L.LevelNumber}. UPEN BRIGT'
+    m_Localized: "{L.LevelNumber}. ERH\xD6HEN SIE DIE HELLIGKEIT"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255
   - m_Id: 14840339087822848
-    m_Localized: '{L.LevelNumber}. NEIN SWIC IN DER EYEZ'
+    m_Localized: '{L.LevelNumber}. DER VERSTECKTE SCHALTER'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005255

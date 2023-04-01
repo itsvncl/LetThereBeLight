@@ -20,7 +20,7 @@ MonoBehaviour:
     - rid: 3547996990398005254
   m_TableData:
   - m_Id: 24107618304
-    m_Localized: '{L.LevelNumber}. AHOGY SZOKTAD'
+    m_Localized: "{L.LevelNumber}. AHOGY AZT SZOK\xC1S"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
@@ -35,37 +35,37 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 423774457856
-    m_Localized: '{L.LevelNumber}. CSAK KAPCSOLD BE'
+    m_Localized: '{L.LevelNumber}. CSAK KAPCSOLJA BE'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 427184427008
-    m_Localized: "{L.LevelNumber}. VIL\xC1G\xCDTS NEKEM"
+    m_Localized: "{L.LevelNumber}. VIL\xC1G\xCDTSON NEKEM"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 433144532992
-    m_Localized: "{L.LevelNumber}. JELEZZ SEG\xCDTS\xC9G\xC9RT"
+    m_Localized: "{L.LevelNumber}. JELEZZEN SEG\xCDTS\xC9G\xC9RT"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 438022508544
-    m_Localized: '{L.LevelNumber}. FEKTESS LE'
+    m_Localized: '{L.LevelNumber}. FEKTESSEN LE'
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 1735673057280
-    m_Localized: "{L.LevelNumber}. LEMER\xDCLVE"
+    m_Localized: "{L.LevelNumber}. LEMER\xDCLT"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 1741247287296
-    m_Localized: "{L.LevelNumber}. \xD6R\xD6K\xCDTSD MEG"
+    m_Localized: "{L.LevelNumber}. \xD6R\xD6K\xCDTSE MEG"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 1742723682304
-    m_Localized: "{L.LevelNumber}. FEDD EL A HIB\xC1KAT"
+    m_Localized: "{L.LevelNumber}. TAKARJA EL A HIB\xC1KAT"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
@@ -90,17 +90,17 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 4706708382093312
-    m_Localized: "{L.LevelNumber}. CSIN\xC1LJ MELEGET"
+    m_Localized: "{L.LevelNumber}. CSIN\xC1LJON MELEGET"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 4903852032462848
-    m_Localized: "{L.LevelNumber}. KERESSD A M\u0170K\xD6D\u0150 K\xD6RT\xC9T"
+    m_Localized: "{L.LevelNumber}. KERESSE MEG A M\u0170K\xD6D\u0150 K\xD6RT\xC9T"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 4918326659452928
-    m_Localized: "{L.LevelNumber}. VEZET\xC9K SZEREL\u0150"
+    m_Localized: "{L.LevelNumber}. VEZET\xC9KSZEREL\u0150"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
@@ -115,22 +115,22 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 10172720112013312
-    m_Localized: "{L.LevelNumber}. N\xC9ZZ A NAPRA"
+    m_Localized: "{L.LevelNumber}. N\xC9ZZEN A NAPRA"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 13344283179159552
-    m_Localized: "{L.LevelNumber}. V\xC9SZHELYZETI VIL\xC1G\xCDT\xC1S"
+    m_Localized: "{L.LevelNumber}. V\xC9SZHELYZET-VIL\xC1G\xCDT\xC1S"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 14739444434014208
-    m_Localized: '{L.LevelNumber}. NEM AHOGY SZOKTAD'
+    m_Localized: "{L.LevelNumber}. NEM AHOGY SZOK\xC1S"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 14840609045811200
-    m_Localized: "{L.LevelNumber}. VEDD FEL A F\xC9NYER\u0150T"
+    m_Localized: "{L.LevelNumber}. VIGYE FEL A F\xC9NYER\u0150T"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254

@@ -3564,6 +3564,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5113823751700616496, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 14920355620392960
+      objectReference: {fileID: 0}
     - target: {fileID: 6778637910862837744, guid: 61476a0b8a51e9946af4c56ec8983d0b, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 221097299968
