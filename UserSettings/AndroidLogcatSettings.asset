@@ -1,19 +1,13 @@
 {
     "m_SelectedDeviceId": "207a5b98",
     "m_SelectedPackage": {
-        "deviceId": "207a5b98",
-        "name": "com.vncl.lettherebelight",
-        "processId": 5075,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "207a5b98",
-            "name": "com.vncl.lettherebelight",
-            "processId": 25726,
-            "exited": true
-        },
         {
             "deviceId": "207a5b98",
             "name": "com.vncl.lettherebelight",
@@ -36,6 +30,12 @@
             "deviceId": "207a5b98",
             "name": "com.vncl.lettherebelight",
             "processId": 5075,
+            "exited": true
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.snapchat.android",
+            "processId": 32067,
             "exited": false
         }
     ],
