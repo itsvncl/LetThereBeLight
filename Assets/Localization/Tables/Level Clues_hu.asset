@@ -20,7 +20,7 @@ MonoBehaviour:
     - rid: 3547996990398005254
   m_TableData:
   - m_Id: 24107618304
-    m_Localized: '{L.LevelNumber}. AHOGY SZOKTAD'
+    m_Localized: "{L.LevelNumber}. AHOGY AZT SZOK\xC1S"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
@@ -60,7 +60,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 1741247287296
-    m_Localized: "{L.LevelNumber}. \xD6R\xD6K\xCDTSD MEG"
+    m_Localized: "{L.LevelNumber}. \xD6R\xD6K\xCDTSE MEG"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254
@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3547996990398005254
   - m_Id: 14739444434014208
-    m_Localized: '{L.LevelNumber}. NEM AHOGY SZOKTAD'
+    m_Localized: "{L.LevelNumber}. NEM AHOGY SZOK\xC1S"
     m_Metadata:
       m_Items:
       - rid: 3547996990398005254

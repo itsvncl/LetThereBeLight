@@ -16,17 +16,15 @@ MonoBehaviour:
     m_Code: hu
   m_SharedData: {fileID: 11400000, guid: dbc30d8f6db399f4a9f080ea9b22b2ed, type: 2}
   m_Metadata:
-    m_Items:
-    - rid: 3547997130631151616
+    m_Items: []
   m_TableData:
   - m_Id: 125681078272
-    m_Localized: "H\xFAzza fel a kapcsolot az ON poz\xEDci\xF3ra."
+    m_Localized: "H\xFAzza fel a kapcsol\xF3t az ON poz\xEDci\xF3ba."
     m_Metadata:
-      m_Items:
-      - rid: 3547997130631151616
+      m_Items: []
   - m_Id: 1036201562112
     m_Localized: "Az azonos sz\xE1mmal rendelkez\u0151 sz\xE1mblokkok k\xE9pesek
-      egym\xE1sba menni. Ezzel \xF6sszead\xF3dnak. Minden egyes block az adott h\xFAz\xE1s
+      egym\xE1sba menni. Ezzel \xF6sszead\xF3dnak. Minden egyes blokk az adott h\xFAz\xE1s
       ir\xE1ny\xE1ba fog mozogni, ha erre k\xE9pes."
     m_Metadata:
       m_Items: []
@@ -59,20 +57,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14922380764581888
-    m_Localized: "K\xF6sse \xF6ssze a pontokat \xFAgy, hogy a t\xE1bl\xE1n az \xF6sszes
-      n\xE9gyzet fel legyen haszn\xE1lva. Figyelem! A narancs nagy kit\xE9r\u0151t
+    m_Localized: "K\xF6sse \xF6ssze a pontokat \xFAgy, hogy a t\xE1bl\xE1n l\xE9v\u0151
+      \xF6sszes n\xE9gyzet fel legyen haszn\xE1lva. Figyelem! A narancs nagy kit\xE9r\u0151t
       tesz."
     m_Metadata:
       m_Items: []
   - m_Id: 14923047348539392
     m_Localized: "A labda a telefon d\xF6nt\xF6get\xE9s\xE9vel ir\xE1ny\xEDthat\xF3.
       A telefont tartsa \xFAgy, hogy a k\xE9perny\u0151je t\xF6k\xE9letesen felfele
-      n\xE9zzen. N\xE9ha lefele kell elindulni, hogy felfele haladjunk."
+      n\xE9zzen. N\xE9ha felfele kell elindulni, hogy lefele haladjunk."
     m_Metadata:
       m_Items: []
   - m_Id: 14923459048837120
     m_Localized: "A legt\xF6bb mobiltelefon rendelkezik egy szenzorral, amely a k\xF6rnyezeti
-      vil\xE1goss\xE1ghoz k\xE9pest \xE1ll\xEDtja a telefon f\xE9nyerej\xE9t."
+      vil\xE1goss\xE1ghoz k\xE9pest \xE1ll\xEDtja a telefon k\xE9perny\u0151 f\xE9nyerej\xE9t."
     m_Metadata:
       m_Items: []
   - m_Id: 14924647282577408
@@ -93,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14925677625937920
-    m_Localized: "A ny\xEDl a rejtekhelye fel\xE9 mutat. Biztosan k\xE9nyelmesen
+    m_Localized: "A ny\xEDl a kapcsol\xF3 rejtekhelye fel\xE9 mutat. Biztosan k\xE9nyelmesen
       \xE9rzi mag\xE1t a sok \xE9rtes\xEDt\xE9s \xE9s gomb k\xF6z\xF6tt."
     m_Metadata:
       m_Items: []
@@ -115,7 +113,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14927451040583680
-    m_Localized: "A blokkok a r\xF6videbb oldal fel\xE9 k\xE9pesek mozogni. Juttassa
+    m_Localized: "A blokkok a r\xF6videbb oldaluk fel\xE9 k\xE9pesek mozogni. Juttassa
       el a z\xF6ld blokkot a k\xE9perny\u0151 jobb oldal\xE1ra a feh\xE9r blokkok
       \xE1trendez\xE9s\xE9vel."
     m_Metadata:
@@ -130,8 +128,4 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds:
-    - rid: 3547997130631151616
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 00102d431d000000
+    RefIds: []

@@ -42,8 +42,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14920814452084736
     m_Localized: You control the ball by tilting your phone. The phone should be
-      facing straight up for a neutral position. In this level the walls will reset
-      the game and the level as well.
+      facing straight up for a neutral position. In this level hitting the walls
+      will reset the balls position and the labirynth as well.
     m_Metadata:
       m_Items: []
   - m_Id: 14921644781670400
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14921896632848384
-    m_Localized: You know, the so called "flashlight" wich also triggers while taking
+    m_Localized: You know, the so called "flashlight". It may flash while taking
       a photo.
     m_Metadata:
       m_Items: []
@@ -67,12 +67,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14923459048837120
-    m_Localized: Most mobilephones are equipped with a sensor, that changes the brightness
-      of the screen according to real world birhtness.
+    m_Localized: Most mobiles are equipped with a sensor, that changes the brightness
+      of the screen according to real world light levels.
     m_Metadata:
       m_Items: []
   - m_Id: 14924647282577408
-    m_Localized: It takes quite a lot of punches, to break this glass.
+    m_Localized: It takes quite a lot of punches to break this glass.
     m_Metadata:
       m_Items: []
   - m_Id: 14924935095717888
@@ -84,13 +84,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14925192256884736
-    m_Localized: Use your fingers! By not seeing something, we can pretend it's not
-      even there.
+    m_Localized: Use your fingers! If you don't see the flaw, it doesn't exist.
     m_Metadata:
       m_Items: []
   - m_Id: 14925677625937920
-    m_Localized: The arrow is pointing towards it's hiding place. It's probabbly
-      cozy around all those settings and messages.
+    m_Localized: The arrow is pointing towards the switch's hiding place. It's probabbly
+      cozy around all those settings and notifications.
     m_Metadata:
       m_Items: []
   - m_Id: 14926287112835072
@@ -111,8 +110,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14927451040583680
-    m_Localized: White blocks move move towards their shorter edge. Move the green
-      block to the right side of the screen by rearranging the white ones.
+    m_Localized: Blocks move move towards their shorter edge. Move the green block
+      to the right side of the screen by rearranging the white ones.
     m_Metadata:
       m_Items: []
   - m_Id: 14928093977055232
