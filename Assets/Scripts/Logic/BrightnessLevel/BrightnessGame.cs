@@ -9,7 +9,7 @@ public class BrightnessGame : MonoBehaviour
     [SerializeField] private GameObject progress;
 
     private bool win = false;
-    private float xiaomiMax = 16.0f;
+    private float xiaomiMax = 12.0f;
     private float androidMax = 1.0f;
 
     private bool isXiaomi;

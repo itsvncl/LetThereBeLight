@@ -9,11 +9,20 @@ public class PremissionRequest : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("permissionsRequested")) return;
 
-        if (!Permission.HasUserAuthorizedPermission("android.permission.READ_EXTERNAL_STORAGE")) {
+        StartCoroutine(RequestPermissions());
+    }
+
+    IEnumerator RequestPermissions()
+    {
+        if (!Permission.HasUserAuthorizedPermission("android.permission.READ_EXTERNAL_STORAGE"))
+        {
             Permission.RequestUserPermission("android.permission.READ_EXTERNAL_STORAGE");
         }
 
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
+        yield return new WaitForSeconds(0.5f);
+
+        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
+        {
             Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
         }
 
