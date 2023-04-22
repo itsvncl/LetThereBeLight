@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "207a5b98",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "207a5b98",
+        "name": "com.vncl.lettherebelight",
+        "processId": 27088,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,12 @@
             "deviceId": "207a5b98",
             "name": "com.snapchat.android",
             "processId": 32067,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.vncl.lettherebelight",
+            "processId": 27088,
             "exited": false
         }
     ],

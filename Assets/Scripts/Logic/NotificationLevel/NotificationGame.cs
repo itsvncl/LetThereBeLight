@@ -15,9 +15,20 @@ public class NotificationGame : MonoBehaviour
 
     void Start()
     {
-        PreparePermissions();
+        if (AndroidActivityManager.getAPILevel() < 33) return;
 
-        var channel = new AndroidNotificationChannel() {
+        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
+        {
+            Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
+        }
+
+        StartCoroutine(InitGame());
+    }
+
+    public void sendNotification()
+    {
+        var channel = new AndroidNotificationChannel()
+        {
             Id = "LetThereBeLight",
             Name = "Game",
             Importance = Importance.Low,
@@ -48,22 +59,17 @@ public class NotificationGame : MonoBehaviour
     }
 
 
-    private void PreparePermissions() {
-        if (AndroidActivityManager.getAPILevel() < 33) return;
 
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
-            Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
-        }
-
-        StartCoroutine(CheckPermissionAccess());
-    }
-
-    IEnumerator CheckPermissionAccess() {
+    IEnumerator InitGame() {
         yield return new WaitForSeconds(0.5f);
 
         if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
             unplayableOverlay.SetActive(true);
             gameObject.SetActive(false);
+        }
+        else
+        {
+            sendNotification();
         }
     }
 }
