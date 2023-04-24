@@ -15,14 +15,9 @@ public class NotificationGame : MonoBehaviour
 
     void Start()
     {
-        if (AndroidActivityManager.getAPILevel() >= 33)
-        {
-            if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
-            {
-                Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
-            }
+        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")){
+            Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
         }
-
 
         StartCoroutine(InitGame());
     }
@@ -65,7 +60,9 @@ public class NotificationGame : MonoBehaviour
     IEnumerator InitGame() {
         yield return new WaitForSeconds(0.5f);
 
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
+        int androidSDK = AndroidActivityManager.getAPILevel();
+
+        if (androidSDK >= 33 && !Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
             unplayableOverlay.SetActive(true);
             gameObject.SetActive(false);
         }
