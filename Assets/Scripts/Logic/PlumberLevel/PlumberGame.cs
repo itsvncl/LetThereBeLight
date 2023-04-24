@@ -132,7 +132,8 @@ public class PlumberGame : MonoBehaviour {
     }
 
     public bool IsWin() {
-        bool win = board[endPos][SIZE - 3].inFlow;
+        bool win = board[endPos][SIZE - 3].inFlow && (board[endPos][SIZE - 3].orientation == PipeOrientation.Right ||
+                                                     board[endPos][SIZE - 3].orientation == PipeOrientation.Left);
 
         endPipe.SetHighlighted(win);
 
