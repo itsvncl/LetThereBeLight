@@ -15,12 +15,14 @@ public class NotificationGame : MonoBehaviour
 
     void Start()
     {
-        if (AndroidActivityManager.getAPILevel() < 33) return;
-
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
+        if (AndroidActivityManager.getAPILevel() >= 33)
         {
-            Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
+            if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
+            {
+                Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
+            }
         }
+
 
         StartCoroutine(InitGame());
     }
