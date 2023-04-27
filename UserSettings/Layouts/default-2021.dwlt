@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 8
-    y: 54
-    width: 1904
-    height: 978
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
   m_Title: Project
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 315
-    width: 454
-    height: 100
+    y: 255
+    width: 459
+    height: 484
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
@@ -67,14 +67,14 @@ MonoBehaviour:
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 1450
+    x: 1461
     y: 0
-    width: 454
-    height: 415
+    width: 459
+    height: 739
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 22
+  controlID: 145
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,8 +95,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
-    height: 978
+    width: 1920
+    height: 997
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 958
-    width: 1904
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1904
-    height: 928
+    width: 1920
+    height: 947
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 19
+  controlID: 142
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,12 +189,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
-    height: 928
+    width: 1920
+    height: 947
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 20
+  controlID: 143
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,12 +216,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
-    height: 415
+    width: 1920
+    height: 739
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 21
+  controlID: 144
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,12 +241,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 450
-    height: 415
+    width: 453
+    height: 739
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 268
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,10 +264,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 450
-    height: 180
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 453
+    height: 313
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -289,9 +289,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 180
-    width: 450
-    height: 235
+    y: 313
+    width: 453
+    height: 426
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -314,12 +314,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 450
+    x: 453
     y: 0
-    width: 688
-    height: 415
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 391
+    height: 739
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -341,10 +341,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1138
+    x: 844
     y: 0
-    width: 312
-    height: 415
+    width: 617
+    height: 739
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
@@ -369,10 +369,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 454
-    height: 315
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 459
+    height: 255
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 415
-    width: 1904
-    height: 513
+    y: 739
+    width: 1920
+    height: 208
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   m_ActualView: {fileID: 24}
@@ -424,21 +424,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1458
-    y: 399
-    width: 453
-    height: 79
+    x: 1461
+    y: 328
+    width: 458
+    height: 463
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 324
+    ID: 185
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 32
-    - 32
+    - 295
+    - 98
     relativeSizes:
     - 0.75
     - 0.25
@@ -448,7 +448,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 44
+    lastTotalSize: 393
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
       name: Let There Be Light
       fullName: Let There Be Light
       resultStatus: 1
-      duration: 7.0372267
+      duration: 6.78143
       messages: 
       output: 
       stacktrace: 
@@ -481,7 +481,7 @@ MonoBehaviour:
       name: PlayMode.dll
       fullName: F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll
       resultStatus: 1
-      duration: 6.8489785
+      duration: 6.6088142
       messages: 
       output: 
       stacktrace: 
@@ -497,7 +497,7 @@ MonoBehaviour:
       name: ConnectTheWiresLevelTest
       fullName: ConnectTheWiresLevelTest
       resultStatus: 1
-      duration: 1.0050058
+      duration: 0.9576918
       messages: 
       output: 
       stacktrace: 
@@ -513,7 +513,7 @@ MonoBehaviour:
       name: ConnectingAlreadyConnected
       fullName: ConnectTheWiresLevelTest.ConnectingAlreadyConnected
       resultStatus: 1
-      duration: 0.3448255
+      duration: 0.3226082
       messages: 
       output: 'Transform childs are missing
 
@@ -537,7 +537,7 @@ MonoBehaviour:
       name: GoodConnection
       fullName: ConnectTheWiresLevelTest.GoodConnection
       resultStatus: 1
-      duration: 0.2132311
+      duration: 0.2058302
       messages: 
       output: 'Transform childs are missing
 
@@ -561,7 +561,7 @@ MonoBehaviour:
       name: MissmatchingColor
       fullName: ConnectTheWiresLevelTest.MissmatchingColor
       resultStatus: 1
-      duration: 0.2107872
+      duration: 0.2064299
       messages: 
       output: 'Transform childs are missing
 
@@ -582,7 +582,7 @@ MonoBehaviour:
       name: SelfConnection
       fullName: ConnectTheWiresLevelTest.SelfConnection
       resultStatus: 1
-      duration: 0.2131358
+      duration: 0.2077785
       messages: 
       output: 'Transform childs are missing
 
@@ -601,7 +601,7 @@ MonoBehaviour:
       name: FindTheSunLevelTest
       fullName: FindTheSunLevelTest
       resultStatus: 1
-      duration: 0.0159042
+      duration: 0.0097919
       messages: 
       output: 
       stacktrace: 
@@ -617,7 +617,7 @@ MonoBehaviour:
       name: AzimuthToVector3Test
       fullName: FindTheSunLevelTest.AzimuthToVector3Test
       resultStatus: 1
-      duration: 0.0083745
+      duration: 0.0067786
       messages: 
       output: 
       stacktrace: 
@@ -634,7 +634,7 @@ MonoBehaviour:
       name: LightbulbLevelTest
       fullName: LightbulbLevelTest
       resultStatus: 1
-      duration: 0.1186837
+      duration: 0.1097545
       messages: 
       output: 
       stacktrace: 
@@ -650,7 +650,7 @@ MonoBehaviour:
       name: ClickIsWin
       fullName: LightbulbLevelTest.ClickIsWin
       resultStatus: 1
-      duration: 0.1128949
+      duration: 0.1066755
       messages: 
       output: 'LevelManager is not inited
 
@@ -669,7 +669,7 @@ MonoBehaviour:
       name: LightSwitchGlassGameLevelTest
       fullName: LightSwitchGlassGameLevelTest
       resultStatus: 1
-      duration: 0.3426779
+      duration: 0.3178366
       messages: 
       output: 
       stacktrace: 
@@ -685,7 +685,7 @@ MonoBehaviour:
       name: Break
       fullName: LightSwitchGlassGameLevelTest.Break
       resultStatus: 1
-      duration: 0.1138916
+      duration: 0.1046615
       messages: 
       output: 
       stacktrace: 
@@ -702,7 +702,7 @@ MonoBehaviour:
       name: ControllerTest
       fullName: LightSwitchGlassGameLevelTest.ControllerTest
       resultStatus: 1
-      duration: 0.1121441
+      duration: 0.105239
       messages: 
       output: 
       stacktrace: 
@@ -719,7 +719,7 @@ MonoBehaviour:
       name: Level
       fullName: LightSwitchGlassGameLevelTest.Level
       resultStatus: 1
-      duration: 0.1097152
+      duration: 0.1048436
       messages: 
       output: 
       stacktrace: 
@@ -736,7 +736,7 @@ MonoBehaviour:
       name: LightSwitchLevelTest
       fullName: LightSwitchLevelTest
       resultStatus: 1
-      duration: 0.2183016
+      duration: 0.2079444
       messages: 
       output: 
       stacktrace: 
@@ -752,7 +752,7 @@ MonoBehaviour:
       name: WinTriggerTest
       fullName: LightSwitchLevelTest.WinTriggerTest
       resultStatus: 1
-      duration: 0.2131612
+      duration: 0.205179
       messages: 
       output: 'Collision with gameobject
 
@@ -776,7 +776,7 @@ MonoBehaviour:
       name: MorseLevelTest
       fullName: MorseLevelTest
       resultStatus: 1
-      duration: 3.846251
+      duration: 3.76988
       messages: 
       output: 
       stacktrace: 
@@ -792,7 +792,7 @@ MonoBehaviour:
       name: Dash
       fullName: MorseLevelTest.Dash
       resultStatus: 1
-      duration: 0.6185031
+      duration: 0.6072582
       messages: 
       output: 
       stacktrace: 
@@ -809,7 +809,7 @@ MonoBehaviour:
       name: Dot
       fullName: MorseLevelTest.Dot
       resultStatus: 1
-      duration: 0.5113647
+      duration: 0.50706
       messages: 
       output: 
       stacktrace: 
@@ -826,7 +826,7 @@ MonoBehaviour:
       name: NotSOSNotWinV1
       fullName: MorseLevelTest.NotSOSNotWinV1
       resultStatus: 1
-      duration: 0.5931885
+      duration: 0.5828816
       messages: 
       output: 
       stacktrace: 
@@ -843,7 +843,7 @@ MonoBehaviour:
       name: NotSOSNotWinV2
       fullName: MorseLevelTest.NotSOSNotWinV2
       resultStatus: 1
-      duration: 0.4124113
+      duration: 0.3934091
       messages: 
       output: 
       stacktrace: 
@@ -860,7 +860,7 @@ MonoBehaviour:
       name: NotSOSNotWinV3
       fullName: MorseLevelTest.NotSOSNotWinV3
       resultStatus: 1
-      duration: 0.7841851
+      duration: 0.7842337
       messages: 
       output: 
       stacktrace: 
@@ -877,7 +877,7 @@ MonoBehaviour:
       name: RetryButton
       fullName: MorseLevelTest.RetryButton
       resultStatus: 1
-      duration: 0.1252029
+      duration: 0.1158695
       messages: 
       output: 
       stacktrace: 
@@ -894,7 +894,7 @@ MonoBehaviour:
       name: SOSWin
       fullName: MorseLevelTest.SOSWin
       resultStatus: 1
-      duration: 0.7950149
+      duration: 0.7754345
       messages: 
       output: 'LevelManager not inited
 
@@ -913,7 +913,7 @@ MonoBehaviour:
       name: RubLevelTest
       fullName: RubLevelTest
       resultStatus: 1
-      duration: 0.6664595
+      duration: 0.6465063
       messages: 
       output: 
       stacktrace: 
@@ -929,7 +929,7 @@ MonoBehaviour:
       name: BeginDirection
       fullName: RubLevelTest.BeginDirection
       resultStatus: 1
-      duration: 0.2172681
+      duration: 0.2107461
       messages: 
       output: 'Image is not loaded
 
@@ -1035,6 +1035,85 @@ MonoBehaviour:
 
         Image
         is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
 
         Image is not loaded
 
@@ -1053,7 +1132,7 @@ MonoBehaviour:
       name: CorrectRub
       fullName: RubLevelTest.CorrectRub
       resultStatus: 1
-      duration: 0.220857
+      duration: 0.2134111
       messages: 
       output: 'Image is not loaded
 
@@ -1240,6 +1319,72 @@ MonoBehaviour:
         Image is not loaded
 
         Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
 
 '
       stacktrace: 
@@ -1256,7 +1401,7 @@ MonoBehaviour:
       name: IncorrectRub
       fullName: RubLevelTest.IncorrectRub
       resultStatus: 1
-      duration: 0.2218075
+      duration: 0.219166
       messages: 
       output: 'Image is not loaded
 
@@ -1264,6 +1409,76 @@ MonoBehaviour:
 
         Image is
         not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
 
         Image is not loaded
 
@@ -1506,7 +1721,7 @@ MonoBehaviour:
       name: VolumeButtonGameLevelTest
       fullName: VolumeButtonGameLevelTest
       resultStatus: 1
-      duration: 0.5276671
+      duration: 0.4946571
       messages: 
       output: 'Image is not loaded
 
@@ -1529,7 +1744,7 @@ MonoBehaviour:
       name: CanWin
       fullName: VolumeButtonGameLevelTest.CanWin
       resultStatus: 1
-      duration: 0.1360947
+      duration: 0.1233957
       messages: 
       output: 'Image is not loaded
 
@@ -1549,6 +1764,41 @@ MonoBehaviour:
 
         Image is
         not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
 
         Image is not loaded
 
@@ -1679,26 +1929,14 @@ MonoBehaviour:
       name: VolumeDownTest
       fullName: VolumeButtonGameLevelTest.VolumeDownTest
       resultStatus: 1
-      duration: 0.1283488
+      duration: 0.1215556
       messages: 
-      output: 'Image not inited
+      output: 'Image is not loaded
 
         Image is not loaded
 
-        Image is not
-        loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        AndroidActivityManager
-        not inited
+        Image is
+        not loaded
 
         Image is not loaded
 
@@ -1707,40 +1945,10 @@ MonoBehaviour:
         Image
         is not loaded
 
-        Image not inited
+        AndroidActivityManager not inited
 
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
+        Image is
+        not loaded
 
         Image is not loaded
 
@@ -1793,6 +2001,13 @@ MonoBehaviour:
 
         Image is not loaded
 
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
         Image not inited
 
         Image
@@ -1808,6 +2023,76 @@ MonoBehaviour:
         Image is not loaded
 
         Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        not inited
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image not inited
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image not inited
 
         Image
         is not loaded
@@ -1831,33 +2116,26 @@ MonoBehaviour:
       name: VolumeDownTestNotNegative
       fullName: VolumeButtonGameLevelTest.VolumeDownTestNotNegative
       resultStatus: 1
-      duration: 0.1290886
+      duration: 0.1187981
       messages: 
-      output: 'Image not inited
+      output: 'Image is not loaded
 
         Image is not loaded
 
-        Image is not
-        loaded
+        Image is
+        not loaded
 
         Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        AndroidActivityManager
-        not inited
-
-        Image not inited
 
         Image is not loaded
 
         Image
         is not loaded
+
+        AndroidActivityManager not inited
+
+        Image not
+        inited
 
         Image is not loaded
 
@@ -1872,34 +2150,6 @@ MonoBehaviour:
 
         Image
         is not loaded
-
-        Image is not loaded
-
-        Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        not inited
 
         Image is not loaded
 
@@ -1938,7 +2188,21 @@ MonoBehaviour:
 
         Image is not loaded
 
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
         Image not inited
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
 
         Image
         is not loaded
@@ -1970,6 +2234,59 @@ MonoBehaviour:
 
         Image
         is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image not inited
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image not inited
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
 
 '
       stacktrace: 
@@ -1986,7 +2303,7 @@ MonoBehaviour:
       name: VolumeUpTest
       fullName: VolumeButtonGameLevelTest.VolumeUpTest
       resultStatus: 1
-      duration: 0.1240488
+      duration: 0.1233123
       messages: 
       output: 'Image is not loaded
 
@@ -1995,6 +2312,46 @@ MonoBehaviour:
         Image is
         not loaded
 
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        AndroidActivityManager not inited
+
+        Image not
+        inited
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
         Image not inited
 
         Image is not loaded
@@ -2004,7 +2361,51 @@ MonoBehaviour:
 
         Image is not loaded
 
-        AndroidActivityManager
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image not inited
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
         not inited
 
         Image is not loaded
@@ -2021,6 +2422,20 @@ MonoBehaviour:
         Image
         is not loaded
 
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
         Image not inited
 
         Image is not loaded
@@ -2044,28 +2459,14 @@ MonoBehaviour:
 
         Image is not loaded
 
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
         Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
 
         Image
         not inited
@@ -2076,52 +2477,6 @@ MonoBehaviour:
 
         Image
         is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image not inited
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
 
 '
       stacktrace: 
@@ -2139,7 +2494,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 84293c85ffffff7f
+      m_ExpandedIDs: 84293c85714c0ee0ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2237,10 +2592,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 84
-    width: 449
-    height: 159
+    x: 0
+    y: 73
+    width: 452
+    height: 292
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2248,9 +2603,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 10710000
       m_LastClickedID: 0
-      m_ExpandedIDs: c675ffff2876ffff3876ffff2e77ffff2478ffff1879ffff0e7affff0a7bffff027cfffff87cffffee7dffffe67effffde7fffffd280ffffca81ffffc082ffffb683ffffb284ffffaa85ffffa086ffff9887ffff8e88ffff8689ffff7e8affff768bffff6e8cffff6a8dffff708dffffdc8fffff3e90ffff4e90ffff4491ffff3a92ffff2e93ffff2494ffff2095ffff1896ffff0e97ffff0498fffffc98fffff499ffffe89affffe09bffffd69cffffcc9dffffc89effffc09fffffb6a0ffffaea1ffffa4a2ffff9ca3ffff94a4ffff8ca5ffff84a6ffff80a7ffff86a7ffff14a9ffff7aa9ffff8ea9ffff88aaffff82abffff7aacffff74adffff74aeffff70afffff6ab0ffff64b1ffff60b2ffff5cb3ffff54b4ffff50b5ffff4ab6ffff44b7ffff44b8ffff40b9ffff3abaffff36bbffff30bcffff2cbdffff28beffff24bfffff20c0ffff20c1ffff2ac1ffffeec2ffff50c3ffff60c3ffff56c4ffff4cc5ffff40c6ffff36c7ffff32c8ffff2ac9ffff20caffff16cbffff0eccffff06cdfffffacdfffff2ceffffe8cfffffded0ffffdad1ffffd2d2ffffc8d3ffffc0d4ffffb6d5ffffaed6ffffa6d7ffff9ed8ffff96d9ffff92daffff98daffffc4dcffff26ddffff0adfffff06e0ffff02e1fffffce1fffff8e2fffffae3fffff8e4fffff4e5fffff2e6fffff0e7ffffeee8ffffeae9ffffeaeaffffe6ebffffe2ecffffe6edffffe4eeffffe2efffffe4f0ffffe0f1ffffe6f2ffffe6f3ffffe4f4ffffe4f5fffff0f6ffff14f7ffff1cfbffff
+      m_ExpandedIDs: 22fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2294,10 +2649,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 264
-    width: 449
-    height: 214
+    x: 0
+    y: 386
+    width: 452
+    height: 405
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2314,7 +2669,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Plugins/Android
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -2329,7 +2685,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 26640000
     m_LastClickedID: 25638
-    m_ExpandedIDs: 00000000146f0000166f0000186f00001a6f00001c6f00001e6f0000206f0000226f0000246f0000266f0000286f00002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f0000386f00003a6f00003c6f00003e6f0000406f0000426f0000446f0000466f0000486f00004a6f00004c6f00004e6f0000506f0000526f0000546f0000566f0000586f00005a6f00005c6f00005e6f0000606f0000626f0000646f0000666f0000686f0000
+    m_ExpandedIDs: 000000004e70000050700000527000005470000056700000587000005a7000005c7000005e70000060700000627000006470000066700000687000006a7000006c7000006e70000070700000727000007470000076700000787000007a7000007c7000007e70000080700000827000008470000086700000887000008a7000008c7000008e70000090700000927000009470000096700000987000009a7000009c7000009e700000a0700000a2700000a4700000a6700000a8700000aa700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2354,24 +2710,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 120}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000146f0000166f0000186f00001a6f00001c6f00001e6f0000206f0000246f0000266f0000286f00002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f0000386f00003a6f00003c6f00003e6f0000406f0000426f0000446f0000466f0000486f00004a6f00004c6f00004e6f0000506f0000526f0000546f0000566f0000586f00005a6f00005c6f0000606f0000626f0000646f0000666f0000686f0000dc6f0000167000006a700000
+    m_ExpandedIDs: ffffffff000000004e70000050700000527000005470000056700000587000005a7000005c7000005e70000060700000627000006470000066700000687000006a7000006c7000006e70000070700000727000007470000076700000787000007a7000007c7000007e70000080700000827000008470000086700000887000008a7000008c7000008e70000090700000927000009470000096700000987000009a7000009c7000009e700000a0700000a2700000a4700000a8700000aa700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PremissionRequest
-      m_OriginalName: PremissionRequest
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 4958
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
@@ -2433,10 +2789,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 458
-    y: 84
-    width: 686
-    height: 394
+    x: 453
+    y: 73
+    width: 389
+    height: 718
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2662,7 +3018,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 700.12244, y: 906.10474, z: -18.145243}
     speed: 2
-    m_Value: {x: 585.03174, y: 845.1744, z: -17.366686}
+    m_Value: {x: 700.12244, y: 906.10474, z: -18.145243}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2715,7 +3071,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 1807.9766
     speed: 2
-    m_Value: 1730.1211
+    m_Value: 1807.9766
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2824,10 +3180,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1146
-    y: 84
-    width: 310
-    height: 394
+    x: 844
+    y: 73
+    width: 615
+    height: 718
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2861,7 +3217,7 @@ MonoBehaviour:
     - '{"m_SerializationStates":{"thermalFoldout":false,"performanceFoldout":false,"developerFoldout":false,"indexerFoldout":false,"scalersFoldout":false,"deviceSettingsFoldout":false}}'
     - '{}'
     - '{}'
-    scale: 24
+    scale: 45
     fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
@@ -2888,10 +3244,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1458
-    y: 84
-    width: 453
-    height: 294
+    x: 1461
+    y: 73
+    width: 458
+    height: 234
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2929,10 +3285,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 499
-    width: 1904
-    height: 492
+    x: 0
+    y: 812
+    width: 1920
+    height: 187
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

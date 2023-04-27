@@ -1,34 +1,18 @@
 package com.vncl.unityactivity;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.Camera;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.PowerManager;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.NotificationCompat;
 
 import com.unity3d.player.UnityPlayer;
 
-import java.lang.reflect.Field;
-
-//TODO: onPause remove event listener
-//TODO: onResume re add event listener
 public class CustomUnityActivity extends UnityPlayerActivity {
     private static final String LOGTAG = "LetThereBeLightActivity";
 
@@ -40,8 +24,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     private ScreenshotDetector screenshotDetector;
 
     private SensorManager sensorManager;
-    private Sensor lightSensor;
-    private SensorEventListener lightSensorEventListener;
 
 
     @Override
@@ -77,8 +59,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     public void onPause() {
         super.onPause();
 
-        if(lightSensorEventListener != null)
-            sensorManager.unregisterListener(lightSensorEventListener);
         if(flashCallback != null)
             cameraManager.unregisterTorchCallback(flashCallback);
         if(screenshotDetector != null)
@@ -88,8 +68,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     public void onResume() {
         super.onResume();
 
-        if(lightSensorEventListener != null)
-            sensorManager.registerListener(lightSensorEventListener, lightSensor, 1000);
         if(flashCallback != null)
             cameraManager.registerTorchCallback(flashCallback, null);
         if(screenshotDetector != null)
@@ -144,19 +122,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     public void disableScreenshotDetector(){
         screenshotDetector.stop();
         screenshotDetector = null;
-    }
-
-    private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "Light channel";
-            String description = "Function to complete a level";
-            int importance = NotificationManager.IMPORTANCE_LOW;
-            NotificationChannel channel = new NotificationChannel("LIGHT", name, importance);
-            channel.setDescription(description);
-
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
     }
 
     @Override
