@@ -3,7 +3,6 @@ package com.vncl.unityactivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.SensorManager;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,9 +21,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     private CameraManager.TorchCallback flashCallback;
 
     private ScreenshotDetector screenshotDetector;
-
-    private SensorManager sensorManager;
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -53,7 +49,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
     @Override
     public void onPause() {
