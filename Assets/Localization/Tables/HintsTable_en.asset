@@ -94,7 +94,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14926287112835072
     m_Localized: Rotate the wires by tapping on them and connect the left and right
-      most wires with eachother.
+      most wires with each other.
     m_Metadata:
       m_Items: []
   - m_Id: 14926730215886848
@@ -110,8 +110,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14927451040583680
-    m_Localized: Blocks move move towards their shorter edge. Move the green block
-      to the right side of the screen by rearranging the white ones.
+    m_Localized: Blocks move towards their shorter edge. Move the green block to
+      the right side of the screen by rearranging the white ones.
     m_Metadata:
       m_Items: []
   - m_Id: 14928093977055232

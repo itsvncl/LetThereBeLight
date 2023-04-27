@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 5354885120
-    m_Localized: Would you like to get a hit?
+    m_Localized: Would you like to get a hint?
     m_Metadata:
       m_Items: []
   - m_Id: 49101475840
