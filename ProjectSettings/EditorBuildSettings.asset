@@ -18,11 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/ConnectTheWiresLevel.unity
     guid: fc186728c0bbc9b42bcd70ea48e3fb00
   - enabled: 1
-    path: Assets/Scenes/LightbulbLevel.unity
-    guid: 62787af160f6c1947bbef5b9dce184eb
-  - enabled: 1
     path: Assets/Scenes/ZoomLevel.unity
     guid: b147c143b68979642b2974b888299ed2
+  - enabled: 1
+    path: Assets/Scenes/LightbulbLevel.unity
+    guid: 62787af160f6c1947bbef5b9dce184eb
   - enabled: 1
     path: Assets/Scenes/FlowLevel.unity
     guid: c447f745a59f607408ff320f74cedf7b
