@@ -24,7 +24,7 @@ public class PlumberGame : MonoBehaviour {
         RevealRoute();
     }
 
-    void GenerateBoard() {
+    private void GenerateBoard() {
         float boardAreaSize = ScreenManager.SM.ScreenWidth - 2 * PADDING;
 
         float cellSize = boardAreaSize / SIZE;
@@ -72,7 +72,7 @@ public class PlumberGame : MonoBehaviour {
     private void routeRecursion(Pipe pipe, int row, int col) {
         pipe.SetHighlighted(true);
 
-        var directions = PipeGameUtil.PU.GetDirections();
+        var directions = PipeGameUtil.PU.Directions;
 
         foreach (var direction in directions[pipe.type][pipe.orientation]) {
             switch (direction) {
@@ -132,7 +132,8 @@ public class PlumberGame : MonoBehaviour {
     }
 
     public bool IsWin() {
-        bool win = board[endPos][SIZE - 3].inFlow;
+        bool win = board[endPos][SIZE - 3].IsHighlighted && (board[endPos][SIZE - 3].orientation == PipeOrientation.Right ||
+                                                     board[endPos][SIZE - 3].orientation == PipeOrientation.Left);
 
         endPipe.SetHighlighted(win);
 

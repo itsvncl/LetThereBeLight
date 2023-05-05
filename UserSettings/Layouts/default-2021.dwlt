@@ -8,97 +8,23 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
-    x: 540
-    y: 251
-    width: 641
-    height: 627
-  m_ShowMode: 0
-  m_Title: Build Settings
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 640, y: 601}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 277
+    x: 1920
+    y: 43
     width: 1920
-    height: 978
+    height: 1037
   m_ShowMode: 4
-  m_Title: Test Runner
-  m_RootView: {fileID: 7}
+  m_Title: Project
+  m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BuildPlayerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 641
-    height: 627
-  m_MinSize: {x: 640, y: 601}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 20}
-  m_Panes:
-  - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 641
-    height: 627
-  m_MinSize: {x: 640, y: 601}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 2458
---- !u!114 &5
+  m_Maximized: 1
+--- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,17 +40,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 389
-    width: 240
-    height: 257
+    y: 658
+    width: 647
+    height: 207
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 21}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &6
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,19 +63,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 18}
-  - {fileID: 5}
+  - {fileID: 15}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 1680
+    x: 1273
     y: 0
-    width: 240
-    height: 646
+    width: 647
+    height: 865
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 63
---- !u!114 &7
+  controlID: 67
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,22 +88,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 8}
-  - {fileID: 10}
-  - {fileID: 9}
+  - {fileID: 5}
+  - {fileID: 7}
+  - {fileID: 6}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1920
-    height: 978
+    height: 1037
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &8
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &9
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,12 +141,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 958
+    y: 1017
     width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &10
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,18 +159,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 11}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 1920
-    height: 928
+    height: 987
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 107
---- !u!114 &11
+  controlID: 64
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,19 +183,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 19}
+  - {fileID: 9}
+  - {fileID: 16}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1920
-    height: 928
+    height: 987
   m_MinSize: {x: 400, y: 300}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 108
---- !u!114 &12
+  controlID: 65
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,21 +208,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 10}
   - {fileID: 13}
-  - {fileID: 16}
-  - {fileID: 17}
-  - {fileID: 6}
+  - {fileID: 14}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1920
-    height: 646
+    height: 865
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 109
---- !u!114 &13
+  controlID: 66
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,19 +235,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 14}
-  - {fileID: 15}
+  - {fileID: 11}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 454
-    height: 646
+    width: 399
+    height: 865
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 110
---- !u!114 &14
+  controlID: 21
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,16 +264,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 454
-    height: 283
+    width: 399
+    height: 402
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &15
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,17 +289,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 283
-    width: 454
-    height: 363
+    y: 402
+    width: 399
+    height: 463
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &16
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,19 +314,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 454
+    x: 399
     y: 0
-    width: 1125
-    height: 646
+    width: 241
+    height: 865
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 24}
-  - {fileID: 25}
+  - {fileID: 20}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &17
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,18 +341,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1579
+    x: 640
     y: 0
-    width: 101
-    height: 646
+    width: 633
+    height: 865
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 26}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 26}
+  - {fileID: 22}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &18
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,16 +369,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 240
-    height: 389
+    width: 647
+    height: 658
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 27}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 27}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &19
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,67 +394,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 646
+    y: 865
     width: 1920
-    height: 282
+    height: 122
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 28}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 28}
+  - {fileID: 24}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12043, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 640, y: 580}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Build Settings
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 540
-    y: 251
-    width: 641
-    height: 606
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
---- !u!114 &21
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -548,21 +424,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1680
-    y: 696
-    width: 239
-    height: 236
+    x: 3193
+    y: 731
+    width: 646
+    height: 186
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 183
+    ID: 168
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 124
-    - 42
+    - 84
+    - 32
     relativeSizes:
     - 0.75
     - 0.25
@@ -572,7 +448,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 166
+    lastTotalSize: 116
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -582,14 +458,14 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 21}
+    m_Window: {fileID: 17}
     m_NewResultList:
     - id: 1004
       uniqueId: '[Let There Be Light][suite]'
       name: Let There Be Light
       fullName: Let There Be Light
       resultStatus: 1
-      duration: 7.0372267
+      duration: 6.78143
       messages: 
       output: 
       stacktrace: 
@@ -605,7 +481,7 @@ MonoBehaviour:
       name: PlayMode.dll
       fullName: F:/LetThereBeLight/LetThereBeLight/Library/ScriptAssemblies/PlayMode.dll
       resultStatus: 1
-      duration: 6.8489785
+      duration: 6.6088142
       messages: 
       output: 
       stacktrace: 
@@ -621,7 +497,7 @@ MonoBehaviour:
       name: ConnectTheWiresLevelTest
       fullName: ConnectTheWiresLevelTest
       resultStatus: 1
-      duration: 1.0050058
+      duration: 0.9576918
       messages: 
       output: 
       stacktrace: 
@@ -637,7 +513,7 @@ MonoBehaviour:
       name: ConnectingAlreadyConnected
       fullName: ConnectTheWiresLevelTest.ConnectingAlreadyConnected
       resultStatus: 1
-      duration: 0.3448255
+      duration: 0.3226082
       messages: 
       output: 'Transform childs are missing
 
@@ -661,7 +537,7 @@ MonoBehaviour:
       name: GoodConnection
       fullName: ConnectTheWiresLevelTest.GoodConnection
       resultStatus: 1
-      duration: 0.2132311
+      duration: 0.2058302
       messages: 
       output: 'Transform childs are missing
 
@@ -685,7 +561,7 @@ MonoBehaviour:
       name: MissmatchingColor
       fullName: ConnectTheWiresLevelTest.MissmatchingColor
       resultStatus: 1
-      duration: 0.2107872
+      duration: 0.2064299
       messages: 
       output: 'Transform childs are missing
 
@@ -706,7 +582,7 @@ MonoBehaviour:
       name: SelfConnection
       fullName: ConnectTheWiresLevelTest.SelfConnection
       resultStatus: 1
-      duration: 0.2131358
+      duration: 0.2077785
       messages: 
       output: 'Transform childs are missing
 
@@ -725,7 +601,7 @@ MonoBehaviour:
       name: FindTheSunLevelTest
       fullName: FindTheSunLevelTest
       resultStatus: 1
-      duration: 0.0159042
+      duration: 0.0097919
       messages: 
       output: 
       stacktrace: 
@@ -741,7 +617,7 @@ MonoBehaviour:
       name: AzimuthToVector3Test
       fullName: FindTheSunLevelTest.AzimuthToVector3Test
       resultStatus: 1
-      duration: 0.0083745
+      duration: 0.0067786
       messages: 
       output: 
       stacktrace: 
@@ -758,7 +634,7 @@ MonoBehaviour:
       name: LightbulbLevelTest
       fullName: LightbulbLevelTest
       resultStatus: 1
-      duration: 0.1186837
+      duration: 0.1097545
       messages: 
       output: 
       stacktrace: 
@@ -774,7 +650,7 @@ MonoBehaviour:
       name: ClickIsWin
       fullName: LightbulbLevelTest.ClickIsWin
       resultStatus: 1
-      duration: 0.1128949
+      duration: 0.1066755
       messages: 
       output: 'LevelManager is not inited
 
@@ -793,7 +669,7 @@ MonoBehaviour:
       name: LightSwitchGlassGameLevelTest
       fullName: LightSwitchGlassGameLevelTest
       resultStatus: 1
-      duration: 0.3426779
+      duration: 0.3178366
       messages: 
       output: 
       stacktrace: 
@@ -809,7 +685,7 @@ MonoBehaviour:
       name: Break
       fullName: LightSwitchGlassGameLevelTest.Break
       resultStatus: 1
-      duration: 0.1138916
+      duration: 0.1046615
       messages: 
       output: 
       stacktrace: 
@@ -826,7 +702,7 @@ MonoBehaviour:
       name: ControllerTest
       fullName: LightSwitchGlassGameLevelTest.ControllerTest
       resultStatus: 1
-      duration: 0.1121441
+      duration: 0.105239
       messages: 
       output: 
       stacktrace: 
@@ -843,7 +719,7 @@ MonoBehaviour:
       name: Level
       fullName: LightSwitchGlassGameLevelTest.Level
       resultStatus: 1
-      duration: 0.1097152
+      duration: 0.1048436
       messages: 
       output: 
       stacktrace: 
@@ -860,7 +736,7 @@ MonoBehaviour:
       name: LightSwitchLevelTest
       fullName: LightSwitchLevelTest
       resultStatus: 1
-      duration: 0.2183016
+      duration: 0.2079444
       messages: 
       output: 
       stacktrace: 
@@ -876,7 +752,7 @@ MonoBehaviour:
       name: WinTriggerTest
       fullName: LightSwitchLevelTest.WinTriggerTest
       resultStatus: 1
-      duration: 0.2131612
+      duration: 0.205179
       messages: 
       output: 'Collision with gameobject
 
@@ -900,7 +776,7 @@ MonoBehaviour:
       name: MorseLevelTest
       fullName: MorseLevelTest
       resultStatus: 1
-      duration: 3.846251
+      duration: 3.76988
       messages: 
       output: 
       stacktrace: 
@@ -916,7 +792,7 @@ MonoBehaviour:
       name: Dash
       fullName: MorseLevelTest.Dash
       resultStatus: 1
-      duration: 0.6185031
+      duration: 0.6072582
       messages: 
       output: 
       stacktrace: 
@@ -933,7 +809,7 @@ MonoBehaviour:
       name: Dot
       fullName: MorseLevelTest.Dot
       resultStatus: 1
-      duration: 0.5113647
+      duration: 0.50706
       messages: 
       output: 
       stacktrace: 
@@ -950,7 +826,7 @@ MonoBehaviour:
       name: NotSOSNotWinV1
       fullName: MorseLevelTest.NotSOSNotWinV1
       resultStatus: 1
-      duration: 0.5931885
+      duration: 0.5828816
       messages: 
       output: 
       stacktrace: 
@@ -967,7 +843,7 @@ MonoBehaviour:
       name: NotSOSNotWinV2
       fullName: MorseLevelTest.NotSOSNotWinV2
       resultStatus: 1
-      duration: 0.4124113
+      duration: 0.3934091
       messages: 
       output: 
       stacktrace: 
@@ -984,7 +860,7 @@ MonoBehaviour:
       name: NotSOSNotWinV3
       fullName: MorseLevelTest.NotSOSNotWinV3
       resultStatus: 1
-      duration: 0.7841851
+      duration: 0.7842337
       messages: 
       output: 
       stacktrace: 
@@ -1001,7 +877,7 @@ MonoBehaviour:
       name: RetryButton
       fullName: MorseLevelTest.RetryButton
       resultStatus: 1
-      duration: 0.1252029
+      duration: 0.1158695
       messages: 
       output: 
       stacktrace: 
@@ -1018,7 +894,7 @@ MonoBehaviour:
       name: SOSWin
       fullName: MorseLevelTest.SOSWin
       resultStatus: 1
-      duration: 0.7950149
+      duration: 0.7754345
       messages: 
       output: 'LevelManager not inited
 
@@ -1037,7 +913,7 @@ MonoBehaviour:
       name: RubLevelTest
       fullName: RubLevelTest
       resultStatus: 1
-      duration: 0.6664595
+      duration: 0.6465063
       messages: 
       output: 
       stacktrace: 
@@ -1053,7 +929,7 @@ MonoBehaviour:
       name: BeginDirection
       fullName: RubLevelTest.BeginDirection
       resultStatus: 1
-      duration: 0.2172681
+      duration: 0.2107461
       messages: 
       output: 'Image is not loaded
 
@@ -1159,6 +1035,85 @@ MonoBehaviour:
 
         Image
         is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
 
         Image is not loaded
 
@@ -1177,7 +1132,7 @@ MonoBehaviour:
       name: CorrectRub
       fullName: RubLevelTest.CorrectRub
       resultStatus: 1
-      duration: 0.220857
+      duration: 0.2134111
       messages: 
       output: 'Image is not loaded
 
@@ -1364,6 +1319,72 @@ MonoBehaviour:
         Image is not loaded
 
         Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
 
 '
       stacktrace: 
@@ -1380,7 +1401,7 @@ MonoBehaviour:
       name: IncorrectRub
       fullName: RubLevelTest.IncorrectRub
       resultStatus: 1
-      duration: 0.2218075
+      duration: 0.219166
       messages: 
       output: 'Image is not loaded
 
@@ -1388,6 +1409,76 @@ MonoBehaviour:
 
         Image is
         not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
 
         Image is not loaded
 
@@ -1630,7 +1721,7 @@ MonoBehaviour:
       name: VolumeButtonGameLevelTest
       fullName: VolumeButtonGameLevelTest
       resultStatus: 1
-      duration: 0.5276671
+      duration: 0.4946571
       messages: 
       output: 'Image is not loaded
 
@@ -1653,7 +1744,7 @@ MonoBehaviour:
       name: CanWin
       fullName: VolumeButtonGameLevelTest.CanWin
       resultStatus: 1
-      duration: 0.1360947
+      duration: 0.1233957
       messages: 
       output: 'Image is not loaded
 
@@ -1673,6 +1764,41 @@ MonoBehaviour:
 
         Image is
         not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
 
         Image is not loaded
 
@@ -1803,26 +1929,14 @@ MonoBehaviour:
       name: VolumeDownTest
       fullName: VolumeButtonGameLevelTest.VolumeDownTest
       resultStatus: 1
-      duration: 0.1283488
+      duration: 0.1215556
       messages: 
-      output: 'Image not inited
+      output: 'Image is not loaded
 
         Image is not loaded
 
-        Image is not
-        loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        AndroidActivityManager
-        not inited
+        Image is
+        not loaded
 
         Image is not loaded
 
@@ -1831,40 +1945,10 @@ MonoBehaviour:
         Image
         is not loaded
 
-        Image not inited
+        AndroidActivityManager not inited
 
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
+        Image is
+        not loaded
 
         Image is not loaded
 
@@ -1917,6 +2001,13 @@ MonoBehaviour:
 
         Image is not loaded
 
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
         Image not inited
 
         Image
@@ -1932,6 +2023,76 @@ MonoBehaviour:
         Image is not loaded
 
         Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        not inited
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image not inited
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image not inited
 
         Image
         is not loaded
@@ -1955,33 +2116,26 @@ MonoBehaviour:
       name: VolumeDownTestNotNegative
       fullName: VolumeButtonGameLevelTest.VolumeDownTestNotNegative
       resultStatus: 1
-      duration: 0.1290886
+      duration: 0.1187981
       messages: 
-      output: 'Image not inited
+      output: 'Image is not loaded
 
         Image is not loaded
 
-        Image is not
-        loaded
+        Image is
+        not loaded
 
         Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        AndroidActivityManager
-        not inited
-
-        Image not inited
 
         Image is not loaded
 
         Image
         is not loaded
+
+        AndroidActivityManager not inited
+
+        Image not
+        inited
 
         Image is not loaded
 
@@ -1996,34 +2150,6 @@ MonoBehaviour:
 
         Image
         is not loaded
-
-        Image is not loaded
-
-        Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        not inited
 
         Image is not loaded
 
@@ -2062,7 +2188,21 @@ MonoBehaviour:
 
         Image is not loaded
 
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
         Image not inited
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
 
         Image
         is not loaded
@@ -2094,6 +2234,59 @@ MonoBehaviour:
 
         Image
         is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image not inited
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image not inited
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
 
 '
       stacktrace: 
@@ -2110,7 +2303,7 @@ MonoBehaviour:
       name: VolumeUpTest
       fullName: VolumeButtonGameLevelTest.VolumeUpTest
       resultStatus: 1
-      duration: 0.1240488
+      duration: 0.1233123
       messages: 
       output: 'Image is not loaded
 
@@ -2119,6 +2312,46 @@ MonoBehaviour:
         Image is
         not loaded
 
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        AndroidActivityManager not inited
+
+        Image not
+        inited
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
         Image not inited
 
         Image is not loaded
@@ -2128,7 +2361,51 @@ MonoBehaviour:
 
         Image is not loaded
 
-        AndroidActivityManager
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image not inited
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
         not inited
 
         Image is not loaded
@@ -2145,6 +2422,20 @@ MonoBehaviour:
         Image
         is not loaded
 
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
+        Image is not loaded
+
+        Image
+        is not loaded
+
         Image not inited
 
         Image is not loaded
@@ -2168,28 +2459,14 @@ MonoBehaviour:
 
         Image is not loaded
 
+        Image is not loaded
+
+        Image
+        is not loaded
+
+        Image is not loaded
+
         Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
 
         Image
         not inited
@@ -2200,52 +2477,6 @@ MonoBehaviour:
 
         Image
         is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image not inited
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image not inited
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
-
-        Image
-        is not loaded
-
-        Image is not loaded
-
-        Image is not loaded
 
 '
       stacktrace: 
@@ -2263,7 +2494,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 84293c85ffffff7f
+      m_ExpandedIDs: 84293c85714c0ee0ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2291,7 +2522,7 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 21}
+    m_Window: {fileID: 17}
     m_NewResultList:
     - id: 1000
       uniqueId: '[Let There Be Light][suite]'
@@ -2341,7 +2572,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &22
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2361,10 +2592,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 307
-    width: 453
-    height: 262
+    x: 1920
+    y: 73
+    width: 398
+    height: 381
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2372,25 +2603,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: b0180000
       m_LastClickedID: 0
-      m_ExpandedIDs: 08beffff6abeffff7abeffff70bfffff66c0ffff5ac1ffff50c2ffff4cc3ffff44c4ffff3ac5ffff30c6ffff28c7ffff20c8ffff14c9ffff0ccaffff02cbfffff8cbfffff4ccffffeccdffffe2ceffffdacfffffd0d0ffffc8d1ffffc0d2ffffb8d3ffffb0d4ffffacd5ffffb2d5ffffeed7ffff54d8ffff34daffff2cdbffff24dcffff1addffff12deffff10dfffff0ae0ffff02e1fffffce1fffff6e2fffff0e3fffff6e4fffff2e5ffffeae6ffffe2e7ffffe2e8ffffdce9ffffd6eaffffd4ebffffccecffffceedffffcaeeffffc4efffffc0f0ffffccf1ffffd2f1ffff22fbffff5e6e0000826e0000
+      m_ExpandedIDs: 2c6cefff946cefffa86cefffa26defff9c6eefff946fefff8e70efff8e71efff8a72efff8473efff7e74efff7a75efff7676efff6e77efff6a78efff6479efff5e7aefff5e7befff5a7cefff547defff507eefff4a7fefff4680efff4281efff3e82efff3a83efff3a84efff4484efff3687efff9c87efff7689efff6e8aefff668befff5c8cefff548defff528eefff4c8fefff4490efff3e91efff3892efff3293efff2a94efff2295efff1a96efff1297efff1298efff0c99efff069aefff049beffffc9beffffe9ceffff89deffff29eefffee9fefffeea0efff0ea1efff7edbefff80dbeffffedcefff5eddefff38dfefff30e0efff28e1efff1ee2efff16e3efff14e4efff0ee5efff06e6efff00e7effffae7effff4e8efffece9efffe8eaefffe0ebefffd8ecefffd8edefffd2eeefffc8efefffc6f0efffbef1efffc0f2efffbaf3efffb4f4efffb0f5efffb0f6efffd0f6efff2e05f0ffb206f0ff1607f0fff008f0ffe809f0ffe00af0ffd60bf0ffce0cf0ffcc0df0ffc60ef0ffbe0ff0ffb810f0ffb211f0ffac12f0ffa413f0ffa014f0ff9815f0ff9016f0ff9017f0ff8a18f0ff8419f0ff7c1af0ff741bf0ff761cf0ff701df0ff6c1ef0ff681ff0ff6820f0ff8820f0ffac29f0ff0e2af0ffe82bf0ffe02cf0ffd82df0ffce2ef0ffc62ff0ffc430f0ffbe31f0ffb632f0ffb033f0ffaa34f0ffa435f0ff9c36f0ff9837f0ff9038f0ff8839f0ff883af0ff823bf0ff7c3cf0ff743df0ff6c3ef0ff6e3ff0ff6840f0ff6441f0ff6042f0ff6043f0ff8043f0ff3047f0ff9447f0ff6e49f0ff664af0ff5e4bf0ff544cf0ff4c4df0ff4a4ef0ff444ff0ff3c50f0ff3651f0ff3052f0ff2a53f0ff2254f0ff1e55f0ff1656f0ff0e57f0ff0e58f0ff0859f0ff025af0fffa5af0fff25bf0fff45cf0ffee5df0ffea5ef0ffe65ff0ffe660f0ff0661f0ffde64f0ff4265f0ff1c67f0ff1468f0ff0c69f0ff026af0fffa6af0fff86bf0fff26cf0ffea6df0ffe46ef0ffde6ff0ffd870f0ffd071f0ffcc72f0ffc473f0ffbc74f0ffbc75f0ffb676f0ffb077f0ffa878f0ffa079f0ffa27af0ff9c7bf0ff987cf0ff947df0ff947ef0ffb47ef0ffd284f0ff3485f0ff4485f0ff3a86f0ff3087f0ff2488f0ff1a89f0ff168af0ff0e8bf0ff048cf0fffa8cf0fff28df0ffea8ef0ffde8ff0ffd690f0ffcc91f0ffc292f0ffbe93f0ffb694f0ffac95f0ffa496f0ff9a97f0ff9298f0ff8a99f0ff829af0ff7a9bf0ff769cf0ff7c9cf0ffe69ff0ff90a1f0fff2a1f0ffcca3f0ffc4a4f0ffbca5f0ffb2a6f0ffaaa7f0ffa8a8f0ffa2a9f0ff9aaaf0ff90abf0ff8aacf0ff84adf0ff7caef0ff78aff0ff70b0f0ff68b1f0ff68b2f0ff62b3f0ff5cb4f0ff5ab5f0ff52b6f0ff54b7f0ff4eb8f0ff48b9f0ff44baf0ff44bbf0ff64bbf0ff80bef0ff48c0f0ff0ac2f0ffc6c3f0ff7ec5f0ff84c7f0ff3ec9f0fff8caf0ffcaccf0ff84cef0ffe8cff0ffa8d1f0ff74d2f0ff48d4f0ff16d6f0ffe8d7f0ffaad9f0ff88dbf0ffa6ddf0ff60dff0ff18e1f0ff8ce2f0ff50e4f0ff26e5f0ffece6f0ffaee8f0ffb0eaf0ff74ecf0ff62f1f0ffc4f1f0ff9ef3f0ff96f4f0ff8ef5f0ff84f6f0ff7cf7f0ff7af8f0ff74f9f0ff6cfaf0ff66fbf0ff60fcf0ff5afdf0ff52fef0ff4efff0ff4600f1ff3e01f1ff3e02f1ff3803f1ff3204f1ff3005f1ff2806f1ff2a07f1ff2408f1ff2009f1ff1c0af1ff280bf1ff2e0bf1ff960ff1ffa020f1ffc22ef1ff5430f1ffb230f1ff3634f1ff0a37f1ffaadbffff82f8ffff22fbfffff4ffffff56ab000086ab000058ac00006caf00002cba0000b8f70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Name
-        m_OriginalName: Name
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 28402
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 14}
+        m_ClientGUIView: {fileID: 11}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2398,7 +2629,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &23
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2418,10 +2649,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 590
-    width: 453
-    height: 342
+    x: 1920
+    y: 475
+    width: 398
+    height: 442
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2438,7 +2669,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts/Logic/2048Level
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -2453,7 +2685,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 26640000
     m_LastClickedID: 25638
-    m_ExpandedIDs: 00000000fe6f000000700000027000000470000006700000087000000a7000000c7000000e70000010700000127000001470000016700000187000001a7000001c7000001e70000020700000227000002470000026700000287000002a7000002c7000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000046700000
+    m_ExpandedIDs: 000000009a6e00002c7000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000046700000487000004a7000004c7000004e70000050700000527000005470000056700000587000005a7000005c7000005e70000060700000627000006470000066700000687000006a7000006c7000006e70000070700000727000007470000076700000787000007a7000007c7000007e70000080700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2469,7 +2701,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 19}
+      m_ClientGUIView: {fileID: 16}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -2478,26 +2710,26 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 120}
+    scrollPos: {x: 0, y: 716}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000fe6f000000700000027000000470000006700000087000000a7000000c7000000e70000010700000127000001470000016700000187000001a7000001c7000001e70000020700000227000002470000026700000287000002a7000002c7000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000046700000
+    m_ExpandedIDs: ffffffff000000009a6e00002c7000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000046700000487000004a7000004c7000004e70000050700000527000005470000056700000587000005a7000005c7000005e70000060700000627000006470000066700000687000006a7000006c7000006e7000007070000074700000767000007a7000007c7000001e7100002071000046710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: LightSwitchOrientationLevel
+      m_OriginalName: LightSwitchOrientationLevel
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 28934
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 15}
+      m_ClientGUIView: {fileID: 12}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -2525,7 +2757,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 19}
+      m_ClientGUIView: {fileID: 16}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2537,7 +2769,7 @@ MonoBehaviour:
     m_GridSize: 44
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 288
---- !u!114 &24
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2557,10 +2789,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 454
-    y: 307
-    width: 1123
-    height: 625
+    x: 2319
+    y: 73
+    width: 239
+    height: 844
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2784,9 +3016,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 702.74396, y: 1910.1279, z: -10.637576}
+    m_Target: {x: -5.200777, y: 3.265063, z: -0.05224836}
     speed: 2
-    m_Value: {x: 711.93555, y: 1910.7183, z: -10.120656}
+    m_Value: {x: -5.200777, y: 3.265063, z: -0.05224836}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2837,9 +3069,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1200.406
+    m_Target: 16.310131
     speed: 2
-    m_Value: 1148.7139
+    m_Value: 16.310131
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2857,14 +3089,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.6669536, y: 0.24117571, z: -0.2430846, w: 0.66176254}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &25
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2928,7 +3160,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &26
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2948,10 +3180,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1579
-    y: 307
-    width: 99
-    height: 625
+    x: 2560
+    y: 73
+    width: 631
+    height: 844
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2964,7 +3196,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1080, y: 2280}
+  m_TargetSize: {x: 960, y: 2658}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2985,14 +3217,14 @@ MonoBehaviour:
     - '{"m_SerializationStates":{"thermalFoldout":false,"performanceFoldout":false,"developerFoldout":false,"indexerFoldout":false,"scalersFoldout":false,"deviceSettingsFoldout":false}}'
     - '{}'
     - '{}'
-    scale: 10
+    scale: 29
     fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Samsung Galaxy S10e
+    friendlyName: Samsung Galaxy Z Fold2 5G (Phone)
     networkReachability: 1
     systemLanguage: 10
---- !u!114 &27
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3012,10 +3244,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1680
-    y: 307
-    width: 239
-    height: 368
+    x: 3193
+    y: 73
+    width: 646
+    height: 637
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3033,7 +3265,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &28
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3053,10 +3285,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 953
+    x: 1920
+    y: 938
     width: 1920
-    height: 261
+    height: 101
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

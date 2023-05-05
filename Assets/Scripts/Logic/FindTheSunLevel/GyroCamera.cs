@@ -10,6 +10,7 @@ public class GyroCamera : MonoBehaviour
     {
         gyro = Input.gyro;
         gyro.enabled = true;
+        gyro.updateInterval = 0.005f;
     }
 
     void Update()

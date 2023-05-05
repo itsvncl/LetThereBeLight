@@ -13,9 +13,11 @@ public class SleepGame : MonoBehaviour
     private bool win = false;
 
     private bool deviceHasProxy;
+    private bool sdk33OrAbove;
 
     void Start() {
         deviceHasProxy = ProximitySensor.current != null;
+        sdk33OrAbove = AndroidActivityManager.getAPILevel() >= 33;
 
         if (deviceHasProxy) {
             InputSystem.EnableDevice(ProximitySensor.current);
@@ -26,7 +28,7 @@ public class SleepGame : MonoBehaviour
         if (win) return;
 
         if (Input.deviceOrientation == DeviceOrientation.FaceDown) {
-            if(!deviceHasProxy || (deviceHasProxy && ProximitySensor.current.distance.ReadValue() < distanceTarget)) {
+            if(!deviceHasProxy || sdk33OrAbove || (deviceHasProxy && ProximitySensor.current.distance.ReadValue() < distanceTarget)) {
                 timeDuration = Time.time - beginTime;
             }
             else {

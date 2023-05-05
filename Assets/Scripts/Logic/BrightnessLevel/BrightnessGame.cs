@@ -9,10 +9,11 @@ public class BrightnessGame : MonoBehaviour
     [SerializeField] private GameObject progress;
 
     private bool win = false;
-    private float xiaomiMax = 12.0f;
     private float androidMax = 1.0f;
+    private float xiaomiMax = 16.0f;
 
     private bool isXiaomi;
+    private float beginValue;
 
     private float progressScaleMin = 0f;
     private float progressScaleMax = 4.2687f;
@@ -28,6 +29,7 @@ public class BrightnessGame : MonoBehaviour
 
     void Start() {
         isXiaomi = Screen.brightness > androidMax;
+        beginValue = Screen.brightness;
         progressScaleRange = Mathf.Abs(progressScaleMax - progressScaleMin);
         progressPosRange = Mathf.Abs(progressPosMax - progressPosMin);
 
@@ -52,7 +54,7 @@ public class BrightnessGame : MonoBehaviour
         AdjustProgress();
 
         if (isXiaomi) {
-            if (Screen.brightness >= xiaomiMax) {
+            if (Screen.brightness != beginValue) {
                 win = true;
                 LevelManager.Instance.LevelComplete();
             }
@@ -74,9 +76,10 @@ public class BrightnessGame : MonoBehaviour
         float level = GetLevel();
 
         if(level < 0) level = 0;
+        if(level > 1.0f) level = 1.0f;
 
         var tempColor = lightImage.color;
-        tempColor.a = level;
+        tempColor.a = level / 1.6f;
 
         if(!lockGame) lightImage.color = tempColor;
 

@@ -14,11 +14,28 @@ public class ScreenshotGame : MonoBehaviour {
     }
 
     IEnumerator CheckPermissionAccess() {
+        int androidSDK = AndroidActivityManager.getAPILevel();
+        yield return new WaitForSeconds(0.5f);
+
+        if (androidSDK >= 33)
+        {
+            if (!Permission.HasUserAuthorizedPermission("android.permission.READ_MEDIA_IMAGES"))
+            {
+                Permission.RequestUserPermission("android.permission.READ_MEDIA_IMAGES");
+            }
+        }
         yield return new WaitForSeconds(0.5f);
 
         if (!Permission.HasUserAuthorizedPermission("android.permission.READ_EXTERNAL_STORAGE")) {
-            unplayableOverlay.SetActive(true);
-            gameObject.SetActive(false);
+            if(androidSDK >= 33 && Permission.HasUserAuthorizedPermission("android.permission.READ_MEDIA_IMAGES"))
+            {
+                AndroidActivityManager.Instance.StartScreenshotDetector();
+            }
+            else
+            {
+                unplayableOverlay.SetActive(true);
+                gameObject.SetActive(false);
+            }
         }
         else {
             AndroidActivityManager.Instance.StartScreenshotDetector();

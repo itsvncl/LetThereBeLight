@@ -11,7 +11,7 @@ public class DeathyrinthGame : MonoBehaviour
 
 
     void Awake() {
-        if (!SystemInfo.supportsGyroscope) {
+        if (!AndroidActivityManager.Instance.DeviceHasGyroscope() || !SystemInfo.supportsGyroscope) {
             unplayableOverlay.SetActive(true);
             gameObject.SetActive(false);
         }

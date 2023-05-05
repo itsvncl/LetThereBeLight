@@ -5,7 +5,6 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
-/[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
@@ -52,9 +51,14 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
-*.apk
+*.aab
 *.unitypackage
 
 # Crashlytics generated file
 crashlytics-build.properties
 
+ClassDiagram1.cd
+ClassDiagram2.cd
+ClassDiagram3.cd
+
+Build/Google Play build

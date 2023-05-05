@@ -15,10 +15,7 @@ public class NotificationGame : MonoBehaviour
 
     void Start()
     {
-        if (AndroidActivityManager.getAPILevel() < 33) return;
-
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
-        {
+        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")){
             Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
         }
 
@@ -39,7 +36,6 @@ public class NotificationGame : MonoBehaviour
         var notification = new AndroidNotification();
         notification.Title = notificationTitle.GetLocalizedString();
         notification.Text = notificationText.GetLocalizedString();
-        notification.IntentData = "LevelCompletionTrigger";
         notification.FireTime = System.DateTime.Now;
         notification.ShouldAutoCancel = true;
 
@@ -63,7 +59,9 @@ public class NotificationGame : MonoBehaviour
     IEnumerator InitGame() {
         yield return new WaitForSeconds(0.5f);
 
-        if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
+        int androidSDK = AndroidActivityManager.getAPILevel();
+
+        if (androidSDK >= 33 && !Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS")) {
             unplayableOverlay.SetActive(true);
             gameObject.SetActive(false);
         }

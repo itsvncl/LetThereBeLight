@@ -8,7 +8,8 @@ public class LabyrinthGame : MonoBehaviour
     [SerializeField] private GameObject unplayableOverlay;
 
     void Awake() {
-        if (!SystemInfo.supportsGyroscope) {
+        if (!AndroidActivityManager.Instance.DeviceHasGyroscope() || !SystemInfo.supportsGyroscope)
+        {
             unplayableOverlay.SetActive(true);
             gameObject.SetActive(false);
         }

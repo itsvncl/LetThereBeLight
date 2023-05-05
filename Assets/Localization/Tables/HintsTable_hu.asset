@@ -52,13 +52,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14921896632848384
-    m_Localized: "Tudja, az \xFAgynevezett \"zsebl\xE1mpa\", ami fot\xF3z\xE1s k\xF6zben
-      is n\xE9ha villan."
+    m_Localized: "Tudja, az \xFAgynevezett \"zsebl\xE1mpa\", amely fot\xF3z\xE1s
+      k\xF6zben is villanhat."
     m_Metadata:
       m_Items: []
   - m_Id: 14922380764581888
     m_Localized: "K\xF6sse \xF6ssze a pontokat \xFAgy, hogy a t\xE1bl\xE1n l\xE9v\u0151
-      \xF6sszes n\xE9gyzet fel legyen haszn\xE1lva. Figyelem! A narancs nagy kit\xE9r\u0151t
+      \xF6sszes n\xE9gyzet fellegyen haszn\xE1lva. Figyelem! A narancs nagy kit\xE9r\u0151t
       tesz."
     m_Metadata:
       m_Items: []
@@ -70,7 +70,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14923459048837120
     m_Localized: "A legt\xF6bb mobiltelefon rendelkezik egy szenzorral, amely a k\xF6rnyezeti
-      vil\xE1goss\xE1ghoz k\xE9pest \xE1ll\xEDtja a telefon k\xE9perny\u0151 f\xE9nyerej\xE9t."
+      vil\xE1goss\xE1ghoz k\xE9pest \xE1ll\xEDtja a k\xE9perny\u0151 f\xE9nyerej\xE9t."
     m_Metadata:
       m_Items: []
   - m_Id: 14924647282577408
@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14927161595858944
-    m_Localized: "B\xE1rcsak lehetne egy m\xF3d k\xE9pet k\xE9sz\xEDteni a k\xE9perny\u0151r\u0151l."
+    m_Localized: "B\xE1rcsak lehetne egy m\xF3d k\xE9pet k\xE9sz\xEDteni a k\xE9perny\u0151r\u0151l!"
     m_Metadata:
       m_Items: []
   - m_Id: 14927451040583680

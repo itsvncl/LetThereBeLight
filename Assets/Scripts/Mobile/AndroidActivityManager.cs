@@ -9,13 +9,18 @@ public class AndroidActivityManager : MonoBehaviour {
     void Awake() {
         if (Instance != null && Instance != this) {
             Destroy(this);
-            return;
+        }
+        else
+        {
+            Instance = this;
+            
+            playerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            activity = playerClass.GetStatic<AndroidJavaObject>("currentActivity");
+            DontDestroyOnLoad(this.gameObject);
+
+            Debug.Log("AndroidActivityManager inited");
         }
 
-        playerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        activity = playerClass.GetStatic<AndroidJavaObject>("currentActivity");
-
-        Instance = this;
     }
 
     private void Update() {
@@ -53,16 +58,6 @@ public class AndroidActivityManager : MonoBehaviour {
         activity.Call("disableFlashlightGuard");
     }
 
-    public void StartLightSensorGuard(float targetValue) {
-        NullCheck();
-        activity.Call("enableLightSensorGuard", targetValue);
-    }
-
-    public void StopLightSensorGuard() {
-        NullCheck();
-        activity.Call("disableLightSensorGuard");
-    }
-
     public void StartScreenshotDetector() {
         NullCheck();
         activity.Call("enableScreenshotDetector");
@@ -80,6 +75,12 @@ public class AndroidActivityManager : MonoBehaviour {
     public bool DeviceHasMagnetometer() {
         NullCheck();
         return activity.Call<bool>("deviceHasMagnetometer");
+    }
+
+    public bool DeviceHasGyroscope()
+    {
+        NullCheck();
+        return activity.Call<bool>("deviceHasGyroscope");
     }
 
     public bool DeviceHasTwoTouchSupport() {

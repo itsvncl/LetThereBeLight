@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
-    private int maxLevel = 25;
+    private int maxLevel;
     private int progression = 1;
     private int lastLevel = 1;
     private int currentLevel = 0;
@@ -18,11 +18,15 @@ public class LevelManager : MonoBehaviour {
 
         if (Instance != null && Instance != this) {
             Destroy(this);
+            return;
         }
         else {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
+            Debug.Log("LevelManager inited");
         }
+
+        maxLevel = SceneManager.sceneCountInBuildSettings-1;
 
         if (PlayerPrefs.HasKey("progression")) {
             progression = PlayerPrefs.GetInt("progression");
@@ -73,10 +77,6 @@ public class LevelManager : MonoBehaviour {
         StartCoroutine(Load());
     }
 
-    public void ReloadLevel() {
-        SwitchToLevel(currentLevel);
-    }
-
     public void SwitchToLevel(int level) {
         if (level > maxLevel) {
             Debug.Log(level);
@@ -100,20 +100,6 @@ public class LevelManager : MonoBehaviour {
         SwitchToLevel(lastLevel);
     }
 
-    public void DebugNextLevel() {
-        if (currentLevel < maxLevel) {
-            currentLevel++;
-        }
-        SceneManager.LoadScene(currentLevel);
-    }
-
-    public void DebugPreviousLevel() {
-        if (currentLevel > 0) {
-            currentLevel--;
-        }
-        SceneManager.LoadScene(currentLevel);
-    }
-
     public int GetMaxLevel() {
         return maxLevel;
     }
@@ -122,5 +108,4 @@ public class LevelManager : MonoBehaviour {
         return currentLevel;
     }
 
-    public int GetProgression() { return progression; }
 }
