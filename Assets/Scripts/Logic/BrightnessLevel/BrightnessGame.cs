@@ -76,9 +76,10 @@ public class BrightnessGame : MonoBehaviour
         float level = GetLevel();
 
         if(level < 0) level = 0;
+        if(level > 1.0f) level = 1.0f;
 
         var tempColor = lightImage.color;
-        tempColor.a = level < 20.0f ? 0 : level - 20.0f;
+        tempColor.a = level / 1.6f;
 
         if(!lockGame) lightImage.color = tempColor;
 

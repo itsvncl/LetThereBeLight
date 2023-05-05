@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "207a5b98",
         "name": "com.vncl.lettherebelight",
-        "processId": 13300,
+        "processId": 11969,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,12 @@
             "deviceId": "207a5b98",
             "name": "com.vncl.lettherebelight",
             "processId": 13300,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.vncl.lettherebelight",
+            "processId": 11969,
             "exited": false
         },
         {
