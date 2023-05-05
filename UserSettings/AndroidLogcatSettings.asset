@@ -3,45 +3,69 @@
     "m_SelectedPackage": {
         "deviceId": "207a5b98",
         "name": "com.vncl.lettherebelight",
-        "processId": 27088,
+        "processId": 13300,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "207a5b98",
-            "name": "com.vncl.lettherebelight",
-            "processId": 28398,
-            "exited": true
-        },
-        {
-            "deviceId": "207a5b98",
-            "name": "com.vncl.lettherebelight",
-            "processId": 3148,
-            "exited": true
-        },
-        {
-            "deviceId": "207a5b98",
-            "name": "com.vncl.lettherebelight",
-            "processId": 4719,
-            "exited": true
-        },
-        {
-            "deviceId": "207a5b98",
-            "name": "com.vncl.lettherebelight",
-            "processId": 5075,
-            "exited": true
-        },
-        {
-            "deviceId": "207a5b98",
-            "name": "com.snapchat.android",
-            "processId": 32067,
+            "name": "com.miui.home",
+            "processId": 2711,
             "exited": false
         },
         {
             "deviceId": "207a5b98",
             "name": "com.vncl.lettherebelight",
-            "processId": 27088,
+            "processId": 1881,
+            "exited": true
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.vncl.lettherebelight",
+            "processId": 4133,
+            "exited": true
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.vncl.lettherebelight",
+            "processId": 14210,
+            "exited": true
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.vncl.lettherebelight",
+            "processId": 16490,
+            "exited": true
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.zhiliaoapp.musically",
+            "processId": 20239,
+            "exited": false
+        },
+        {
+            "deviceId": "207a5b98",
+            "name": "com.vncl.lettherebelight",
+            "processId": 13300,
+            "exited": false
+        },
+        {
+            "deviceId": "7b04da677ce4",
+            "name": "com.vncl.lettherebelight",
+            "processId": 602,
+            "exited": true
+        },
+        {
+            "deviceId": "7b04da677ce4",
+            "name": "com.vncl.lettherebelight",
+            "processId": 5728,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.google.android.documentsui",
+            "processId": 4856,
             "exited": false
         }
     ],

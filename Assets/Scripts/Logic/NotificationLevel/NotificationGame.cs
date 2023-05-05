@@ -36,7 +36,6 @@ public class NotificationGame : MonoBehaviour
         var notification = new AndroidNotification();
         notification.Title = notificationTitle.GetLocalizedString();
         notification.Text = notificationText.GetLocalizedString();
-        notification.IntentData = "LevelCompletionTrigger";
         notification.FireTime = System.DateTime.Now;
         notification.ShouldAutoCancel = true;
 

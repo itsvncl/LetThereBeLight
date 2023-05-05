@@ -38,7 +38,6 @@ public class NumberBlock : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
     void FixedUpdate() {
         if (direction == Direction.Stationary) return;
 
@@ -83,9 +82,7 @@ public class NumberBlock : MonoBehaviour {
         transform.position = newPos;
     }
 
-    //Ez meg se hívódik
     void OnTriggerStay2D(Collider2D collider) {
-        //Debug.Log("Ilyen");
         HandleCollision(collider.gameObject);
     }
 

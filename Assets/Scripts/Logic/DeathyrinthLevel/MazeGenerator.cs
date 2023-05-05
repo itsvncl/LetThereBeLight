@@ -222,9 +222,4 @@ public class MazeGenerator : MonoBehaviour {
 
         return currentNode;
     }
-
-
-    public GameObject GetPlayer() {
-        return Player;
-    }
 }

@@ -24,7 +24,6 @@ public class CustomUnityActivity extends UnityPlayerActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        Log.i(LOGTAG, isVolumeButtonLocked ? "Volume button is locked" : "Volume button is unlocked");
         if(isVolumeButtonLocked){
             switch (event.getKeyCode()) {
                 case KeyEvent.KEYCODE_VOLUME_UP:
@@ -105,9 +104,11 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         Log.i(LOGTAG, "Flashlight guard enabled");
     }
     public void disableFlashlightGuard(){
-        cameraManager.unregisterTorchCallback(flashCallback);
-        flashCallback = null;
-        Log.i(LOGTAG, "Flashlight guard disabled");
+        if(flashCallback != null){
+            cameraManager.unregisterTorchCallback(flashCallback);
+            flashCallback = null;
+            Log.i(LOGTAG, "Flashlight guard disabled");
+        }
     }
 
     public void enableScreenshotDetector(){
@@ -115,8 +116,10 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         screenshotDetector.start();
     }
     public void disableScreenshotDetector(){
-        screenshotDetector.stop();
-        screenshotDetector = null;
+        if(screenshotDetector != null){
+            screenshotDetector.stop();
+            screenshotDetector = null;
+        }
     }
 
     @Override
@@ -137,6 +140,13 @@ public class CustomUnityActivity extends UnityPlayerActivity {
         Log.i(LOGTAG, "Device magnetometer available: " + hasMagnetometer);
 
         return hasMagnetometer;
+    }
+
+    public boolean deviceHasGyroscope(){
+        boolean hasGyroscope = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_GYROSCOPE);
+        Log.i(LOGTAG, "Device gyroscope available: " + hasGyroscope);
+
+        return hasGyroscope;
     }
 
     public boolean deviceHasTwoTouchSupport(){

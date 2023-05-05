@@ -9,9 +9,9 @@ public class Pipe : MonoBehaviour, IClickable
     public PlumberGame game;
     public SpriteRenderer sr;
     
-    public bool inFlow = false;
+    private bool inFlow = false;
     
-    bool locked = false;
+    private bool locked = false;
 
     public PipeType type { get { return _type; } }
     public PipeOrientation orientation { get { return _orientation; } }
@@ -43,7 +43,7 @@ public class Pipe : MonoBehaviour, IClickable
         orientate();
     }
 
-    void orientate() {
+    private void orientate() {
         float rotation = 0;
 
         switch (orientation) {

@@ -44,10 +44,6 @@ public class TouchUtil : MonoBehaviour {
         return col == Physics2D.OverlapPoint(_beginWorldPosition);
     }
 
-    public bool EndedTouching(Collider2D col) {
-        return col == Physics2D.OverlapPoint(_endWorldPosition);
-    }
-
     public static DragDirection GetDragDirection(Vector2 directionVector) {
 
         if (Mathf.Abs(directionVector.x) > Mathf.Abs(directionVector.y)) {

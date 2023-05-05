@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WinTrigger : MonoBehaviour {
     public bool win = false;
-    [SerializeField] GameObject[] winObjects;
-    [SerializeField] bool freezeAfterWin;
+    [SerializeField] private GameObject[] winObjects;
+    [SerializeField] private bool freezeAfterWin;
 
     void OnTriggerEnter2D(Collider2D col) {
         Debug.Log("Collision with gameobject");

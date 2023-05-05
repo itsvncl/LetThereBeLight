@@ -47,7 +47,9 @@ public class TouchSystem : MonoBehaviour
 
                 //Canceled touch
                 if (touch.phase == TouchPhase.Canceled) {
-                    _touchDictionary.Remove(touch.fingerId);
+                    if(_touchDictionary.ContainsKey(touch.fingerId))
+                        _touchDictionary.Remove(touch.fingerId);
+                    Debug.Log("Touch canceled, with the fingerID of: " + touch.fingerId);
                     continue;
                 }
 
@@ -63,6 +65,7 @@ public class TouchSystem : MonoBehaviour
     private void HandleNewTouch(Touch touch)
     {
         _touchDictionary.Add(touch.fingerId, new TouchData(_worldPosition, touch.fingerId, null, _tapCount));
+        Debug.Log("Touch began, with the fingerID of: " + touch.fingerId);
 
         GameObject hitObject = GetTouchedObject();
 
@@ -81,6 +84,8 @@ public class TouchSystem : MonoBehaviour
     {
         //Ongoing touch only gets called back to Draggables
         //Wont recognise newly touched objecs.
+        if (!_touchDictionary.ContainsKey(touch.fingerId)) return;
+
         TouchData previousTouchData = _touchDictionary[touch.fingerId];
         TouchData newTouchData = CreateMovingPosData(previousTouchData);
         _touchDictionary[touch.fingerId] = newTouchData;
@@ -99,6 +104,8 @@ public class TouchSystem : MonoBehaviour
     }
     private void HandleFinishedTouch(Touch touch)
     {
+        if (!_touchDictionary.ContainsKey(touch.fingerId)) return;
+
         TouchData previousTouchData = _touchDictionary[touch.fingerId];
         TouchData endTouchData = CreateEndPosData(previousTouchData);
         _touchDictionary[touch.fingerId] = endTouchData;
@@ -147,7 +154,10 @@ public class TouchSystem : MonoBehaviour
         }
 
         //Removing the touch from the map
-        _touchDictionary.Remove(touch.fingerId);
+        if (_touchDictionary.ContainsKey(touch.fingerId))
+            _touchDictionary.Remove(touch.fingerId);
+
+        Debug.Log("Touch ended, with the fingerID of: " + touch.fingerId);
     }
 
     private GameObject GetTouchedObject()

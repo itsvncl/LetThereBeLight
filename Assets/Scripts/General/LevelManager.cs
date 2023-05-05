@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     public static LevelManager Instance;
 
-    private int maxLevel = 25;
+    private int maxLevel;
     private int progression = 1;
     private int lastLevel = 1;
     private int currentLevel = 0;
@@ -18,11 +18,15 @@ public class LevelManager : MonoBehaviour {
 
         if (Instance != null && Instance != this) {
             Destroy(this);
+            return;
         }
         else {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
+            Debug.Log("LevelManager inited");
         }
+
+        maxLevel = SceneManager.sceneCountInBuildSettings-1;
 
         if (PlayerPrefs.HasKey("progression")) {
             progression = PlayerPrefs.GetInt("progression");

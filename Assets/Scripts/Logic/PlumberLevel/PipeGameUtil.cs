@@ -6,7 +6,9 @@ public class PipeGameUtil : MonoBehaviour
 {
     public static PipeGameUtil PU;
 
-    private Dictionary<PipeType, Dictionary<PipeOrientation, List<PipeOrientation>>> directions;
+    private Dictionary<PipeType, Dictionary<PipeOrientation, List<PipeOrientation>>> _directions;
+
+    public Dictionary<PipeType, Dictionary<PipeOrientation, List<PipeOrientation>>> Directions { get { return _directions; } }
 
     void Awake() {
         PU = this;
@@ -27,13 +29,9 @@ public class PipeGameUtil : MonoBehaviour
             { PipeOrientation.Left, new List<PipeOrientation>() { PipeOrientation.Right, PipeOrientation.Left } },
         };
 
-        directions = new() {
+        _directions = new() {
             { PipeType.Bending, bendDirections},
             { PipeType.Straight, straightDirections}
         };
-    }
-
-    public Dictionary<PipeType, Dictionary<PipeOrientation, List<PipeOrientation>>> GetDirections() {
-        return directions;
     }
 }

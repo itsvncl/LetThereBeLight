@@ -10,7 +10,7 @@ public class BrightnessGame : MonoBehaviour
 
     private bool win = false;
     private float androidMax = 1.0f;
-    private float xiaomiMax = 12.0f;
+    private float xiaomiMax = 16.0f;
 
     private bool isXiaomi;
     private float beginValue;
@@ -78,7 +78,7 @@ public class BrightnessGame : MonoBehaviour
         if(level < 0) level = 0;
 
         var tempColor = lightImage.color;
-        tempColor.a = level;
+        tempColor.a = level < 20.0f ? 0 : level - 20.0f;
 
         if(!lockGame) lightImage.color = tempColor;
 

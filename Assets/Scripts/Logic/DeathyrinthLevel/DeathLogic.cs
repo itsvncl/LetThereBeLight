@@ -6,7 +6,7 @@ public class DeathLogic : MonoBehaviour
 {
     [SerializeField] private DeathyrinthGame game;
 
-    private void Start() {
+    void Start() {
         game = GameObject.Find("GameController").GetComponent<DeathyrinthGame>();
     }
 

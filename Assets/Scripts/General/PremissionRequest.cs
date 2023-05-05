@@ -26,6 +26,13 @@ public class PremissionRequest : MonoBehaviour
             Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
         }
 
+        yield return new WaitForSeconds(0.5f);
+
+        if (!Permission.HasUserAuthorizedPermission("android.permission.READ_MEDIA_IMAGES"))
+        {
+            Permission.RequestUserPermission("android.permission.READ_MEDIA_IMAGES");
+        }
+
         PlayerPrefs.SetInt("permissionsRequested", 1);
     }
 }

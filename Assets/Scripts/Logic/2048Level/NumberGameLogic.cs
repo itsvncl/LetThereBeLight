@@ -114,7 +114,7 @@ public class NumberGameLogic : MonoBehaviour {
     }
 
     //Depending on the direction, the objects start 
-    void MoveNumbers() {
+    private void MoveNumbers() {
 
         if (true) {
             foreach (var number in Board) {
@@ -125,7 +125,7 @@ public class NumberGameLogic : MonoBehaviour {
         }
     }
 
-    void SyncPositions() {
+    private void SyncPositions() {
         List<GameObject> newBoard = new List<GameObject>(16);
 
         for (int i = 0; i < 16; i++) {
